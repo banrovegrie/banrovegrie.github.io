@@ -83,20 +83,18 @@
             <div class="section" itemprop="articleBody">
               
                 <h3 id="a-treatise-on-thinking-and-problem-solving">A Treatise on Thinking and Problem Solving</h3>
-<p>I have wasted a lot of time meta-problem solving. Or more specifically, wondering about how to think about approaching a problem. </p>
-<p>Now, to give a preface, let me state this as clearly as possible. I am neither a mathematician nor a computer scientist and nor can I consider myself a philosopher. I am just a young guy with a laptop and a lot of time. However, I indeed love each of those fields, and given that thinking is not a monopoly of the old and experienced — I decided to explore as much as I can into two questions that have been grappling my mind for quite some time.</p>
-<p>The two questions are:</p>
+<p>I have wasted a lot of time meta-problem solving. Or more specifically, wondering about how to think about approaching a problem. Most of these venturing was during my preparation for ICPC (and eventually World Finals). It wasn't all a waste though. Somethings stayed and changed my way of working. Firstly, the differences in approaching problems based on culture (read: particular field) and character (read: seeker or craftspeople). Secondly, the similarities across the board which could be generalized. Cliche, much?</p>
 <ol>
 <li>Do mathematicians, physicists and computer scientists approach a given problem differently? Is mathematical thinking different from algorithmic thinking? I love the word algorithmic rather than computational because the latter presents an ambiguous scope of considering the purely mechanistic working of a computer.</li>
 <li>Are there any generalizable heuristics that can be used or applied to any formal problem?</li>
 </ol>
-<p>Both of the questions are very dear to my heart, and I will try my best to put forward several ideas I have come across and as they have been filtered and modified by my own point of view.</p>
+<p>In this essay, I will try my best to put forward several ideas I have come across and as they have been filtered and modified by my own point of view. References to interesting reads are present at the end.</p>
 <h3 id="mathematical-thinking-and-algorithmic-thinking">Mathematical Thinking and Algorithmic Thinking</h3>
 <p>Mathematical thinking and algorithmic thinking have a lot in common. It shall be easier to first define what we consider mathematical thinking to be and what it means to be a mathematician.</p>
 <h3 id="mathematical-thinking">Mathematical Thinking</h3>
 <p>Mathematical thinking involves the skills of modeling a given problem formally and rigorously arguing about the formal statement.</p>
 <ul>
-<li>Here, the <ins>point of rigor</ins> is not to destroy all intuition; instead, it should be used to eliminate bad intuition while clarifying and elevating good intuition.</li>
+<li>Here, the <strong>point of rigor</strong> is not to destroy all intuition; instead, it should be used to eliminate bad intuition while clarifying and elevating good intuition.</li>
 <li>Even though rigor is merely the instrument of demonstration, just as intuition and curiosity are the instruments of invention, there is no denying that it alone can provide us with certainty.</li>
 </ul>
 <p>Moreover, in mathematics, there are two cultures involved. They differ based on the following two ideologies.</p>
@@ -112,21 +110,23 @@
 <li>dynamic notion of the state of any process (data structures)</li>
 </ul>
 <p>These notions are inherently associated with the idea of implementability, which can be used to put forward the following picture — is computer science implementable mathematics? And if it were so, then computer science is rooted in physics as much as we believe it is rooted in mathematics. After all, it is the nature of our universe and existence which determines what is implementable and what is not.</p>
-<p><img src="../images/mathcs.png" width="50%"/></p>
-<p><ins>Footnote</ins>: The more I read about this, the more I can't help thinking about whether Computer Science isn't just a whole new way of understanding Physics.</p>
+<!-- <img src="../images/mathcs.png" width="50%"/> -->
+
+<!-- **Footnote**: The more I read about this, the more I can't help thinking about whether Computer Science isn't just a whole new way of understanding Physics. -->
+
 <h3 id="on-heuristics">On Heuristics</h3>
 <ul>
 <li>
-<p><ins>Proofs are Programs</ins>: Often, we find that the approaches we make (both mathematical and psychological) while trying to prove some statement or construct an algorithm are similar.</p>
+<p><strong>Proofs are Programs</strong>: Often, we find that the approaches we make (both mathematical and psychological) while trying to prove some statement or construct an algorithm are similar.</p>
 <p>This becomes clearer when we start reading more about the correspondence between proofs, programs, and algebraic structures. Such a trinity allows us to say with certainty that proofs and algorithms are complementary and analogous to a great extent. Furthermore, thinking about proofs and programs in this manner often gives us a clearer perspective while approaching any given problem.</p>
 </li>
 <li>
-<p><ins>Abstraction and Modularity</ins>: The set of ideas I hope to entail here also go by several other names, like, wishful thinking and thinking from first principles. However, the main idea is following a modular approach while constructing an algorithm or proving a theorem. </p>
+<p><strong>Abstraction and Modularity</strong>: The set of ideas I hope to entail here also go by several other names, like, wishful thinking and thinking from first principles. However, the main idea is following a modular approach while constructing an algorithm or proving a theorem. </p>
 <p>You can start off by dividing you problem in layers of chunks and while solving for a specific chunk, consider everything else as a blackbox. You can further hope to simplify each chunk or a set of chunks by reducing it to another problem or wishing off several constraints and trying your hand at that.When dealing with implementation jobs, then this methodology is also referred to as the top-down approach, albeit with some more caveats sprinkled all-over.</p>
 <p>On a similar note, it is worth remembering that while constructing any mathematical proof, you ought to try stringing lemmas together, along with speculation that has been cleaned and sharpened with rigor.</p>
 </li>
 <li>
-<p><ins>Questions and Perspective</ins>: When solving a problem it is vital to keep changing your perspective. You need to look at it and attack it differently (using different tools with different tricks). For example, try contradictions, then maybe induction, then maybe something else and so on.</p>
+<p><strong>Questions and Perspective</strong>: When solving a problem it is vital to keep changing your perspective. You need to look at it and attack it differently (using different tools with different tricks). For example, try contradictions, then maybe induction, then maybe something else and so on.</p>
 <blockquote>
 <p>While looking at a problem through different lenses ideally you would want to find the natural world for the problem, express it cohomologically and often the cohomology of that world may solve your problem, like a ripe avocado bursts in your hand. (Grothendieck)</p>
 </blockquote>
@@ -134,13 +134,13 @@
 <p>Also, you need to realize how crucial partial progress is. Failures are often crucial advances. In fact, people should write about their failures and speculations while writing a paper. Because well, if we don't at all have any insight into what made someone come up with an argument or construction, then what is the fricking point at all?</p>
 </li>
 <li>
-<p><ins>Formalism and Writing</ins>: Formalism is arguably the most important and recurring step towards solving any problem. This is something I learned while studying functional programming. Often, the act of describing a problem and stating it formally reveals what you need to solve it.</p>
-<p>And in case you are dealing with an algorithm or a computer system, formalism through programming is literally both the crux and beauty of it. Similarly, on a broader note, writing too is hugely essential. In fact, ideally, it should be the primary mechanism for doing research and not just for reporting it.</p>
+<p><strong>Formalism and Writing</strong>: Formalism is arguably the most important and recurring step towards solving any problem. This is something I learned while studying functional programming. Often, the act of describing a problem and stating it formally reveals what you need to solve it.</p>
+<p>And in case you are dealing with an algorithm or a computer system, formalism through programming is both the crux and beauty of it. Similarly, on a broader note, writing too is hugely essential. Ideally, it should be the primary mechanism for doing research and not just for reporting it.</p>
 </li>
 </ul>
 <h3 id="conclusion">Conclusion</h3>
-<p>Heuristics, as mentioned above, serve as more of a psychological strategy than a tangible cut out path for solving problems. Almost all major problems that lurk in the horizon of human understanding are mainly solved by "knowledge (of your own field and of other fields), experience, patience and hard work".</p>
-<p>Furthermore, we don't really understand how a human being thinks. We do have some understanding that our linguistic capabilities serve as the operating system of our minds supporting abstraction other cognitive abilities. However, that being said, there is so much more that we don't understand. But, don't let this lack of understanding reflect any kind of unimportance of the subject -- for if we don't even understand how we think, how could we possibly make machines that can truly think like and for us?</p>
+<p>Heuristics, as mentioned above, serve as more of a psychological strategy than a tangible cut out path for solving problems. Almost all major problems that lurk in the horizon of human understanding are mainly solved by experience (of your own field and others), curiosity, hard work and peeking into randomness.</p>
+<p>Furthermore, we don't really understand how a human being thinks. We do have some understanding that our linguistic capabilities serve as an operating system for our minds supporting abstraction and other cognitive abilities. But, there is so much that we don't understand. However, do not let this lack of understanding reflect any kind of unimportance on the subject - for if we don't even understand how we think, how could we possibly make machines that can truly think like and for us?</p>
 <h3 id="references">References</h3>
 <ol>
 <li><a href="https://www.dpmms.cam.ac.uk/~wtg10/2cultures.pdf">The Two Cultures of Mathematics</a> by Gowers</li>
@@ -151,7 +151,8 @@
 <li><a href="https://terrytao.wordpress.com/career-advice/ask-yourself-dumb-questions-and-answer-them/">Ask yourself dumb questions</a> by Tao</li>
 <li><a href="https://terrytao.wordpress.com/career-advice/solving-mathematical-problems/">Solving mathematical problems</a> by Tao</li>
 <li><a href="https://www.youtube.com/watch?v=WP-FkUaOcOM">How to write a great research paper</a></li>
-<li><a href="https://www.amazon.com/gp/product/0618551050">Seekers and Craftspeople</a></li>
+<li><a href="https://www.amazon.com/gp/product/0618551050">Seekers and Craftspeople</a> by Lee Smolin</li>
+<li><a href="https://www.ams.org/notices/200902/rtx090200212p.pdf">Birds and Frogs</a> by Freeman Dyson</li>
 </ol>
               
             </div>
