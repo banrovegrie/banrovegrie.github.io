@@ -6,27 +6,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://banrovegrie.github.io/journal/</loc>
+         <loc>https://banrovegrie.github.io/weblog/</loc>
          <lastmod>2024-03-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://banrovegrie.github.io/kotobaro-bhebechhinu/</loc>
+         <loc>https://banrovegrie.github.io/src/kotobaro-bhebechhinu/</loc>
          <lastmod>2024-03-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://banrovegrie.github.io/on-composition/</loc>
+         <loc>https://banrovegrie.github.io/src/on-composition/</loc>
          <lastmod>2024-03-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://banrovegrie.github.io/on-problem-solving/</loc>
+         <loc>https://banrovegrie.github.io/src/on-problem-solving/</loc>
          <lastmod>2024-03-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://banrovegrie.github.io/search-for-meaning/</loc>
+         <loc>https://banrovegrie.github.io/src/sanskrit/</loc>
+         <lastmod>2024-03-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://banrovegrie.github.io/src/search-for-meaning/</loc>
          <lastmod>2024-03-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
