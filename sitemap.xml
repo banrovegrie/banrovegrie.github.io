@@ -6,12 +6,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://banrovegrie.github.io/Composition/</loc>
+         <loc>https://banrovegrie.github.io/Journal/</loc>
          <lastmod>2024-03-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://banrovegrie.github.io/Journal/</loc>
+         <loc>https://banrovegrie.github.io/On%20Composition/</loc>
+         <lastmod>2024-03-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://banrovegrie.github.io/Search%20for%20Meaning/</loc>
          <lastmod>2024-03-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
