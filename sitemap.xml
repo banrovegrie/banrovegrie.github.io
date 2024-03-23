@@ -11,12 +11,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://banrovegrie.github.io/kotobaro-bhebechinu/</loc>
+         <loc>https://banrovegrie.github.io/kotobaro-bhebechhinu/</loc>
          <lastmod>2024-03-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://banrovegrie.github.io/on-composition/</loc>
+         <lastmod>2024-03-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://banrovegrie.github.io/on-problem-solving/</loc>
          <lastmod>2024-03-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
