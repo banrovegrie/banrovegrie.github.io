@@ -21,17 +21,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://banrovegrie.github.io/src/literature-fiction-society/</loc>
-         <lastmod>2024-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://banrovegrie.github.io/src/on-composition/</loc>
          <lastmod>2024-03-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://banrovegrie.github.io/src/on-problem-solving/</loc>
+         <lastmod>2024-03-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://banrovegrie.github.io/src/reality-of-fiction/</loc>
          <lastmod>2024-03-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
