@@ -248,6 +248,151 @@ E(M) = \sum mp(m) = \langle \psi | M | \psi \rangle = \langle M\rangle
 <h3 id="global-phase-doesnt-matter">Global Phase doesn't matter</h3>
 <p>We say <span class="arithmatex">\(e^{i\theta} |\psi\rangle \equiv |\psi\rangle\)</span> but why? Because, <span class="arithmatex">\(\langle \psi | M_m^{\dagger}M_m | \psi \rangle = \langle \psi \vert e^{-i\theta}M_m^\dagger M_m e^{i\theta}\vert \psi \rangle\)</span>.</p>
 <p>However, be aware that the global phase is quite different from the relative phase.</p>
+<h2 id="density-matrices">Density Matrices</h2>
+<p>We can represent a system as an ensemble of pure states <span class="arithmatex">\(\{p_i, \psi_i\}\)</span>. Now, if you have exact knowledge of the system then it is for sure in a pure state, i.e., <span class="arithmatex">\(\rho = |\psi\rangle\langle\psi|\)</span>. However, if we have classical uncertainty amongst the possible states. The system can be represented as a mixed state <span class="arithmatex">\(\rho = \sum_{i} p_i\psi_i\)</span> where the probabilities <span class="arithmatex">\(p_i\)</span> are classical in nature.</p>
+<p>This formulation helps us a lot in dealing with quantum information, noisy systems and helps us represent measurements better, as well. Why? Because it provides a convenient means for describing quantum systems whose state is not completely known.</p>
+<h3 id="postulates-in-density-matrices-formulation">Postulates in Density Matrices formulation</h3>
+<ol>
+<li>
+<p>Isolated physical system is given by its density matrix operating on a certain Hilbert space.</p>
+</li>
+<li>
+<p>Evolution of a closed quantum system is given by a unitary transformation as <span class="arithmatex">\(\rho \xrightarrow{U} U\rho U^\dagger\)</span>.</p>
+</li>
+<li>
+<p>The state space of a composite physical system is the tensor product of the state spaces of the component systems.</p>
+<div class="arithmatex">\[
+\rho = \rho_1\otimes...\otimes\rho_n
+\]</div>
+</li>
+<li>
+<p>Quantum measurements are described by a collection <span class="arithmatex">\(\{M_m\}\)</span> of measurement operators acting on the state space of the system. </p>
+<p>Probability that upon measurement the outcome is <span class="arithmatex">\(m = p(m) = tr(M_m^\dagger M_m\rho)\)</span> and the state of the system becomes as follows.</p>
+<div class="arithmatex">\[
+\rho \xrightarrow{\text{on measuring}} \frac{M_m\rho M_m^\dagger}{p(m)}
+\]</div>
+<p>Measurement operators also follow the completeness equation, <span class="arithmatex">\(\sum_m M_m^\dagger M_m = I\)</span>.</p>
+</li>
+</ol>
+<h3 id="properties">Properties</h3>
+<p>Theorem 1: An operator <span class="arithmatex">\(\rho\)</span> is a density operator if and only if it is both positive semi-definite <span class="arithmatex">\((\rho = \rho^\dagger\)</span> and non-negative eigenvalues<span class="arithmatex">\()\)</span> and <span class="arithmatex">\(tr(\rho) = 1\)</span>.</p>
+<p>Converse is easy to prove. If an operator is both positive and has trace as one, then it shall have a spectral decomposition of the form <span class="arithmatex">\(\sum_i\lambda_i|i\rangle\langle i|\)</span>.</p>
+<p>For the direct proof, let us consider <span class="arithmatex">\(tr(\rho) = \sum_i p_i tr(|\psi_i\rangle\langle\psi_i|) = 1\)</span>.</p>
+<p>Theorem 2: The sets <span class="arithmatex">\(|\tilde\psi\rangle\)</span> and <span class="arithmatex">\(|\tilde\phi\rangle\)</span> generate the same density matrix if and only if,</p>
+<div class="arithmatex">\[
+|\tilde\psi_i\rangle = \sum_j u_{ij} |\tilde\phi_j\rangle
+\]</div>
+<p>where <span class="arithmatex">\(u_{ij}\)</span> is a unitary matrix of complex numbers, with indices <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span>, and we 'pad' whichever set of vectors <span class="arithmatex">\(|\tilde\psi_i\rangle\)</span> or <span class="arithmatex">\(|\tilde\phi_j\rangle\)</span> is smaller with additional vectors <span class="arithmatex">\(0\)</span> so that the two sets have the same number of elements.</p>
+<p>As a consequence of the theorem, note that <span class="arithmatex">\(\rho = \sum_i p_i |\psi_i\rangle\langle\psi_i| = \sum_j q_j |\phi_j\rangle\langle\phi_j|\)</span> if and only if we have the following as true for some unitary matrix <span class="arithmatex">\(u_{ij}\)</span>.</p>
+<div class="arithmatex">\[
+\sqrt p_i |\psi_i\rangle = \sum_j u_{ij} \sqrt q_j |\phi_j\rangle
+\]</div>
+<p>Theorem 3: If <span class="arithmatex">\(\rho\)</span> is a density operator, then <span class="arithmatex">\(\rho\)</span> is a pure state if and only if <span class="arithmatex">\(tr(\rho^2) = 1\)</span> and mixed state if and only if <span class="arithmatex">\(tr(\rho^2) &lt; 1\)</span>.</p>
+<p>Theorem 4: Observable <span class="arithmatex">\(M\)</span> has expectation <span class="arithmatex">\(\sum_x \langle \psi_x|M|\psi_x\rangle = tr(M\rho)\)</span>.</p>
+<h3 id="reduced-density-operator">Reduced Density Operator</h3>
+<p>This is the single-most important application of density operator formulation is the existence of reduced density operator. It is defined as follows.</p>
+<div class="arithmatex">\[
+\rho_A = tr_B(\rho_{AB})
+\]</div>
+<p>This allows us to talk about sub-systems of a composite system.</p>
+<div class="arithmatex">\[
+tr_B(|a_1\rangle\langle a_2| \otimes |b_1\rangle\langle b_2|) = |a_1\rangle\langle a_2| tr(|b_1\rangle\langle b_2|)
+\]</div>
+<h3 id="schmidt-decomposition">Schmidt Decomposition</h3>
+<p>Suppose <span class="arithmatex">\(|\psi\rangle\)</span> is a pure state of a composite system, <span class="arithmatex">\(AB\)</span>. Then, there exists orthonormal states <span class="arithmatex">\(|i_A\rangle\)</span> for system <span class="arithmatex">\(A\)</span>, and orthonormal states <span class="arithmatex">\(|i_B\rangle\)</span> of system <span class="arithmatex">\(B\)</span> such that</p>
+<div class="arithmatex">\[
+|\psi\rangle = \sum_i \lambda_i |i_A\rangle |i_B\rangle
+\]</div>
+<p>where <span class="arithmatex">\(\lambda_i\)</span> are non-negative real numbers satisfying <span class="arithmatex">\(\sum_i \lambda_i^2 = 1\)</span> known as Schmidt co-efficients.</p>
+<h3 id="purification">Purification</h3>
+<p>Suppose we have a mixed state <span class="arithmatex">\(\rho_A\)</span> for a system <span class="arithmatex">\(A\)</span>. Then, we can introduce another system <span class="arithmatex">\(R\)</span> such that <span class="arithmatex">\(AR\)</span> forms a pure state <span class="arithmatex">\(|AR\rangle\)</span> and <span class="arithmatex">\(\rho_A = tr_R(|AR\rangle\langle AR|)\)</span>.</p>
+<p>Given  <span class="arithmatex">\(\rho_A = \sum_i p_i |i_A\rangle\langle i_A|\)</span>, we shall have the following where  <span class="arithmatex">\(|i_R\rangle\)</span> are orthonormal basis states.</p>
+<div class="arithmatex">\[
+|AR\rangle = \sum_i \sqrt{p_i}|i_A\rangle|i_R\rangle
+\]</div>
+<h2 id="bloch-sphere-and-rotations">Bloch Sphere and Rotations</h2>
+<p>We can represent any <span class="arithmatex">\(\rho\)</span>  (density matrix) as <span class="arithmatex">\(\frac 1 2 (I + \vec{r}\cdot\vec{\sigma})\)</span></p>
+<h3 id="single-qubit-operations">Single Qubit Operations</h3>
+<div class="arithmatex">\[
+e^{iAx} = cos(x) + isin(x)A
+\]</div>
+<p>Thus, <span class="arithmatex">\(R_x(\theta) = e^{i\theta X/2}\)</span>, <span class="arithmatex">\(R_y(\theta) = e^{i\theta Y/2}\)</span> and <span class="arithmatex">\(R_z(\theta) = e^{i\theta Z/2}\)</span>.</p>
+<div class="arithmatex">\[
+R_{\hat{n}}(\theta) = e^{i\theta \hat n\cdot\vec\sigma/2}
+\]</div>
+<p>In general, we have the above equation where <span class="arithmatex">\(\vec\sigma = X\hat i + Y\hat j + Z\hat k\)</span>.</p>
+<h3 id="some-algebra">Some Algebra</h3>
+<div class="arithmatex">\[
+X^2 = Y^2 = Z^2 = -iXYZ = I
+\]</div>
+<div class="arithmatex">\[
+R_{\hat n}(\alpha) = R_z(\phi)R_y(\theta)R_z(\alpha)R_y(-\theta)R_z(-\phi)\\
+= R_z(\phi)R_y(\theta)R_z(\alpha)R_y(\theta)^\dagger R_z(\phi)^\dagger
+\]</div>
+<h3 id="theorems">Theorems</h3>
+<ol>
+<li>Any arbitrary single qubit unitary operator can be written in the form <span class="arithmatex">\(U = e^{i\alpha}R_{\hat n}(\theta)\)</span>.</li>
+<li>Suppose <span class="arithmatex">\(U\)</span> is a unitary operation over a single qubit then <span class="arithmatex">\(\exists\ \alpha, \beta, \gamma, \delta\)</span> such that <span class="arithmatex">\(U = e^{i\alpha}R_{\hat n}(\beta)R_{\hat m}(\gamma)R_{\hat n}(\delta)\)</span>.</li>
+<li>There exists unitaries <span class="arithmatex">\(A, B, C\)</span> for any given unitary <span class="arithmatex">\(U\)</span> such that <span class="arithmatex">\(ABC = I\)</span> and <span class="arithmatex">\(U = e^{i\alpha} AXBXC\)</span>.</li>
+</ol>
+<h3 id="proof-that-bloch-sphere-unitaries-as-rotations">Proof that Bloch Sphere Unitaries as Rotations</h3>
+<p>A single qubit operator can be represented as <span class="arithmatex">\(U = a_0I + a_1X + a_2Y +a_3Z\)</span>.</p>
+<p>Also, such a unitary can also be represented this way,</p>
+<div class="arithmatex">\[
+U = \begin{bmatrix}
+a &amp; b\\
+c &amp; d
+\end{bmatrix}
+\]</div>
+<p>and thus, we obtain the following equivalences.</p>
+<div class="arithmatex">\[
+a_0 = (a+d)/2,\ a_1 = (b+c)/2,
+\]</div>
+<div class="arithmatex">\[
+a_2 = (c-b)/2i,\ a_3 = (d-a)/2
+\]</div>
+<p>Also from <span class="arithmatex">\(UU^\dagger = I\)</span> we get,</p>
+<div class="arithmatex">\[
+|a_0|^2 + |a_1|^2 + |a_2|^2 + |a_3|^2 = 1
+\]</div>
+<div class="arithmatex">\[
+a^∗_0a_1+a^∗_1a_0+ia^∗_2a_3−ia^∗_3a_2 = 0
+\]</div>
+<div class="arithmatex">\[
+a^∗_0a_2−ia^∗_1a_3+a^∗_2a_0+ia^∗_3a_1 = 0
+\]</div>
+<div class="arithmatex">\[
+a^∗_0a_3+ia^∗_1a_2−ia^∗_2a_1+a^∗_3a_0 = 0
+\]</div>
+<p>where we define <span class="arithmatex">\(|a_0| = cos(\theta/2)\)</span> then <span class="arithmatex">\(|a_1|^2 + |a_2|^2 + |a_3|^2 = |sin(\theta/2)|\)</span>.</p>
+<p>Then define,</p>
+<div class="arithmatex">\[
+n_x = |a_1|/|sin(\theta/2)|
+\]</div>
+<div class="arithmatex">\[
+n_y = |a_2|/|sin(\theta/2)|
+\]</div>
+<div class="arithmatex">\[
+n_z = |a_3|/|sin(\theta/2)|
+\]</div>
+<p>and further we get <span class="arithmatex">\(n_x^2 + n_y^2 + n_z^2 = 1\)</span>.</p>
+<p>Now, we define <span class="arithmatex">\(exp(iα) =a_0/cos(θ/2)\)</span> and denote the phase of <span class="arithmatex">\(a_1,a_2,a_3\)</span> as <span class="arithmatex">\(α_1,α_2,α_3\)</span> respectively.</p>
+<p>By putting these in the other constraints we get, <span class="arithmatex">\(α_1=α_2=α_3=α−π/2\)</span>.</p>
+<div class="arithmatex">\[
+a_0 = e^{i\alpha}cos(\theta/2),
+\]</div>
+<div class="arithmatex">\[
+a_1 = -ie^{i\alpha}sin(\theta/2)n_x,
+\]</div>
+<div class="arithmatex">\[
+a_2 = -ie^{i\alpha}sin(\theta/2)n_y,
+\]</div>
+<div class="arithmatex">\[
+a_3 = -ie^{i\alpha}sin(\theta/2)n_z
+\]</div>
+<div class="arithmatex">\[
+U= e^{iα}(\cos(\frac{θ}{2})I − i\sin(\frac{\theta}{2})(n_xX+n_yY+n_zZ))= e^{iα}R_{\hat n}(θ)
+\]</div>
               
             </div>
           </div><footer>
