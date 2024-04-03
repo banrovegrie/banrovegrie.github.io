@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://banrovegrie.github.io/research/linear-algebra/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Adiabatic Quantum Computing - Alapan Chaudhuri</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Adiabatic Quantum Computing";
+        var mkdocs_page_input_path = "research/linear-algebra.md";
+        var mkdocs_page_url = "/research/linear-algebra/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Alapan Chaudhuri
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../weblog/">Weblog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reading-list/">Reading List</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Writings</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/on-composition/">On Composition</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/search-for-meaning/">Search for Meaning</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/on-problem-solving/">On Problem Solving</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/kotobaro-bhebechhinu/">Kotobaro Bhebechhinu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/sanskrit/">Random Sanskrit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/reality-of-fiction/">Reality of Fiction</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Research</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Adiabatic Quantum Computing</a>
+    <ul class="current">
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Alapan Chaudhuri</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Research</li>
+      <li class="breadcrumb-item active">Adiabatic Quantum Computing</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="linear-operators-and-matrices">Linear Operators and Matrices</h2>
+<div class="arithmatex">\[
+A (\Sigma a_i |v_i\rangle) = \Sigma a_iA|v_i\rangle
+\]</div>
+<p>Now, see a linear operator is just a matrix. Suppose <span class="arithmatex">\(A: V \to W\)</span> and <span class="arithmatex">\(|v_1\rangle, |v_2\rangle, ..., |v_m\rangle\)</span> are basis of <span class="arithmatex">\(V\)</span> and <span class="arithmatex">\(|w_1\rangle, |w_2\rangle, ..., |w_n\rangle\)</span> is a basis of <span class="arithmatex">\(W\)</span> then,</p>
+<div class="arithmatex">\[
+A|v_j\rangle = \Sigma_i A_{ij}|w_i\rangle 
+\]</div>
+<h2 id="inner-products">Inner Products</h2>
+<p>Ok so imagine an operation <span class="arithmatex">\((\_ ,\_): V\times V \to \mathbb{C}\)</span> such that the following shit holds ok?</p>
+<ol>
+<li><span class="arithmatex">\((|v\rangle, \Sigma_i \lambda_i|w_i\rangle) = \Sigma_i\lambda_i(|v\rangle, |w_i\rangle)\)</span></li>
+<li><span class="arithmatex">\((|v\rangle, |w\rangle) = (|w\rangle, |v\rangle)^*\)</span></li>
+<li><span class="arithmatex">\((|v\rangle, |v\rangle) \geq 0\)</span> and <span class="arithmatex">\(= 0\)</span>  iff <span class="arithmatex">\(|v\rangle\)</span></li>
+</ol>
+<p>In finite dimensions, inner product space i.e., vector spaces equipped with inner prducts for all <span class="arithmatex">\(|v\rangle \in\)</span>  vector space <span class="arithmatex">\(=\)</span>  Hilbert Space</p>
+<p>Consider <span class="arithmatex">\(|i\rangle\ \&amp;\ |j\rangle\)</span> to be orthonormal basis, we have —</p>
+<div class="arithmatex">\[
+\langle v|w \rangle = (\Sigma_i v_i|i\rangle, \Sigma_jw_j|j\rangle) = \Sigma_i \Sigma_j v_i^*w_j\delta_{ij} = \Sigma_iv_i^*w_i = |v\rangle^\dagger |w\rangle
+\]</div>
+<h2 id="norm-of-a-vector">Norm of a vector</h2>
+<div class="arithmatex">\[
+||v|| = \sqrt{\langle v|v \rangle}
+\]</div>
+<p>We can say that <span class="arithmatex">\(|v\rangle\)</span> is normalized iff <span class="arithmatex">\(||v|| = 1\)</span>. </p>
+<p>A set of <span class="arithmatex">\(|a_i\rangle\)</span> vectors is orthonormal if <span class="arithmatex">\(\langle a_i|a_j \rangle = \delta_{ij}\)</span> i.e., <span class="arithmatex">\(\forall\ i \neq j\ \langle a_i|a_j \rangle = 0\)</span> and <span class="arithmatex">\(\langle a_i|a_j \rangle = 1\ \forall\ i=j\)</span>.</p>
+<h2 id="gram-schmidt-for-orthonormal-basis">Gram Schmidt: for orthonormal basis</h2>
+<div class="arithmatex">\[
+|v_{k+1}\rangle =  \frac{|w_{k+1}\rangle - \Sigma_{i=1}^k \langle v_i | w_{k+1}\rangle |v_i\rangle}{|||w_{k+1}\rangle - \Sigma_{i=1}^k \langle v_i | w_{k+1}\rangle |v_i\rangle||},\ 
+|v_1\rangle = |w_1\rangle/|||w_1 \rangle||
+\]</div>
+<h2 id="outer-product">Outer Product</h2>
+<div class="arithmatex">\[
+|w\rangle \langle v|(|v'\rangle) = |w\rangle |v\rangle^\dagger |v'\rangle = |w\rangle \langle v|v' \rangle = \langle v|v' \rangle |w\rangle 
+\]</div>
+<ul>
+<li>From this notion we obtain the completeness relation, <span class="arithmatex">\(\Sigma_i |i\rangle \langle i| = I\)</span>.</li>
+<li><span class="arithmatex">\(A = I_wAI_v = \Sigma_{ij} |w_j\rangle\langle w_j|A|v_i\rangle\langle v_i| = \Sigma_{ij} \langle w_j|A|v_i\rangle|w_j\rangle\langle v_i|\)</span></li>
+<li>Cauchy Schwarz: <span class="arithmatex">\(\langle v|v \rangle \langle w|w \rangle \geq \langle v|w \rangle \langle w|v \rangle = |\langle v|w \rangle|^2\)</span></li>
+</ul>
+<h2 id="hilbert-space">Hilbert Space</h2>
+<p>A Hilbert Space <span class="arithmatex">\(\mathcal{H}\)</span> is complete which means that every Cauchy sequence of vectors admits in the space itself. Under this hypothesis there exist Hilbert bases also known as complete orthonormal systems of vectors in <span class="arithmatex">\(\mathcal{H}\)</span>.</p>
+<p>For any orthonormal basis of <span class="arithmatex">\(\mathcal{H}\)</span>, we have the following.</p>
+<div class="arithmatex">\[
+\text{Orthonormality} \equiv\langle \psi_i|\psi_j\rangle = \delta_{ij}\\
+\text{Completeness} \equiv\sum_{i} |\psi_i\rangle\langle\psi_i| = I
+\]</div>
+<h2 id="eigenvectors-and-eigenvalues">Eigenvectors and Eigenvalues</h2>
+<p>Under a given linear transformation <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(A|v\rangle = \lambda|v\rangle\)</span>  where <span class="arithmatex">\(\exists\ |v\rangle\)</span>  s.t. they do not get shifted off their span.</p>
+<p>All such vectors are referred as eigenvectors and <span class="arithmatex">\((A - \lambda I)|v\rangle = 0 \implies det|A-\lambda I| = 0\)</span> gives all possible eigenvalue.</p>
+<p>If all <span class="arithmatex">\(λ_i ≥ 0\)</span>, it is positive semidefinite and if they are <span class="arithmatex">\(&gt; 0\)</span>, it is positive definite.</p>
+<h2 id="eigenspace">Eigenspace</h2>
+<p>It is the space of all vectors with a given eigenvalue <span class="arithmatex">\(\lambda\)</span>. When an eigenspace is more than one dimensional, we call it degenerate.</p>
+<h2 id="adjoints-and-hermitian">Adjoints and Hermitian</h2>
+<p>Suppose <span class="arithmatex">\(A: V \to V\)</span> then <span class="arithmatex">\(\exists\ A^\dagger: V \to V\)</span> such that <span class="arithmatex">\(\forall\ \vert v\rangle,\ \vert w\rangle \in V\)</span> we have,</p>
+<div class="arithmatex">\[
+(\vert v\rangle, A\vert w\rangle) = (A^\dagger \vert v\rangle, \vert w\rangle)
+\]</div>
+<p>This operator is called as the adjoint or Hermitian conjugate of the operator <span class="arithmatex">\(A\)</span>.</p>
+<div class="arithmatex">\[
+(\vert v\rangle, A\vert w\rangle) = \langle v\vert A\vert w\rangle = \bold{v}^\dagger A\bold{w} = (A^\dagger\bold{v})^\dagger\bold{w} = (A^\dagger\vert v\rangle, \vert w\rangle)
+\]</div>
+<ul>
+<li>We have, <span class="arithmatex">\((AB)^\dagger = B^\dagger A^\dagger\)</span></li>
+<li><span class="arithmatex">\(\vert v\rangle^\dagger = \langle v\vert\)</span></li>
+</ul>
+<h3 id="some-defintions">Some defintions</h3>
+<ul>
+<li>Normal matrices: <span class="arithmatex">\(AA^\dagger = A^\dagger A\)</span></li>
+<li>Hermitian matrices: <span class="arithmatex">\(A^\dagger = A\)</span></li>
+<li>Unitary matrices: <span class="arithmatex">\(AA^\dagger = I\)</span></li>
+<li>A normal matrix is Hermitian if and only if it has real eigenvalues.</li>
+<li>If <span class="arithmatex">\(\langle x| A|x\rangle \geq 0, \forall\ |x\rangle\)</span> then <span class="arithmatex">\(A\)</span> is positive semi-definite and has positive eigenvalues.</li>
+</ul>
+<h3 id="some-properties">Some properties</h3>
+<ul>
+<li>If a Hermitian matrix has positive eigenvalues then it is positive semi-definite.</li>
+<li>If <span class="arithmatex">\(M = AA^\dagger\)</span> then it is both Hermitian and positive semi-definite.</li>
+<li>All positive semi-definite operators are Hermitian, by definition.</li>
+</ul>
+<h2 id="spectral-decomposition">Spectral Decomposition</h2>
+<p>Definition: A linear operator is <em>diagonalizable</em> if and only if it is <em>normal</em>.</p>
+<p>Some notes and derivation regarding the above:</p>
+<p><span class="arithmatex">\(A\vec{v} = \lambda\vec{v} = \Sigma_i \lambda_{ij}\vec{q_i}\)</span>  where <span class="arithmatex">\(q_i\)</span>'s are linearly independent eigenvalues of <span class="arithmatex">\(A\)</span>.</p>
+<p><span class="arithmatex">\(AQ = Q\Lambda\)</span> where <span class="arithmatex">\(Q = 
+\begin{bmatrix}
+    q_1&amp;q_2 &amp;\ldots&amp;q_n
+\end{bmatrix}
+\implies A = Q{\Lambda}Q^{-1}\)</span>  </p>
+<p><span class="arithmatex">\(A = IAI = (P+Q)A(P+Q) = PAP + QAP + PAQ + QAQ\\ \implies A = \lambda{P^2} + 0 + 0 + QAQ\\ \implies A = \lambda{P^2} + QAQ\)</span></p>
+<h2 id="matrices-and-vectors">Matrices and Vectors</h2>
+<p>In the following statements we are dealing with <span class="arithmatex">\(\{\vert i\rangle\}\)</span>  as a <strong><em>orthonormal</em></strong> basis set.</p>
+<p>$$
+I = \Sigma \vert i\rangle\langle i\vert\
+\vert \psi \rangle = \Sigma \sigma_i\vert i\rangle, \text{ where } \sigma_i = \langle i\vert \psi\rangle\</p>
+<p>$$</p>
+<p>Now, to represent a operator or linear transformation as matrix in orthonormal basis.</p>
+<div class="arithmatex">\[
+A_{ij} = \langle i\vert A\vert j\rangle\\
+A = \Sigma_{i, j} \langle i\vert A\vert j\rangle \vert i\rangle \langle j\vert\\
+\text{tr}(A) = \Sigma_i \langle i\vert A\vert i\rangle
+\]</div>
+<p>Now diagonalization for any <strong><em>normal</em></strong> matrix.</p>
+<div class="arithmatex">\[
+M = \Sigma_i \lambda_i \vert i\rangle \langle i\vert = \Sigma_i \lambda_i P_i,\ \text{where}\ P_i^\dagger = P_i\\
+f(M) = \Sigma_i f(\lambda_i) \vert i\rangle \langle i\vert
+\]</div>
+<p>where <span class="arithmatex">\(\lambda_i\)</span> are eigenvalues of <span class="arithmatex">\(M\)</span> under a given orthonormal basis set <span class="arithmatex">\(\{\vert i\rangle\}\)</span> for vector space <span class="arithmatex">\(V\)</span>, each <span class="arithmatex">\(\vert i \rangle\)</span> is an eigenvector of <span class="arithmatex">\(M\)</span> with eigenvalue <span class="arithmatex">\(\lambda_i\)</span>.</p>
+<p>If <span class="arithmatex">\(M\)</span> is <strong><em>Hermitian</em></strong>, all eigenvalues <span class="arithmatex">\((\lambda_i\text{ s})\)</span> are real.</p>
+<h2 id="tensor-products">Tensor Products</h2>
+<p>!https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7538ea71-cb44-436e-8407-9e45edd5bcc4/Untitled.png</p>
+<ul>
+<li><span class="arithmatex">\(z\vert{vw}\rangle = (z\vert{v}\rangle) \otimes (\vert{w}\rangle) =(\vert{v}\rangle) \otimes (z\vert{w}\rangle)\)</span></li>
+<li><span class="arithmatex">\((\vert v_1 \rangle + \vert v_2 \rangle) \otimes \vert w \rangle = \vert{v_1w}\rangle + \vert{v_2w}\rangle\)</span></li>
+<li><span class="arithmatex">\(\vert v \rangle \otimes (\vert w_1 \rangle + \vert w_2 \rangle) = \vert{vw_1}\rangle + \vert{vw_2}\rangle\)</span></li>
+<li><span class="arithmatex">\(\vert \psi \rangle^{\otimes^k} = \vert \psi \rangle \otimes \ldots \otimes \vert \psi \rangle \text{ k times}\)</span></li>
+<li><span class="arithmatex">\((A \otimes B)^\dagger = A^\dagger \otimes B^\dagger\)</span></li>
+</ul>
+<h3 id="linear-product">Linear Product</h3>
+<p><span class="arithmatex">\(A\otimes{B}\)</span> forms the linear operator that acts on <span class="arithmatex">\(V\otimes W\)</span> vector space givern that <span class="arithmatex">\(A\)</span> acts on <span class="arithmatex">\(V\)</span> and <span class="arithmatex">\(B\)</span> acts on <span class="arithmatex">\(W\)</span>.</p>
+<div class="arithmatex">\[
+(A\otimes B)(\Sigma_{i} a_i\vert v_i\rangle \otimes \vert w_i \rangle) = \Sigma_{i} a_iA\vert v_i\rangle \otimes B\vert w_i \rangle
+\]</div>
+<h3 id="inner-product">Inner Product</h3>
+<div class="arithmatex">\[
+(\Sigma_{i} a_i\vert v_i\rangle \otimes \vert w_i \rangle, \Sigma_{i} a_j\vert v'_j\rangle \otimes \vert w'_j \rangle) = \Sigma_{ij} a_i^*b_j \langle v_i\vert v'_j\rangle\langle w_i\vert w'_j\rangle
+\]</div>
+<h2 id="trace">Trace</h2>
+<p>Properties of trace are given below as follows.</p>
+<ul>
+<li><span class="arithmatex">\(\text{tr}(A) = \Sigma_i A_{ii}\)</span></li>
+<li><span class="arithmatex">\(\text{tr}(A) = \Sigma_i \langle i\vert A\vert i\rangle\)</span> for orthonormal basis</li>
+<li><span class="arithmatex">\(\text{tr}(AB) = \text{tr}(BA)\)</span></li>
+<li><span class="arithmatex">\(\text{tr}(zA+B) = z\cdot \text{tr}(A) + \text{tr}(B)\)</span></li>
+</ul>
+<p>The above properties yield certain implications as follows.</p>
+<ul>
+<li><span class="arithmatex">\(\text{tr}(UAU^\dagger) = tr(A)\)</span></li>
+<li><span class="arithmatex">\(\text{tr}(A\vert \psi\rangle\langle\psi\vert) = \Sigma_i \langle i\vert A\vert \psi\rangle\langle\psi\vert i \rangle\)</span></li>
+<li><span class="arithmatex">\(\text{tr}(A) = \sum_i \lambda_i\)</span>, <span class="arithmatex">\(\text{det}(A) = \prod_i \lambda_i\)</span> with algebraic multiplicities</li>
+</ul>
+<div class="arithmatex">\[
+||A|| = \sqrt{tr (A^\dagger A)}
+\]</div>
+<h2 id="partial-trace">Partial Trace</h2>
+<p>Entanglement excludes the possibility of associating state vectors with individual subsystems. Therefore, we introduce density matrices and the corresponding idea of reduction preformed with partial trace.</p>
+<div class="arithmatex">\[
+\text{tr}(A \otimes B) = \text{ tr}(A) \cdot \text{tr}(B)
+\]</div>
+<div class="arithmatex">\[
+\rho_{AB} : \mathcal{H_A}\otimes\mathcal{H_B} \xrightarrow{\text{ tr}_B} \rho_A : \mathcal{H_A}
+\]</div>
+<div class="arithmatex">\[
+\text{ tr}_B(AB) = A \text{ tr}(B)
+\]</div>
+<h2 id="hilbert-schimdt-inner-product">Hilbert-Schimdt Inner Product</h2>
+<p><span class="arithmatex">\(L_v\)</span> forms the vector space of operators over the Hilbert space <span class="arithmatex">\(V\)</span>. Then, we can show that <span class="arithmatex">\(L_v\)</span>  is also a Hilbert space with ****<span class="arithmatex">\(\text{tr}(A^\dagger B)\)</span> as the inner product operator on <span class="arithmatex">\(L_v \times L_v\)</span>.</p>
+<p>Also, we have <span class="arithmatex">\(div(L_v) = dim(V)^2\)</span>.</p>
+<h2 id="commutator-and-anti-commutator">Commutator and Anti-commutator</h2>
+<div class="arithmatex">\[
+[A, B] = AB - BA\\
+\{A, B\} = AB + BA
+\]</div>
+<h2 id="theorem-of-simultaneous-diagonalization">Theorem of Simultaneous Diagonalization</h2>
+<p>Suppose <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are both Hermitian matrices, then <span class="arithmatex">\([A, B] = 0\)</span> iff <span class="arithmatex">\(\exists\)</span> orthonormal basis such that both <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are diagonal with respect to that basis.</p>
+<h2 id="polar-value-decomposition">Polar Value Decomposition</h2>
+<p>If <span class="arithmatex">\(A\)</span> is any linear operator and <span class="arithmatex">\(U\)</span> is a unitary then <span class="arithmatex">\(J, K\)</span> are positive operators, such that</p>
+<div class="arithmatex">\[
+A = UJ = KU, \text{ where } J = \sqrt{A^\dagger A} \text{ and } K = \sqrt{AA^\dagger}
+\]</div>
+<p>Moreover, if <span class="arithmatex">\(A^{-1}\)</span> exists, then <span class="arithmatex">\(U\)</span> is unique.</p>
+<h2 id="singular-value-decomposition">Singular Value Decomposition</h2>
+<p><img alt="Untitled" src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b85a945d-d3b1-43b3-a851-821d666e76ef/Untitled.png" /></p>
+<p>SVD in general is given as follows. </p>
+<p>$$
+{U\Sigma V^{T}}</p>
+<p>$$</p>
+<p>It generalizes the <a href="https://en.wikipedia.org/wiki/Eigendecomposition">eigen decomposition</a> of a square <a href="https://en.wikipedia.org/wiki/Normal_matrix">normal matrix</a> with an orthonormal eigen basis to any <span class="arithmatex">\(m\times n\)</span> matrix.</p>
+<p><span class="arithmatex">\({\Sigma}\)</span> is an <span class="arithmatex">\({m\times n}\)</span> <a href="https://en.wikipedia.org/wiki/Rectangular_diagonal_matrix">rectangular diagonal matrix</a> with non-negative real numbers on the diagonal (called singular values).</p>
+<p>Corollary: If <span class="arithmatex">\(A\)</span> is a square matrix and <span class="arithmatex">\(\exists\ U, V\)</span> unitaries then <span class="arithmatex">\(D\)</span> is a diagonal matrix, such that</p>
+<div class="arithmatex">\[
+A = UDV
+\]</div>
+<p>where <span class="arithmatex">\(D\)</span> has non-negative values.</p>
+<p>Corollary: If <span class="arithmatex">\(A\)</span> has non-negative eigenvalues then, <span class="arithmatex">\(A = U^\dagger DU\)</span> is possible where <span class="arithmatex">\(D\)</span> has non-negative values.</p>
+<ul>
+<li>If <span class="arithmatex">\(A\)</span> is square both SVD and EVD exist but might not be same.</li>
+<li>If <span class="arithmatex">\(A\)</span> is a square symmetric matrix both SVD and EVD exist and are equivalent.</li>
+<li>If <span class="arithmatex">\(A\)</span> is non-square only SVD is possible.</li>
+</ul>
+<h2 id="rank-of-a-matrix">Rank of a matrix</h2>
+<p>Rank <span class="arithmatex">\(=\)</span> number of dimensions in column space.</p>
+<ul>
+<li>The row rank is the largest number of rows of <span class="arithmatex">\(A\)</span> that constitute a linearly independent set.</li>
+<li>The column rank is the largest number of columns of <span class="arithmatex">\(A\)</span> that constitute a linearly independent set. Moreover, column-rank <span class="arithmatex">\(=\)</span>  row-rank for <span class="arithmatex">\(A \in \mathbb{R}^{m \times n}\)</span>.</li>
+</ul>
+<div class="arithmatex">\[
+rank(A \in \mathbb{R}^{m \times n}) \leq min(m, n)
+\]</div>
+<p>Matrix is called full rank if equality holds.</p>
+<ul>
+<li><span class="arithmatex">\(rank(A^T) = rank(A)\)</span></li>
+<li><span class="arithmatex">\(rank(AB) ≤ min(rank(A), rank(B))\)</span></li>
+<li><span class="arithmatex">\(rank(A + B) ≤ rank(A) + rank(B)\)</span></li>
+</ul>
+<h2 id="projection-and-spaces">Projection and Spaces</h2>
+<div class="arithmatex">\[
+Proj(y ; A) = argmin_{v ∈R(A)} ||v − y||_2 = A(A^T A)^{−1} A^T y
+\]</div>
+<ul>
+<li><span class="arithmatex">\(\mathcal{N} (A) = \{x ∈ \mathbb R^n : Ax = 0\}\)</span> denotes all vectors in <span class="arithmatex">\(\mathbb R^n\)</span> that land at the origin after transformation. It is also called kernel.</li>
+<li><span class="arithmatex">\(\mathcal R(A) = \{v ∈ \mathbb R^m : v = Ax,~x ∈ \mathbb R^n \}\)</span> denotes the space spanned by the transformed basis vectors in <span class="arithmatex">\(\mathbb R^n\)</span>.</li>
+<li><span class="arithmatex">\(\mathcal R(A^T)\)</span> and <span class="arithmatex">\(\mathcal N (A)\)</span> are orthogonal spaces which together span <span class="arithmatex">\(\mathbb R^n\)</span>.</li>
+</ul>
+<p>Determinant <span class="arithmatex">\(\neq 0\)</span> implies that the matrix has an inverse.</p>
+<h2 id="quadratic-forms">Quadratic Forms</h2>
+<p>Reminder: we are in real <span class="arithmatex">\(\mathbb R\)</span> space.</p>
+<div class="arithmatex">\[
+x^TAx = (x^TAx)^T = x^T(\frac 1 2 A + \frac 1 2 A^T)x
+\]</div>
+<h2 id="moore-penrose-pseudoinverse">Moore-Penrose Pseudoinverse</h2>
+<div class="arithmatex">\[
+A^{\text{left inv}} = (A^\dagger A)^{-1}A^\dagger
+\]</div>
+<div class="arithmatex">\[
+A^{\text{right inv}} = A^\dagger(AA^\dagger)^{-1}
+\]</div>
+<p>This is a pseudo inverse formalism with left and right inverses.</p>
+<div class="arithmatex">\[
+A^{\text{left inv}}A = I\\
+AA^{\text{right inv}} = I
+\]</div>
+<h2 id="row-echelon-forms">Row Echelon Forms</h2>
+<p>A matrix is in row echelon form if:</p>
+<ul>
+<li>All rows consisting of only zeroes are at the bottom.</li>
+<li>The leading coefficient (also called the pivot) of a nonzero row is always strictly to the right of the leading coefficient of the row above it.</li>
+</ul>
+<p>A matrix is in reduced row echelon form if:</p>
+<ul>
+<li>It is in row echelon form.</li>
+<li>The leading entry in each nonzero row is a 1 (called a leading 1).</li>
+<li>Each column containing a leading 1 has zeros in all its other entries.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../src/reality-of-fiction/" class="btn btn-neutral float-left" title="Reality of Fiction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../src/reality-of-fiction/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../javascripts/config.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
