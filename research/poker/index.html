@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://banrovegrie.github.io/research/poker/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Poker - Alapan Chaudhuri</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Poker";
+        var mkdocs_page_input_path = "research/poker.md";
+        var mkdocs_page_url = "/research/poker/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Alapan Chaudhuri
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../weblog/">Weblog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reading-list/">Reading List</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Writings</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/on-composition/">On Composition</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/search-for-meaning/">Search for Meaning</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/on-problem-solving/">On Problem Solving</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/kotobaro-bhebechhinu/">Kotobaro Bhebechhinu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/sanskrit/">Random Sanskrit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/reality-of-fiction/">Reality of Fiction</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Research</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quantum-theory/">Quantum Theory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../quantum-channels/">Quantum Channels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linear-algebra/">Linear Algebra</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../music-theory/">Music Theory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../multi-variate/">Multivariate Calculus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../millennium/">What gets you a million dollars?</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../psdp/">PSDP Problem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../haskell/">Haskell in Harsh Words</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Alapan Chaudhuri</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Poker</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="basic-strategy">Basic Strategy</h2>
+<p><img style="width:60%;" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fee3ae0a1-a5be-41e5-a405-d24157dc4da8%2FPoker_Chart.png?table=block&id=11adec29-af0e-4144-866f-db848021934c&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<p><img style="width:60%;" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fb9bb0c17-aefa-4695-bba0-6b9f1ebd6377%2FUntitled.png?table=block&id=c07d5541-db80-4695-a120-4a9101f206c0&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<p><img style="width:60%;" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F36f57b6c-599d-414f-b11e-4b764423467b%2FUntitled.png?table=block&id=b7125c74-7a6c-4521-9ad9-9d3d105860bb&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<p>When you have <span class="arithmatex">\(\leq 12\text{BB}\)</span> in tournament or in general low stack, you should ideally try to shove it soon sometime and play more often.</p>
+<ul>
+<li>Odds <span class="arithmatex">\(= \text{reward}:\text{risk}\)</span></li>
+<li>Pot odds percentage <span class="arithmatex">\(=\)</span> <span class="arithmatex">\(\frac{\text{your bet}}{\text{final pot value}} \times 100\% = \frac{\text{risk}}{\text{risk + reward}} \times 100\%\)</span></li>
+<li>Final pot value <span class="arithmatex">\(=\)</span> pot value after you bet</li>
+<li>Call when your hand equity <span class="arithmatex">\(&gt;\)</span> pod odds percentage</li>
+<li>Equity = Outs <span class="arithmatex">\(\times\)</span> 4 (if both turn and river are left to be seen)</li>
+<li>Equity = (Outs <span class="arithmatex">\(\times\)</span> 4) <span class="arithmatex">\(-\)</span> (Outs <span class="arithmatex">\(-\)</span> 8) (if both turn and river are left to be seen)</li>
+<li>Equity = Outs <span class="arithmatex">\(\times\)</span> 2 (if only river is left to be seen)</li>
+</ul>
+<pre><code>Don’t tilt
+Be TAG
+Be unpredictable
+</code></pre>
+<pre><code>Pairs aren’t worth much
+Shove only when strongest
+Look for straights or flushes of opponents
+</code></pre>
+<p><strong>Note:</strong> First in bluff is often something to use and watch out for.</p>
+<ul>
+<li>In Heads up, 70% of the time the flop misses both players. So, whoever bets first has a big advantage.</li>
+<li>Even mutiway, if no body takes interest, the first aggresor wins.</li>
+<li>People often C-Bet no matter the flop.</li>
+</ul>
+<h2 id="handy-outs-table">Handy Outs Table</h2>
+<table>
+<thead>
+<tr>
+<th>Number of outs</th>
+<th>Drawing Hand</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>2 pair + needing a full house + inside straight draw</td>
+</tr>
+<tr>
+<td>6</td>
+<td>2 overcards needing to make a pair</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Open ended straight draw</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Flush draw</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Flush draw plus a pair needing to improve to trips</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Flush draw plus inside straight draw</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Flush draw plus open ended straight draw</td>
+</tr>
+</tbody>
+</table>
+<p><strong>14 outs</strong>: makes you even money against a better hand (DO NOT FOLD). Ans you will always be getting better than even pot odds from any bet (can go ALL IN).</p>
+<p><strong>Expressed odds</strong>: the odds of completing a hand based on the current pot size and the cost of calling a bet.</p>
+<p><strong>Implied odds</strong>: take into account the potential future bets that may occur if you hit your hand. In general, implied odds tend to be more important in no limit hold'em than expressed odds, since there is no limit to how much players can bet.</p>
+<h2 id="range-and-hand-decisions">Range and Hand Decisions</h2>
+<p><strong>Premium Hand</strong>: AA, KK, QQ, AK</p>
+<p><strong>Solid Hands</strong>: JJ, TT, 99, 88, 77, AQs, AJs</p>
+<p><strong>Speculative Hands</strong>: Smaller pairs (22+), suited aces (A2s+), suited connectors (78s, 9Ts)</p>
+<table>
+<thead>
+<tr>
+<th>Opening</th>
+<th>Big pairs or QQ+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raise</td>
+<td>3BB</td>
+</tr>
+<tr>
+<td>Re-raises</td>
+<td>3x the previous bet</td>
+</tr>
+<tr>
+<td>Note</td>
+<td>JJ is mostly not considered</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Opening</th>
+<th>Small pairs or 22+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weak game</td>
+<td>Play (max one raise)</td>
+</tr>
+<tr>
+<td>Strong game</td>
+<td>Don’t play</td>
+</tr>
+<tr>
+<td>Warning</td>
+<td>Negative implied odds in super deep stack games</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Opening</th>
+<th>Medium pairs or 66+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raise</td>
+<td>3BB</td>
+</tr>
+<tr>
+<td>Re-raises</td>
+<td>&gt; 4-bet FOLD</td>
+</tr>
+<tr>
+<td>Call</td>
+<td>50% - 80% (depending on position)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Opening</th>
+<th>AK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Short stack</td>
+<td>Plays great</td>
+</tr>
+<tr>
+<td>Deep stack</td>
+<td>Drawing hand</td>
+</tr>
+<tr>
+<td>Against a pair</td>
+<td>Just &lt; 50% (22 to QQ), but against AA 7% and against KK 30%</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Having suited cards only increases your chances of winning by 2% to 3%.</li>
+<li>Remember people have 1 in 17 chances of having pocket pairs, so if there are &gt; 8 people on the table you have 50% chance of playing against a pocket pair.</li>
+<li>While choosing hands to open with, don’t be results oriented since a good decision can look bad.</li>
+<li>AK is hard to play after flop. Best that you go all-in when playing short stack cash games.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Describe a Hand</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stack sizes</td>
+<td>Table image</td>
+<td>Recent activity</td>
+<td>Position</td>
+</tr>
+<tr>
+<td>Cards</td>
+<td>Thought process</td>
+<td>Action</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>AQ <span class="arithmatex">\(\ll\)</span> AK.</li>
+<li>A2-AJ are highly overrated.</li>
+</ul>
+<p><strong>Trouble Hands</strong>: KQ, KJ, KT, QJ, QT etc. are called pretty looking </p>
+<ul>
+<li>If someone represents a top 10% hand &gt; 20% of the time, you know they are bluffing &gt; 50% of the time.</li>
+<li>If you ever get 3-bet with the trouble hands, say bye bye.</li>
+</ul>
+<p><strong>Suited Connectors</strong>: not good for short stack games but they can be played well as disguised hands (better played in multi-way scenarios)</p>
+<ul>
+<li>Don’t play GTO poker 15%-20% of the time.</li>
+</ul>
+<h2 id="charts">Charts</h2>
+<table>
+<thead>
+<tr>
+<th>SPR</th>
+<th>SPR Size</th>
+<th>Hands to Commit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low</td>
+<td>0 to 2</td>
+<td>Over Pair, Top Pair, Bottom 2 Pair</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>3 to 6</td>
+<td>Top 2 Pair, Non-nutted flushes and strights</td>
+</tr>
+<tr>
+<td>High</td>
+<td>7+</td>
+<td>Sets and Nutted Hands</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Drawing Hand</th>
+<th>Flop not all-in &amp; Turn equity</th>
+<th>Bet Sizing</th>
+<th>Pot Odds offered</th>
+<th>All-in case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flush + Open-ended SD</td>
+<td>33%</td>
+<td>Slightly over pot +</td>
+<td>&gt; 33%</td>
+<td>&gt; 60%</td>
+</tr>
+<tr>
+<td>Flush + Gut-shot SD</td>
+<td>25%</td>
+<td>2/3 pot +</td>
+<td>&gt; 28.5%</td>
+<td>&gt; 45%</td>
+</tr>
+<tr>
+<td>Flush</td>
+<td>19%</td>
+<td>1/2 pot +</td>
+<td>&gt; 25%</td>
+<td>&gt; 33%</td>
+</tr>
+<tr>
+<td>Open-ended SD</td>
+<td>17%</td>
+<td>1/3 pot +</td>
+<td>&gt; 25%</td>
+<td>34%</td>
+</tr>
+<tr>
+<td>Over Cards + 2-Pair Draw</td>
+<td>13%</td>
+<td>1/4 pot +</td>
+<td>&gt; 25%</td>
+<td>26%</td>
+</tr>
+<tr>
+<td>Gut-shot straight draw</td>
+<td>8%</td>
+<td>1/4 pot +</td>
+<td>&gt; 25%</td>
+<td>16%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="poker-terminology">Poker Terminology</h2>
+<p><strong>Ante</strong>: a stake put up by a player in poker before receiving cards.</p>
+<p><strong>Effective stack</strong>: maximum amount of chips you can loose in a round</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Aggressive (Bets Often)</th>
+<th>Passive (Bets Infrequently)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tight (Calls Seldom)</td>
+<td>TAG</td>
+<td>TP "Weak"</td>
+</tr>
+<tr>
+<td>Loose (Calls Often)</td>
+<td>LAG</td>
+<td>Calling Machine</td>
+</tr>
+</tbody>
+</table>
+<p>Now, if you are not aggressive it is very highly likely that you will loose. Be aggressive no matter if you are tight or loose.</p>
+<h2 id="strategy-for-pokerbaazi">Strategy for Pokerbaazi</h2>
+<ol>
+<li>Don’t bluff at higher stakes more than a very low freuquency.</li>
+<li>Playing style:<ul>
+<li>play loose or tight depending on table</li>
+<li>try to be aggresive</li>
+<li>lure but do not slowplay</li>
+</ul>
+</li>
+<li>Probability of getting beaten by a fullhouse or straight or flush is quite higher than normal.</li>
+<li>If u at all want to all in or overbet:<ul>
+<li>make sure that you have the nuts</li>
+<li>don’t try to catch bluff with something like 1 or 2 pair</li>
+</ul>
+</li>
+<li>Play RIT if you feel prompted to do all in.</li>
+<li>Don’t play cash games <span class="arithmatex">\(\ll 100\ \text{BB}\)</span>.</li>
+</ol>
+<h2 id="strategy-for-crushing-crash-games">Strategy for crushing Crash Games</h2>
+<ul>
+<li>You need to exploit your opponent’s weeknesses.</li>
+<li>Play few hands from early position, play more hands from late position.</li>
+<li>Do not slow play unless your opponent can easily catch up to good, but still second best hand.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../javascripts/config.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
