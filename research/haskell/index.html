@@ -90,26 +90,6 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Haskell in Harsh Words</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#meaning-of-the-above-bullshit-words">Meaning of the above bullshit words?</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#functional">Functional</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#pure">Pure</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#lazy">Lazy</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#haskell-the-new-cool-guy-in-campus">Haskell, the new cool guy in campus</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#types">Types</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#abstraction">Abstraction</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#what-can-i-do-with-it">What can I do with it?</a>
-    </li>
-        </ul>
-    </li>
     </ul>
                   </li>
               </ul>
@@ -137,10 +117,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="the-fuck-is-haskell">The Fuck is Haskell?</h1>
-<hr />
+                <h3 id="the-fuck-is-haskell">The Fuck is Haskell?</h3>
 <p>A <em>pure</em>, <em>lazy</em>, <em>functional</em> programming language. Basically, it is something that happens when like-minded cool people come together.</p>
-<h2 id="meaning-of-the-above-bullshit-words">Meaning of the above bullshit words?</h2>
+<h3 id="meaning-of-the-above-bullshit-words">Meaning of the above bullshit words?</h3>
 <p>Well here we go.</p>
 <h3 id="functional">Functional</h3>
 <ul>
@@ -160,7 +139,7 @@
 <li>Compositional programming — you feel like Mozart.</li>
 <li>Disadvantage: Wot is time? Wot is space?</li>
 </ul>
-<h2 id="haskell-the-new-cool-guy-in-campus">Haskell, the new cool guy in campus</h2>
+<h3 id="haskell-the-new-cool-guy-in-campus">Haskell, the new cool guy in campus</h3>
 <p>Well here we go.</p>
 <h3 id="types">Types</h3>
 <ul>
@@ -179,11 +158,10 @@
 <li>Fail safe programming (Cardano)</li>
 <li>High-load concurrent programming (web back-end)</li>
 </ul>
-<h1 id="haskell-a-functional-programming-langauge">Haskell: A Functional Programming Langauge</h1>
-<hr />
+<h3 id="haskell-a-functional-programming-langauge">Haskell: A Functional Programming Langauge</h3>
 <p>What does it mean for Haskell to be a functional programming language? Well, it means that Haskell follows the principle of functional programming — a programming paradigm where functions are the basic building blocks of computation.</p>
 <p><strong>Def:</strong> <em>A function is a mapping that takes one or more arguments and produces a single result.</em></p>
-<h2 id="properties-of-haskell">Properties of Haskell</h2>
+<h3 id="properties-of-haskell">Properties of Haskell</h3>
 <ul>
 <li>Consice programs</li>
 <li>Powerful type system</li>
@@ -195,8 +173,7 @@
 <li>Lazy evaluation</li>
 <li>Equational reasoning</li>
 </ul>
-<h1 id="first-steps">First Steps</h1>
-<hr />
+<h3 id="first-steps">First Steps</h3>
 <p>Haskell comes with a large number of built-in functions, which are defined in a library file called the standard prelude.</p>
 <ul>
 <li><code>head &lt;list&gt;</code></li>
@@ -207,7 +184,7 @@
 <li><code>reverse &lt;list&gt;</code></li>
 <li><code>product &lt;list&gt;</code></li>
 </ul>
-<h2 id="function-format">Function Format</h2>
+<h3 id="function-format">Function Format</h3>
 <p>Just as in lambda calculus haskell follows a fixed pattern for functions. Here are some examples to elaborate:</p>
 <ul>
 <li><span class="arithmatex">\(f(x)\)</span> as <code>f x</code></li>
@@ -218,7 +195,7 @@
 <li>Function application has the highest priority than all other operators.</li>
 <li><code>x</code>f<code>y</code> is a syntactic sugar for <code>f x y</code></li>
 </ul>
-<h2 id="examples">Examples</h2>
+<h3 id="examples">Examples</h3>
 <pre><code class="language-haskell">-- Program 1
 main = print (a ++ b ++ c)
 a = [((2**3) * 4)]
@@ -237,8 +214,7 @@ main = print (a [1 .. 5])
 a xs = sum (drop (length xs - 1) (take (length xs) xs))
 main = putStrLn &quot;hello, world&quot;
 </code></pre>
-<h1 id="types-and-class">Types and class</h1>
-<hr />
+<h3 id="types-and-class">Types and class</h3>
 <h3 id="types_1"><strong>Types</strong></h3>
 <ul>
 <li>They are a collection of related values.</li>
@@ -267,8 +243,7 @@ main = putStrLn &quot;hello, world&quot;
 <li>Integral — <code>div :: Int a =&gt; a -&gt; a -&gt; a</code> and <code>mod :: Int a =&gt; a -&gt; a -&gt; a</code>, also Int and Integer types are instances of this class.</li>
 <li>Fractional — Float and Double are instances of this class. We also have methods such as <code>/</code> and <code>recip</code>.</li>
 </ul>
-<h1 id="functions">Functions</h1>
-<hr />
+<h3 id="functions">Functions</h3>
 <p>Let us now introduce some really cool implementation techniques in haskell with respect to defining functions.</p>
 <ul>
 <li>Conditionals</li>
@@ -351,8 +326,7 @@ y = (1+) 2
 z = (+2) 1
 </code></pre>
 <p>This is very useful to construct certain functions.</p>
-<h1 id="list-comprehension">List Comprehension</h1>
-<hr />
+<h3 id="list-comprehension">List Comprehension</h3>
 <p>The idea is based on set construction from other sets.</p>
 <pre><code class="language-haskell">xy = [(x, y) | x &lt;- [1..3], y &lt;- [x..3]]
 
@@ -366,9 +340,9 @@ concat xss = [x | xs &lt;- xss, x &lt;- xs]
 -- Guards are possible for example as bellow.
 evens = [x | x &lt;- [1..10], even x]
 </code></pre>
-<h1 id="recursion">Recursion</h1>
-<hr />
-<h2 id="how-to-think-recursively">How to think recursively?</h2>
+<h3 id="recursion">Recursion</h3>
+<p>Here we go.</p>
+<h3 id="how-to-think-recursively">How to think recursively?</h3>
 <ul>
 <li>Name the function</li>
 <li>Define its type</li>
@@ -406,7 +380,7 @@ fib f n = f (n - 1) + f (n - 2)
 fibMemo :: Int -&gt; Integer
 fibMemo = fix (memoize . fib)
 </code></pre>
-<h2 id="higher-order-function">Higher Order Function</h2>
+<h3 id="higher-order-function">Higher Order Function</h3>
 <p>A function is called a higher order if it takes a function as an argument or returns a function as a result.</p>
 <pre><code class="language-haskell">twice :: (a -&gt; a) -&gt; a -&gt; a
 twice f x = f (f x)
@@ -488,8 +462,7 @@ f = let x = 1; y = 2 in (x + y)
 -- Where
 f = x + y where x = 1; y = 1
 </code></pre>
-<h1 id="type-and-class-declaration">Type and Class Declaration</h1>
-<hr />
+<h3 id="type-and-class-declaration">Type and Class Declaration</h3>
 <pre><code class="language-haskell">type Pos = (Int, Int)
 type Trans = Pos -&gt; Pos
 
@@ -547,8 +520,7 @@ eval (Val n) = n
 eval (Add x y) = eval x + eval y
 eval (Mul x y) = eval x * eval y
 </code></pre>
-<h1 id="interactive-programming">Interactive Programming</h1>
-<hr />
+<h3 id="interactive-programming">Interactive Programming</h3>
 <p>This is a problem because Haskell is designed to have no side effects and thus only to create batch programs.</p>
 <p>Interactive programs, on the other hand, necessarily require side effects.</p>
 <h3 id="solution">Solution</h3>
@@ -636,8 +608,7 @@ read :: Read a =&gt; String -&gt; a
            let y = (read input2 :: Int)
            print (x + y)
 </code></pre>
-<h1 id="lazy-evaluation">Lazy Evaluation</h1>
-<hr />
+<h3 id="lazy-evaluation">Lazy Evaluation</h3>
 <div class="arithmatex">\[
 \text{lazy evaluation} = \text{outermost evaluation}\ +\ \text{shared arguments}
 \]</div>
@@ -648,8 +619,7 @@ read :: Read a =&gt; String -&gt; a
 <li>Supports programming with infinite structures</li>
 <li>Allows programs to be modular (separates control from data)</li>
 </ul>
-<h1 id="notes-on-functional-programming">Notes on Functional Programming</h1>
-<hr />
+<h3 id="notes-on-functional-programming">Notes on Functional Programming</h3>
 <p>Haskell is very expressive language. It makes you think abstractly and forces to model and define the problem mathematically.</p>
 <ul>
 <li>Focus on what to compute (definitions) rather than how</li>
