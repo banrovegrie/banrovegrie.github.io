@@ -374,6 +374,49 @@ T(\mathcal E(\rho) - \mathcal E(\sigma)) \leq \max_M |\text{tr}\ M(\rho-\sigma| 
 T(\mathcal E(\rho), \mathcal E(\sigma)) \leq T(\rho, \sigma)
 \]</div>
 <p>Thus, I can never increase the distance of two states, no matter what. So, basically when you wanna protect against noise all we are doing is slowing down the rate of noise (indistinguishable nonsense).</p>
+<h2 id="chois-theorem">Choi's Theorem</h2>
+<p>Let <span class="arithmatex">\(\mathcal E :\mathbb {C} ^{n\times n}\to \mathbb {C} ^{m\times m}\)</span> be a linear map. Then, the following are equivalent:</p>
+<ul>
+<li><span class="arithmatex">\(\mathcal E\)</span> is <span class="arithmatex">\(n\)</span>-positive (i.e. <span class="arithmatex">\(\mathcal E(A)\in \mathbb {C} ^{m\times m}\)</span> is positive whenever <span class="arithmatex">\(A\in \mathbb {C} ^{n\times n}\)</span> is positive).</li>
+<li>
+<p>The matrix <span class="arithmatex">\(\Gamma_\mathcal E\)</span>, sometimes called the Choi matrix, is positive. Here the state <span class="arithmatex">\(\phi\)</span> is maximally entangled.</p>
+<div class="arithmatex">\[
+\Gamma_{\mathcal E}=\left(\operatorname {id} _{n}\otimes \mathcal E \right)\left(\vert \phi \rangle\langle \phi \vert\right)
+\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathcal E\)</span> is completely positive.</p>
+</li>
+</ul>
+<h2 id="solving-a-lindblad-equation">Solving a Lindblad Equation</h2>
+<p>Any ideal open quantum system will undergo Markovian dynamics provided that its evolution satisfies a Master equation.</p>
+<div class="arithmatex">\[
+\frac{d\rho}{dt} = \mathcal L(\rho) = -i[H, \rho] + \sum_k \gamma_k (V_k\rho V_k^\dagger - \frac{1}{2} \{V_k^\dagger V_k, \rho\})
+\]</div>
+<p>Let <span class="arithmatex">\(\rho = \frac{1}{2}(I + \vec r \cdot \vec \sigma)\)</span> and differentiate <span class="arithmatex">\(\rho(t)\)</span> to obtain <span class="arithmatex">\(\dot \rho(t)\)</span> in terms of <span class="arithmatex">\(\frac{d\vec{r}}{dt}\)</span>.</p>
+<div class="arithmatex">\[
+\frac{d\rho}{dt} = \frac 1 2 (\dot r_x\sigma_x + \dot r_y\sigma_y + \dot r_z\sigma_z)
+\]</div>
+<p>We equate <span class="arithmatex">\(\dot \rho = \mathcal L(\rho)\)</span> using the above representation for <span class="arithmatex">\(\dot \rho\)</span> and <span class="arithmatex">\(\rho\)</span> and solve the equation by solving the individual differential equations obtained. After we solve for <span class="arithmatex">\(\rho\)</span>, we obtain <span class="arithmatex">\(\Lambda_t\)</span>.</p>
+<div class="arithmatex">\[
+\Lambda_t: \rho_0 \to \rho_t \text{,~~~~~} \rho(t) = \Lambda_t(\rho(0))
+\]</div>
+<p>Now, with Choi's theorem we check if <span class="arithmatex">\(\Lambda_t\)</span> is <span class="arithmatex">\(CP\)</span> by checking whether <span class="arithmatex">\(\Gamma_\Lambda\)</span> is positive semi-definite.</p>
+<div class="arithmatex">\[
+\Gamma_\Lambda = C\vert\psi\rangle\langle\psi\vert
+\]</div>
+<div class="arithmatex">\[
+C = (I \otimes \Lambda_t)
+\]</div>
+<p>Now, we find the eigenvalues and eigenvectors of <span class="arithmatex">\(C\)</span> and represent it as <span class="arithmatex">\(C = \sum_i \lambda_i\vert v_i\rangle\)</span>. Then, we can obtain Kraus operators <span class="arithmatex">\(\{K_i\}_{\forall i}\)</span> such as follows (check below).</p>
+<div class="arithmatex">\[
+v_{i} = \begin{bmatrix}
+-1/2\\1/2\\-1/2\\1/2
+\end{bmatrix} \implies K_i = \sqrt{\lambda_i}
+\begin{bmatrix}
+-1/2 &amp; -1/2\\1/2 &amp; 1/2
+\end{bmatrix}
+\]</div>
               
             </div>
           </div><footer>
