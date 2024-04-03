@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://banrovegrie.github.io/research/quantum-channels/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Quantum Channels - Alapan Chaudhuri</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Quantum Channels";
+        var mkdocs_page_input_path = "research/quantum-channels.md";
+        var mkdocs_page_url = "/research/quantum-channels/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Alapan Chaudhuri
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../weblog/">Weblog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reading-list/">Reading List</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Writings</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/on-composition/">On Composition</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/search-for-meaning/">Search for Meaning</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/on-problem-solving/">On Problem Solving</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/kotobaro-bhebechhinu/">Kotobaro Bhebechhinu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/sanskrit/">Random Sanskrit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/reality-of-fiction/">Reality of Fiction</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Research</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../quantum-theory/">Quantum Theory</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Quantum Channels</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linear-algebra/">Linear Algebra</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../haskell/">Haskell in Harsh Words</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Alapan Chaudhuri</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Research</li>
+      <li class="breadcrumb-item active">Quantum Channels</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="introduction">Introduction</h2>
+<p>Quantum Channels are generalizations of Quantum Operations. Since, in general our operations maybe noisy (inherently) and the system we are dealing with maybe open so Quantum Channels us the study of <strong>noisy open</strong> Quantum Operations.</p>
+<div class="arithmatex">\[
+\rho \xrightarrow{U}\rho'
+\]</div>
+<p>The above only holds for <strong>closed</strong> quantum systems. Thus, in case of <strong>noisy open</strong> quantum systems we have the following.</p>
+<div class="arithmatex">\[
+\rho \xrightarrow{\mathcal E} \rho'
+\]</div>
+<p>Here, <span class="arithmatex">\(\mathcal E\)</span> is a combination of:</p>
+<ul>
+<li>unitaries <span class="arithmatex">\((U)\)</span></li>
+<li>adding systems <span class="arithmatex">\((\rho \to \rho \otimes \sigma)\)</span></li>
+<li>subtracting systems or partial tracing <span class="arithmatex">\((\rho_{AB} \to \text{tr}_B \rho_{AB} = \rho_A)\)</span></li>
+</ul>
+<h2 id="review-of-density-matrices">Review of Density Matrices</h2>
+<p>Moreover, to deal with <strong>noisy open</strong> systems we also need to review density matrices which are the general way of representing noisy quantum states.</p>
+<div class="arithmatex">\[
+\rho \equiv \text{noisy quantum state}
+\]</div>
+<div class="arithmatex">\[
+\mathcal E \equiv \text{noisy open quantum channel}
+\]</div>
+<p><img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fb2274519-c2aa-4dff-a58c-c03572cb66e1%2FUntitled.png?table=block&id=646dc1ff-bb2b-42eb-8c1c-0989a8db695e&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<p><img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F17804dbc-2fd9-4abd-9ed2-2b6546b3f65d%2FUntitled.png?table=block&id=7c369fe5-5c39-4e0d-aa41-c714dd84b1cc&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<p><img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F80068b3e-0b02-474d-b709-85227db91ce3%2FUntitled.png?table=block&id=e59e08a6-3d7b-4709-858f-83878f76cc4c&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<p>Now since, <span class="arithmatex">\(\rho\)</span> is positive semi-definite thus, <span class="arithmatex">\(\frac{1 + ||\vec{a}||}{2} \geq 0 \implies ||\vec{a}|| \leq 1\)</span>.</p>
+<p>This results in the Bloch Ball representation for general mixed state qubits, which serves as a generalization of the Bloch Sphere that serves as representation for pure state qubits. Pure state qubits have eigenvalues of <span class="arithmatex">\(0\)</span> or <span class="arithmatex">\(1\)</span>, <span class="arithmatex">\(\lambda(\rho) = 0\ \text{or}\ 1\)</span>.</p>
+<p><img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F65f28bcb-b310-4fc4-85b4-cfe1de7cbc23%2FUntitled.png?table=block&id=99774276-4089-4f50-87d0-32a2a2ff1d1a&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<p>The eigenvalue of the maximally mixed state is <span class="arithmatex">\({I}/{2}\)</span> where the state is actually given by the following.</p>
+<div class="arithmatex">\[
+\frac{1}{2}(|0 \rangle\langle 0| + |1 \rangle\langle 1|) \equiv \frac{1}{2}(|+ \rangle\langle +| + |- \rangle\langle -|)
+\]</div>
+<h2 id="quantum-operations">Quantum Operations</h2>
+<p><img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F551a167d-6266-4fb1-8372-eb6639d4b849%2FUntitled.png?table=block&id=4b4519ca-daa3-416c-bbb2-a0f768edd96a&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<p>However, in both these above cases, we are still dealing with <strong>closed</strong> (albeit <strong>noisy</strong>) for the random case.</p>
+<h2 id="generalized-quantum-operations">Generalized Quantum Operations</h2>
+<p>We can refer to Generalized Quantum Operations as Quantum Channels (<strong>noisy</strong> and <strong>open</strong>) whose definitions we shall rediscover and formalize here.</p>
+<p>Now, it should be noted that there are three major equivalent formalisms for Quantum Channels:</p>
+<ul>
+<li>Operational (Steinspring)</li>
+<li>Mathemtically Simplified (Kraus)</li>
+<li>Axiomatic (TPCP maps)</li>
+</ul>
+<h2 id="introduction-to-steinspring-representation">Introduction to Steinspring Representation</h2>
+<p>For closed systems we have a probabilistic combinations of the above (noisy closed channels).</p>
+<div class="arithmatex">\[
+|\psi\rangle \to U|\psi\rangle
+\]</div>
+<div class="arithmatex">\[
+|\psi\rangle\langle\psi| \to U |\psi\rangle\langle\psi|U^\dagger
+\]</div>
+<div class="arithmatex">\[
+\rho \to U\rho\ U^\dagger
+\]</div>
+<p>This can be generalized for noisy open channels as combinations of unitaries <span class="arithmatex">\((U)\)</span>, adding systems together <span class="arithmatex">\((\rho \to \rho \otimes \sigma)\)</span> and subtracting systems <span class="arithmatex">\((\rho_{AB} \to \text{tr}_B(\rho_{AB}) = \rho_A)\)</span>.</p>
+<p>But why is partial tracing allowed? Doesn't this "delete" information? </p>
+<p><img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2c84844d-bd95-4a56-8106-ec65e95aabe1%2FUntitled.png?table=block&id=eac38b17-1932-44a3-beda-eee8343de619&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=960&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<p>The information has basically flown out of your lab to the heavens (but still exists in nature) and in most cases, you simply can't access it anymore, kinda like your ex-girlfriend.</p>
+<div class="arithmatex">\[
+\text{tr}(\rho_{AB}) = \sum_b (I_A \otimes \langle b|)\ \rho\ (I_A \otimes |b\rangle) = (I_A \otimes \text{tr}_B)(\rho_{AB})
+\]</div>
+<h2 id="isometry">Isometry</h2>
+<p>An operator <span class="arithmatex">\(V \in \mathcal{L}(X),\ V:{X \to Y}\)</span> is called an isometry if and only if <span class="arithmatex">\(||V\vec{v}|| = ||\vec{v}||\)</span> for all <span class="arithmatex">\(\vec{v} \in {X}\)</span>. In other words, an isometry is a genralization of norm preserving operators.</p>
+<p>Now, properties of linear isometries:</p>
+<ul>
+<li><span class="arithmatex">\(\langle v|v\rangle = \langle Vv|Vv\rangle = \langle v|V^\dagger V|v\rangle\)</span></li>
+<li>Thus, <span class="arithmatex">\(V^\dagger V = I_{{X}}\)</span>.</li>
+</ul>
+<p>Linear isometries are not always unitary operators, though, as those require additionally that <span class="arithmatex">\(X = Y\)</span> and <span class="arithmatex">\(V V^\dagger = I_X\)</span>.</p>
+<p>By the Mazur–Ulam theorem, any isometry of normed vector spaces over <span class="arithmatex">\(\mathbb{R}\)</span> is affine. Affine transformations are those that preserve lines and parallelism (but not necessarily distances and angles).</p>
+<h2 id="steinspring-representation">Steinspring Representation</h2>
+<p>Isometries allow us to restate the requirements of a <strong>noisy open</strong> quantum channel. Now, it can be formed by combinations of isometries and partial trace. Moreover, the purpose of the partial trace is to trash the environment shit out of my lab.</p>
+<p><img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4094536f-32e8-4f23-ba20-89075124cdda%2FUntitled.png?table=block&id=1e3dfe03-822f-466c-9fd9-c1ed62d95a00&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<p>Thus, we have the following formalism.</p>
+<div class="arithmatex">\[
+V:A\to B\otimes E
+\]</div>
+<div class="arithmatex">\[
+\mathcal E : \mathcal L(A) \to \mathcal L(B)
+\]</div>
+<div class="arithmatex">\[
+\mathcal E(\rho) = \text{tr}_E(V\rho\ V^\dagger)
+\]</div>
+<p>Partial tracing can be delayed (deferred tracing), an idea similar to deferred measurements. Also, from a philosophical standpoint (Church of the Larger Hilbert Space) you can defer it forever.</p>
+<p><img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffb007ee6-ff8e-4572-b70e-e53149b65a35%2FUntitled.png?table=block&id=c92d8555-a0ff-4031-86f3-c639c4ff333c&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=1150&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<p>Now, the above circuit is equivalent to the below circuit. As a result, inductively, combinations of isometries and partial trace is equivalent to the <span class="arithmatex">\(\mathcal E\)</span> operator.</p>
+<p><img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5c6d8391-b8bc-447b-b46c-4f64c131a081%2FUntitled.png?table=block&id=e5c464ee-a64d-478d-8462-9875bde25249&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=770&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<h2 id="kraus-operator-picture">Kraus Operator Picture</h2>
+<p>We can fix a orthonormal bases <span class="arithmatex">\(\{|e\rangle\}\)</span> for <span class="arithmatex">\(E\)</span>, and have <span class="arithmatex">\(\{V_e\}\)</span> such that</p>
+<div class="arithmatex">\[
+V = \sum_e V_e \otimes |e\rangle
+\]</div>
+<p>where <span class="arithmatex">\(V_e \in \mathcal L(A), V_e: A \to B\)</span> and furthermore</p>
+<div class="arithmatex">\[
+I = V^\dagger V = (\sum_{e_1} V^\dagger_{e_1} \otimes \langle e_1|)(\sum_{e_2} V_{e_2} \otimes |e_2\rangle)
+\]</div>
+<p>such that <span class="arithmatex">\(V_e \neq V_e^\dagger\)</span>in general and thus, we have the Kraus operator condition (stated below).</p>
+<div class="arithmatex">\[
+I = \sum_e V_e^\dagger V_e
+\]</div>
+<p>Thus, we can have a equivalent and simplified formalism of the Steinspring Operator <span class="arithmatex">\((\mathcal E)\)</span>, where <span class="arithmatex">\(\{V_e\}\)</span> are Kraus operators.</p>
+<div class="arithmatex">\[
+\mathcal E(\rho) = \text{tr}_E (V \rho\ V^\dagger) = \text{tr}_E (\sum_{e_1, e_2} V_{e_1} \rho\ V_{e_2}^\dagger \otimes |e_1\rangle\langle e_2|)
+\]</div>
+<div class="arithmatex">\[
+\implies \mathcal E(\rho) = \sum_e V_e\rho\ V_e^\dagger
+\]</div>
+<p>Conversely, given <span class="arithmatex">\(\{V_e\}\)</span> satisfying Kraus operator conditions, <span class="arithmatex">\(\mathcal E(\rho) = \sum_e {V_e \rho\ V_e^\dagger}\)</span> is a quantum operator with <span class="arithmatex">\(V = \sum_e V_e \otimes |e\rangle\)</span> as the isometry involved in the transformation.</p>
+<h2 id="examples-of-kraus-operators-for-quantum-channels">Examples of Kraus Operators for Quantum Channels</h2>
+<ol>
+<li><span class="arithmatex">\(\mathcal E(\rho) = U \rho\ U^\dagger \rightarrow\)</span> single Kraus operator <span class="arithmatex">\(\{U\}\)</span></li>
+<li><span class="arithmatex">\(\mathcal E(\rho) = \sum_e p_e U_e\ \rho\ U_e^\dagger \rightarrow\)</span> Kraus operators <span class="arithmatex">\(\{\sqrt{p_e} U_e\}\)</span></li>
+<li><span class="arithmatex">\(\text{tr}(\rho_{AB}) = \sum_b (I_A \otimes \langle b|)\ \rho\ (I_A \otimes |b\rangle)\)</span> where <span class="arithmatex">\(V_b = (I_A \otimes \langle b |_B)\)</span> thus we also have the following holding true, <span class="arithmatex">\(\sum_b V_b^\dagger V_b = \sum_b I_A \otimes |b\rangle\langle b| = I_A \otimes I_B = I\)</span>.</li>
+<li>
+<p>Ultimate Refrigerator: <span class="arithmatex">\(\mathcal E (\rho) = |0\rangle\langle 0|\)</span>, regardless of the initial state <span class="arithmatex">\(\rho\)</span>. </p>
+<div class="arithmatex">\[
+V_0 = |0\rangle\langle 0|, V_1 = |0\rangle\langle 1|
+\]</div>
+<div class="arithmatex">\[
+V_0 \rho\ V_0^\dagger + V_1 \rho\ V_1^\dagger = |0\rangle\langle 0|
+\]</div>
+</li>
+<li>
+<p>Depolarizing Channel: <span class="arithmatex">\(\mathcal E (\rho) = (1 - p)\rho + \rho ({I}/{2})\)</span> <span class="arithmatex">\(\rightarrow\)</span> simple kind of white noise effect </p>
+</li>
+<li>
+<p>Amplitude Damping Channel: <span class="arithmatex">\(\mathcal E_\gamma (\rho) = K_0 \rho\ K_0^\dagger + K_1 \rho\ K_1^\dagger\)</span> where we have the following </p>
+<div class="arithmatex">\[
+K_0 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; \sqrt{1 - \gamma} \\
+\end{bmatrix} \text{ and, }\ 
+K_1 = \begin{bmatrix}
+0 &amp; \sqrt{\gamma} \\
+0 &amp; 0 \\
+\end{bmatrix}
+\]</div>
+</li>
+</ol>
+<h2 id="axiomatic-definitions">Axiomatic Definitions</h2>
+<p>By God, properties of <span class="arithmatex">\(\mathcal E\)</span> should be as follows:</p>
+<ul>
+<li>Linear (assume this or die, basically) and Hermitian preserving</li>
+<li>Trace preserving (TP) such that <span class="arithmatex">\(\text{tr}(\mathcal E(\rho)) = \text{tr}(\rho) = 1\)</span></li>
+<li>Completely positive (CP) since <span class="arithmatex">\(\rho \geq 0 \implies (\mathcal E \otimes I)(\rho) \geq 0\)</span></li>
+</ul>
+<p>But why completely positive? Well, because we are dealing with isometries of form <span class="arithmatex">\(A \to B \otimes E\)</span>.</p>
+<p>Here, completely positive means that if <span class="arithmatex">\(\mathcal E\)</span> is applied on a subsystem, then the complete system and the subsystems must remain positive.</p>
+<h2 id="equivalence-of-tpcp-maps-and-kraus-operators">Equivalence of TPCP maps and Kraus operators</h2>
+<p>Equivalence Theorem: If <span class="arithmatex">\(\mathcal E(\rho) = \sum_e V_e\rho\ V_e^\dagger\)</span> then <span class="arithmatex">\(\mathcal E\)</span> is TPCP and converse holds true as well.</p>
+<p><img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F46663b5e-b401-49a2-8886-3db763aa8e84%2FUntitled.png?table=block&id=95fcd92a-d573-4a98-9e03-fc5945990d02&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<p><img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F8602461a-1673-4a0e-baa2-c06786adb676%2FUntitled.png?table=block&id=e76c7b76-d8f4-4079-94d0-ebf4f2a50f11&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<p><img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9103799a-4030-48dc-89f0-bc55ee1f1524%2FUntitled.png?table=block&id=9293fb22-91c3-49e2-b238-0dc354b8b72f&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<p><img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F80195c3c-ffd6-4627-bcf5-f1489db2d79a%2FUntitled.png?table=block&id=64d1c47f-fd4d-4a55-96ff-14d05f04731b&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<p>This implies that the map <span class="arithmatex">\(N→J(N)\)</span> is injective. In fact it is known as the Choi-Jamiołkowski isomorphism — a correspondence between quantum channels and quantum states (described by density matrices).</p>
+<p>Equivalence of Operators: Given <span class="arithmatex">\(2\)</span> operators <span class="arithmatex">\(\mathcal E\)</span> and <span class="arithmatex">\(\mathcal F\)</span> with operator elements <span class="arithmatex">\(\{\mathcal E_i\}\)</span> and <span class="arithmatex">\(\{\mathcal F_i\}\)</span> respectively, if <span class="arithmatex">\(\mathcal E = \mathcal F\)</span> then  </p>
+<div class="arithmatex">\[
+\mathcal E_i = \sum_j u_{ij} \mathcal F_j
+\]</div>
+<h2 id="measurements-as-quantum-operations">Measurements as Quantum Operations</h2>
+<p>Measurement can be thought of as a quantum operation where the input is any quantum state and the output is classical, <span class="arithmatex">\(\mathcal E(\rho) = \sum_x p_x|x\rangle\langle x|\)</span> (diagonal density matrix). </p>
+<p>The probabilities, <span class="arithmatex">\(p_x\)</span>, should depend on the state. Further, <span class="arithmatex">\(p_x\)</span> should be a linear function of the density matrix <span class="arithmatex">\(p_x = \text{tr}(M_x \rho)\)</span>. From this we can work out the properties that <span class="arithmatex">\(M_x\)</span> should obey:</p>
+<ul>
+<li>Normalization: <span class="arithmatex">\(\text{tr}(\mathcal E(\rho)) = \text{tr}(p_x) = tr(M_x\rho) = 1 \implies \sum M_x = I\)</span></li>
+<li>Positive Semi-definite: <span class="arithmatex">\((\mathcal E \otimes I)(\rho) \geq 0 \implies p_x \geq 0\)</span> thus <span class="arithmatex">\(\text{tr}(M_x \rho) \geq 0, \forall\ M_x\)</span> over <span class="arithmatex">\(\rho\)</span> thus, we have <span class="arithmatex">\(M_x \geq 0 \implies M_x's\)</span> are positive semi-definite <span class="arithmatex">\(\implies M_x = E_x E_x^\dagger\)</span></li>
+</ul>
+<p>Thus, we have the following:</p>
+<div class="arithmatex">\[
+\sum_x M_x = I
+\]</div>
+<div class="arithmatex">\[
+M_x \geq 0
+\]</div>
+<p>These conditions still leave room for noisy measurements, etc.</p>
+<p>We can also talk about non-demolition measurements, which do not discard the quantum systems aftermeasurements. Consider the following quantum channel.</p>
+<div class="arithmatex">\[
+\mathcal E(\rho) =\sum_e V_e \rho V^\dagger_e \otimes |e\rangle\langle e| = \sum_e \frac{V_e \rho V^\dagger_e} {\text{tr}(V_e\rho V^†_e)} \otimes \text{tr}(V_e \rho V^\dagger_e)|e\rangle\langle e|
+\]</div>
+<p>This channel has the following interpretation: with probability as</p>
+<div class="arithmatex">\[
+p_e = \text{tr}(V_e \rho V_e^\dagger) = \text{tr}(V_e V_e^\dagger\rho) = \text{tr}(M_e\rho)
+\]</div>
+<p>the state of the system after the application of this channel is <span class="arithmatex">\(\rho_e = {(V_e \rho V^\dagger_e)}/{\text{tr}(V_e\rho V^†_e)}\)</span>. This is similar to having a measurement that outputs the post measured state <span class="arithmatex">\(\rho_e\)</span> with probability <span class="arithmatex">\(p_e\)</span>.</p>
+<h2 id="quantum-norms-and-distance-metrics">Quantum Norms and Distance Metrics</h2>
+<p>Motivation: Now that we have defined channels and states of information, how do you differentiate between two items of information? What does it mean to say that information is preserved by some process? </p>
+<p>Well for these questions it is necessary to develop distance measures. There is a certain arbitrariness in the way distance measures are defined, both classically and quantum mechanically, and the community of people studying quantum computation and quantum information has found it convenient to use a variety of distance measures over the years. Two of those measures, the trace distance and the fidelity, have particularly wide currency today.</p>
+<h2 id="norms">Norms</h2>
+<p>Norm is a distance metric such that</p>
+<ol>
+<li><span class="arithmatex">\(|cv| = |c|.|v|\)</span></li>
+<li><span class="arithmatex">\(|v+w| \leq |v| + |w|\)</span></li>
+<li><span class="arithmatex">\(|v| = 0\)</span> iff <span class="arithmatex">\(v = 0\)</span></li>
+</ol>
+<p>Examples of norms are as follows</p>
+<ul>
+<li>Manhattan (<span class="arithmatex">\(L_1\)</span>)</li>
+<li>Euclidean (<span class="arithmatex">\(L_2\)</span>)</li>
+<li><span class="arithmatex">\(L_p\)</span> norm <span class="arithmatex">\(\to |v|_{L_p} = (\sum v_i^p)^{1/p}\)</span></li>
+</ul>
+<h2 id="schatten-p-norms">Schatten <span class="arithmatex">\(p\)</span>-norms</h2>
+<ol>
+<li><span class="arithmatex">\(L_1\)</span> norm corresponds to probability distributions</li>
+<li><span class="arithmatex">\(L_2\)</span> norm corresponds to pure states</li>
+<li><span class="arithmatex">\(L_\infty = \max_i {|v_i|}\)</span></li>
+</ol>
+<p>Similarly, schatten <span class="arithmatex">\(p\)</span>-norm <span class="arithmatex">\(:\)</span> <span class="arithmatex">\(|M|_{S_p} = |\sigma(M)|_{S_p}\)</span> where <span class="arithmatex">\(\sigma(M)\)</span> is a vector of singular values of a matrix, say <span class="arithmatex">\(M\)</span>.</p>
+<div class="arithmatex">\[
+S_1 = \sum \text{singular values}
+\]</div>
+<div class="arithmatex">\[
+S_2 = \sqrt {\sum \text{singular values}^2}
+\]</div>
+<div class="arithmatex">\[
+S_\infty = \max_i |\text{singular values}|
+\]</div>
+<p>In case of density matrices (in general to positive semi-definite Hermitian operators), we have <span class="arithmatex">\(\text{singular values = eigen values}\)</span> thus, <span class="arithmatex">\(\sigma(M) = \lambda(M)\)</span>.</p>
+<div class="arithmatex">\[
+|X|_{S_p} = |\sigma(X)|_{L_p} = (\sum_i \sigma_i^p)^{1/p}
+\]</div>
+<p>If <span class="arithmatex">\(X \geq 0\)</span>, then <span class="arithmatex">\(\sigma(X) = \lambda(X)\)</span> then, <span class="arithmatex">\(|X|_{S_1} = tr X \implies |\rho|_{S_1} {= \text{tr} (\rho)}\)</span>.</p>
+<p>Thus, <span class="arithmatex">\(\rho\)</span> is a density matrix <span class="arithmatex">\(\iff \rho \geq 0\)</span> and <span class="arithmatex">\(|\rho|_{S_1} = 1\)</span>.</p>
+<p><img style="width:60%;" id="image"  src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F09959a0d-5a45-4010-a089-b8fddfb942fb%2FUntitled.png?table=block&id=88a97f38-a7e5-4eaf-9680-3960872aca9b&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=670&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<h2 id="measurements">Measurements</h2>
+<p>Let us consider a simple system with <span class="arithmatex">\(\{M, I-M\}\)</span> as measurement operators.</p>
+<p>Then, we have</p>
+<div class="arithmatex">\[
+M \geq 0, I - M \geq 0 \iff M \leq I
+\]</div>
+<div class="arithmatex">\[
+\iff 0 \leq M \leq I
+\]</div>
+<div class="arithmatex">\[
+\iff |M|_{S_\infty} \leq 1
+\]</div>
+<p>But why is it that two objects with different norms can co-exist in the same operator framework? The answer lies in the notion of duality.</p>
+<h2 id="duality">Duality</h2>
+<p>Given a norm <span class="arithmatex">\(|.|\)</span> there exists a dual norm such that, <span class="arithmatex">\(|x|_* = \max_{|y| \leq 1} |\langle x,y\rangle|\)</span>.</p>
+<ol>
+<li><span class="arithmatex">\(L_2\)</span> is dual to <span class="arithmatex">\(L_2\)</span></li>
+<li><span class="arithmatex">\(L_1\)</span> and <span class="arithmatex">\(L_\infty\)</span>  are dual to each other</li>
+<li><span class="arithmatex">\(S_2\)</span> is dual to <span class="arithmatex">\(S_2\)</span></li>
+<li><span class="arithmatex">\(S_1\)</span> and <span class="arithmatex">\(S_\infty\)</span>  are dual to each other</li>
+</ol>
+<h2 id="introduction-to-trace-norm">Introduction to Trace Norm</h2>
+<div class="arithmatex">\[
+T(\rho, \sigma) = \frac{1}{2}|\rho - \sigma|_{S_1} = \frac{1}{2}\  \text{tr}\ |\rho - \sigma|
+\]</div>
+<p>Then, <span class="arithmatex">\(\forall M\)</span> where <span class="arithmatex">\(M\)</span> denotes measurement,</p>
+<div class="arithmatex">\[
+|\text{tr}(M\rho) - \text{tr}(M\sigma)| = |\text{tr}(M (\rho - \sigma))| \leq |M|_{S_\infty} |\rho -\sigma|_{S_1} \leq |\rho -\sigma|_{S_1} = 2T(\rho, \sigma)
+\]</div>
+<p>In fact, we can tighten this inequality even further to obtain</p>
+<div class="arithmatex">\[
+|\text{tr}(M\rho) - \text{tr}(M\sigma)| \leq T(\rho, \sigma)
+\]</div>
+<div class="arithmatex">\[
+\Big\downarrow
+\]</div>
+<div class="arithmatex">\[
+T(\rho, \sigma) = \max_M |\text{tr}\ M(\rho-\sigma)|
+\]</div>
+<div class="arithmatex">\[
+\Big\downarrow
+\]</div>
+<div class="arithmatex">\[
+T(\mathcal E(\rho) - \mathcal E(\sigma)) \leq \max_M |\text{tr}\ M(\rho-\sigma| = T(\rho, \sigma)
+\]</div>
+<p>and finally we get the required inequality</p>
+<div class="arithmatex">\[
+T(\mathcal E(\rho), \mathcal E(\sigma)) \leq T(\rho, \sigma)
+\]</div>
+<p>Thus, I can never increase the distance of two states, no matter what. So, basically when you wanna protect against noise all we are doing is slowing down the rate of noise (indistinguishable nonsense).</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../quantum-theory/" class="btn btn-neutral float-left" title="Quantum Theory"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../linear-algebra/" class="btn btn-neutral float-right" title="Linear Algebra">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../quantum-theory/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../linear-algebra/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../javascripts/config.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
