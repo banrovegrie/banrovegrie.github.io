@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://banrovegrie.github.io/research/probability/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Probability - Alapan Chaudhuri</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Probability";
+        var mkdocs_page_input_path = "research/probability.md";
+        var mkdocs_page_url = "/research/probability/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Alapan Chaudhuri
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../weblog/">Weblog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reading-list/">Reading List</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Writings</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/on-composition/">On Composition</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/search-for-meaning/">Search for Meaning</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/on-problem-solving/">On Problem Solving</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/kotobaro-bhebechhinu/">Kotobaro Bhebechhinu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/sanskrit/">Random Sanskrit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/reality-of-fiction/">Reality of Fiction</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Research</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../quantum-theory/">Quantum Theory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../quantum-channels/">Quantum Channels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linear-algebra/">Linear Algebra</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../music-theory/">Music Theory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../multi-variate/">Multivariate Calculus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ads-cft/">Ads-CFT Correspondance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data-analysis/">Data Analysis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../poker/">Poker</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Probability</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prog-lang/">Programming Language Theory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../millennium/">What gets you a million dollars?</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../psdp/">PSDP Problem</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../haskell/">Haskell in Harsh Words</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Alapan Chaudhuri</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Research</li>
+      <li class="breadcrumb-item active">Probability</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h3 id="axioms">Axioms</h3>
+<ol>
+<li><span class="arithmatex">\(P(A) \geq 0\)</span></li>
+<li><span class="arithmatex">\(P(A \cup B) = P(A) + P(B)\)</span>, where both are disjoint sets</li>
+<li><span class="arithmatex">\(P(\Omega) = 1\)</span></li>
+</ol>
+<h3 id="properties">Properties</h3>
+<div class="arithmatex">\[
+P(A \cup B) = P(A) + P(B) - P(A \cap B)
+\]</div>
+<div class="arithmatex">\[
+P(A) \leq P(B), \text{ if } A \sub B
+\]</div>
+<h3 id="conditional-probability">Conditional Probability</h3>
+<div class="arithmatex">\[
+P(A\vert B) = \frac{P(A \cap B)}{P(B)}
+\]</div>
+<h3 id="total-probability">Total Probability</h3>
+<div class="arithmatex">\[
+P(B) = P(A_1 \cap B) + \cdots + P (A_n \cap B)
+\]</div>
+<div class="arithmatex">\[
+= \sum P(A_i) P(B\vert A_i)
+\]</div>
+<p>Here, <span class="arithmatex">\(A_i\)</span>’s are independent.</p>
+<h3 id="independence">Independence</h3>
+<p>If <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are independent, we have the following.</p>
+<div class="arithmatex">\[
+P(A \vert B) = P(A)
+\]</div>
+<div class="arithmatex">\[
+P(A \cap B) = P(A)P(B)
+\]</div>
+<h3 id="conditional-independence">Conditional Independence</h3>
+<div class="arithmatex">\[
+P(A \cap B \vert C) = P(A \vert C) P(B \vert C)
+\]</div>
+<h3 id="expectation-and-variance">Expectation and Variance</h3>
+<div class="arithmatex">\[
+E[g(X)] = \sum_x g(x)p_X(x)
+\]</div>
+<div class="arithmatex">\[
+Var[X] = E[(X - E[X])^2]
+\]</div>
+<div class="arithmatex">\[
+Var[X] = E[X^2] - E[X]^2
+\]</div>
+<h3 id="linearity">Linearity</h3>
+<div class="arithmatex">\[
+E[aX + b] = aE[X] + b
+\]</div>
+<div class="arithmatex">\[
+Var[aX + b] = a^2\ Var[X]
+\]</div>
+<div class="arithmatex">\[
+E[aX + bY + c] = aE[X] + bE[Y] + c
+\]</div>
+<h3 id="probability-mass-functions">Probability Mass Functions</h3>
+<div class="arithmatex">\[
+p_{X,Y}(x, y) = P(X=x, Y=y)
+\]</div>
+<h3 id="marginal-pmfs">Marginal PMFs</h3>
+<div class="arithmatex">\[
+p_X(x) = \sum_y p_{{X, Y}}(x, y)
+\]</div>
+<div class="arithmatex">\[
+E[g(X, Y)] = \sum_x \sum_y g(x, y)p_{X, Y} (x, y)
+\]</div>
+<h3 id="conditionals">Conditionals</h3>
+<div class="arithmatex">\[
+p_{X|A}(x) = P(X = x | A), \text{ such that } \sum_x p_{X|A}(x) = 1
+\]</div>
+<div class="arithmatex">\[
+p_X(x) = \sum P(A_i) p_{x|A_i}(x)
+\]</div>
+<div class="arithmatex">\[
+p_{X, Y}(x, y) = p_Y(y)p_{X|Y}(x|y)
+\]</div>
+<div class="arithmatex">\[
+p_X = \sum_y p_Y(y)p_{X|Y}(x|y)
+\]</div>
+<div class="arithmatex">\[
+E[g(X)|A] = \sum_x g(x)p_{X|A}(x)
+\]</div>
+<div class="arithmatex">\[
+E[g(X)|Y=y] = \sum_x g(x)p_{X|Y}(x|y)
+\]</div>
+<div class="arithmatex">\[
+E[X] = \sum P(A_i)E[x|A_i]
+\]</div>
+<h3 id="independence-strikes-back">Independence strikes back</h3>
+<ul>
+<li><span class="arithmatex">\(p_{X|A}(x) = p_X(x)\)</span></li>
+<li><span class="arithmatex">\(E[XY]=E[X]E[Y]\)</span></li>
+<li><span class="arithmatex">\(Var[X + Y] = Var[X] + Var[Y]\)</span></li>
+<li><span class="arithmatex">\(p_{X, Y}(x, y) = p_X(x) p_Y(y)\)</span>,   <span class="arithmatex">\(\forall\)</span>  <span class="arithmatex">\(x \in X\)</span> and <span class="arithmatex">\(y \in Y\)</span></li>
+</ul>
+<h3 id="continuity-and-lovely-curves">Continuity and Lovely Curves</h3>
+<div class="arithmatex">\[
+P(X\in B)= \int_B f_X(x)dx, \text{ where } f_X(x) \geq 0
+\]</div>
+<div class="arithmatex">\[
+E[g(X)] = \int_{-\infty}^{\infty} g(x)f_X(x)dx
+\]</div>
+<h3 id="cumulative-distributions">Cumulative Distributions</h3>
+<div class="arithmatex">\[
+F_X(x) = P(X \leq x)
+\]</div>
+<div class="arithmatex">\[
+F_X(x) = \int_{-\infty}^x f_X(x)dx
+\]</div>
+<h3 id="conditionals_1">Conditionals</h3>
+<div class="arithmatex">\[
+\int_B f_{X|A}(x)dx = P(X \in B|A)
+\]</div>
+<div class="arithmatex">\[
+f_X(x) = \sum P(A_i) f_{x|A_i}(x)
+\]</div>
+<div class="arithmatex">\[
+f_{X, Y}(x, y) = f_Y(y)f_{X|Y}(x|y)
+\]</div>
+<div class="arithmatex">\[
+f_X = \int_{-\infty}^{\infty} f_Y(y)f_{X|Y}(x|y)
+\]</div>
+<h3 id="conditional-expectation">Conditional Expectation</h3>
+<div class="arithmatex">\[
+E[g(X)|A] = \int_{\Omega} g(x)f_{X|A}(x)
+\]</div>
+<div class="arithmatex">\[
+E[g(X)|Y=y] = \int_\Omega g(x)f_{X|Y}(x|y)
+\]</div>
+<div class="arithmatex">\[
+E[X] = \sum P(A_i)E[x|A_i]
+\]</div>
+<h3 id="bayes-theorem">Bayes' Theorem</h3>
+<p>You can of course interchange <span class="arithmatex">\(p\)</span> with <span class="arithmatex">\(f\)</span> to account for continuous random variables.</p>
+<div class="arithmatex">\[
+p_X(x)p_{Y|X}(y|x) = p_Y(y)p_{X|Y}(x|Y)
+\]</div>
+<h3 id="gimme-more">Gimme More</h3>
+<div class="arithmatex">\[
+F_Y(y) = P(g(X)\leq y) = \int_{x | g(x) \leq y} f_X(x)dx
+\]</div>
+<p>where <span class="arithmatex">\(Y = g(X)\)</span>.</p>
+<p>Also, if <span class="arithmatex">\(Y = aX+b\)</span>, then we have <span class="arithmatex">\(f_Y(y) = \frac{1}{|a|}f_X(\frac{y - a}{b})\)</span>.</p>
+<h3 id="correlations">Correlations</h3>
+<div class="arithmatex">\[
+Cov(X, Y) = E[(X - E[X])(Y - E[Y])] = E[XY] - E[X]E[Y]
+\]</div>
+<div class="arithmatex">\[
+Var[X + Y] = Var[X] + Var[Y] + 2 Cov[X, Y]
+\]</div>
+<div class="arithmatex">\[
+Cor(X, Y) = \rho(X, Y) = \frac{Cov(X, Y)}{\sqrt{var(X)var(Y)}}
+\]</div>
+<h3 id="law-of-iterated-expectations">Law of iterated expectations</h3>
+<div class="arithmatex">\[
+E[E[X|Y]] = E[X]
+\]</div>
+<h3 id="law-of-total-variance">Law of total variance</h3>
+<div class="arithmatex">\[
+Var[X] = E[Var[X|Y]] + Var[E[X|Y]]
+\]</div>
+<h3 id="limits-of-the-land">Limits of the land</h3>
+<ol>
+<li>If <span class="arithmatex">\(X\)</span> takes only non-negative values then <span class="arithmatex">\(P(X \geq a) \leq E[X]/a\)</span>.</li>
+<li><span class="arithmatex">\(P(|X - \mu|\geq c) \leq \sigma^2/c^2\)</span> for all <span class="arithmatex">\(c &gt; 0\)</span>.</li>
+<li>According to the idea of convergence <span class="arithmatex">\(\lim_{n\to \infty} P(|X_n - a| \geq \epsilon)= 0\)</span>.</li>
+</ol>
+<h3 id="central-limit-theorem">Central Limit Theorem</h3>
+<p>Independent sampling of any distribution always yields a mean distribution which is normal. </p>
+<div class="arithmatex">\[
+Z_n = \frac{X_1 + \cdots + X_n - n\mu}{\sigma\sqrt n}
+\]</div>
+<div class="arithmatex">\[
+\lim_{n \to \infty} P(Z_n \leq z) = \phi(z) = \frac{1}{\sqrt {2\pi}} e^{-z^2/2}
+\]</div>
+<p><img style="width:60%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F84e0a07c-ba42-4638-9812-de198849bd5f%2FUntitled.png?table=block&id=11bf1580-6f78-4d76-91d1-c6f453bb7f38&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<h3 id="law-of-large-numbers">Law of large numbers</h3>
+<p>If you repeat an experiment independently a large number of times and average the result, what you obtain should be close to the expected value.</p>
+<div class="arithmatex">\[
+P(\lim \frac{X_1 + \cdots + X_n}{n} = \mu) = 1
+\]</div>
+<h3 id="distributions">Distributions</h3>
+<p>The gaussian distribution shows up in nature a lot because there are many situations in which a lot of small effects sum up to the thing you actually measure.</p>
+<p>Poisson statistics describe situations where an event occurs randomly but has a constant probability of happening everytime.</p>
+<h3 id="discrete-random-distributions">Discrete Random Distributions</h3>
+<p><img style="width:60%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fb6fe9ce1-7fef-45a9-b691-e1da3f23d69a%2FUntitled.png?table=block&id=ddf5f829-2b56-4464-ab5a-1cb2a631e551&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=1060&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<h3 id="continuous-random-distributions">Continuous Random Distributions</h3>
+<p><img style="width:60%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F81eb6ba8-044e-4beb-b571-1d22f6bfee43%2FUntitled.png?table=block&id=b61cd0d3-2672-4396-a4df-8464a4186476&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=1060&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"></p>
+<h3 id="poisson-distribution">Poisson Distribution</h3>
+<ul>
+<li>To predict the number of events occurring in the future!</li>
+<li>More formally, to predict the probability of a given number of events occurring in a fixed interval of time.</li>
+<li>The Poisson Distribution, on the other hand, doesn’t require you to know <span class="arithmatex">\(n\)</span> or <span class="arithmatex">\(p\)</span>. We are assuming <span class="arithmatex">\(n\)</span> is infinitely large and <span class="arithmatex">\(p\)</span> is infinitesimal. The only parameter of the Poisson distribution is the rate <span class="arithmatex">\(\lambda\)</span> (the expected value of <span class="arithmatex">\(x\)</span>). In real life, only knowing the rate (i.e., during 2pm~4pm, I received 3 phone calls) is much more common than knowing both <span class="arithmatex">\(n\)</span> &amp; <span class="arithmatex">\(p\)</span>.</li>
+</ul>
+<p>This gives the probability of observing <span class="arithmatex">\(k\)</span> events in an interval. The average number of events in an interval is designated by <span class="arithmatex">\(\lambda\)</span>.</p>
+<div class="arithmatex">\[
+P(X = k) = \frac{\lambda^k}{k!}e^{-\lambda}
+\]</div>
+<ul>
+<li>Even though the Poisson distribution models rare events, the rate <span class="arithmatex">\(\lambda\)</span> can be any number. It doesn’t always have to be small.</li>
+<li>Assumptions:<ul>
+<li>The <strong>average rate</strong> of events per unit time is <strong>constant</strong>.</li>
+<li>Events are <strong>independent</strong>.</li>
+</ul>
+</li>
+<li>If the number of events per unit time follows a Poisson distribution, then the amount of time between events follows the exponential distribution. The Poisson distribution is discrete and the exponential distribution is continuous, yet the two distributions are closely related.</li>
+</ul>
+<h3 id="random-shit">Random Shit</h3>
+<ol>
+<li>
+<p>How do you test whether a data sample is normal or not? <a href="https://en.wikipedia.org/wiki/Jarque%E2%80%93Bera_test">https://en.wikipedia.org/wiki/Jarque–Bera_test</a></p>
+</li>
+<li>
+<p>Optimal theoretical size for a bet is given by the https://en.wikipedia.org/wiki/Kelly_criterion.</p>
+</li>
+<li>
+<p>Random variable X is distributed as N(a, b), and random variable Y is distributed as N(c, d). What is the distribution of (1) X+Y, (2) X-Y, (3) X*Y, (4) X/Y?</p>
+<p>(1) <span class="arithmatex">\(X+Y \sim N(a+c, \sqrt{(b^2 + d^2 + 2\rho bd)})\)</span></p>
+<p>(2) <span class="arithmatex">\(X+Y \sim N(a+c, \sqrt{(b^2 + d^2 - 2\rho bd)})\)</span></p>
+<p>(3) <span class="arithmatex">\(X*Y \sim N(a*c, \sqrt{(a^2 d + c^2 b + bd)})\)</span></p>
+</li>
+<li>
+<p>The Monty Hall Problem</p>
+</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../poker/" class="btn btn-neutral float-left" title="Poker"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../prog-lang/" class="btn btn-neutral float-right" title="Programming Language Theory">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../poker/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../prog-lang/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../javascripts/config.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
