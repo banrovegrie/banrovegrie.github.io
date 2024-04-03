@@ -138,6 +138,81 @@ dw = f_x dx + f_y dy = (f_xx_u+ f_yy_u)du + (f_xx_v+ f_yy_v)dv = \frac{\partial 
 \]</div>
 <p>Basic idea: to find <span class="arithmatex">\((x, y)\)</span> where the level curves of <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span>  are tangent to each other (<span class="arithmatex">\(\vec{\nabla}f \parallel \vec{\nabla}g\)</span>). </p>
 <p>Note: Take care that the point is indeed a maxima or minima as required and not just a saddle point (second derivative test won't be applicable so be vigilant).</p>
+<table>
+<thead>
+<tr>
+<th>Functions</th>
+<th>Example</th>
+<th>Value</th>
+<th>First derivative</th>
+<th>Second derivative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(f: \mathbb R \to \mathbb R\)</span></td>
+<td><span class="arithmatex">\(x^2\)</span></td>
+<td><span class="arithmatex">\(\mathbb R\)</span></td>
+<td><span class="arithmatex">\(\mathbb R\)</span></td>
+<td><span class="arithmatex">\(\mathbb R\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f: \mathbb R^d \to \mathbb R\)</span></td>
+<td>loss function</td>
+<td><span class="arithmatex">\(\mathbb R\)</span></td>
+<td><span class="arithmatex">\(\mathbb R^d [\text{gradient}]\)</span></td>
+<td><span class="arithmatex">\(\mathbb R^{d\times d} [\text{hessian}]\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f: \mathbb R^d \to \mathbb R^p\)</span></td>
+<td>neural net layer</td>
+<td><span class="arithmatex">\(\mathbb R^p\)</span></td>
+<td><span class="arithmatex">\(\mathbb R^{d \times p} [\text{jacobian}]\)</span></td>
+<td><span class="arithmatex">\(\mathbb R^{d \times p \times p}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="gradient">Gradient</h3>
+<div class="arithmatex">\[
+\nabla_x f(x) = \nabla_x f(x_1, \cdots, x_d) = \begin{bmatrix}
+\frac{\partial f(x)}{\partial x_1}\\
+\vdots\\
+\frac{\partial f(x)}{\partial x_d}
+\end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+\nabla_Af(A) = \begin{bmatrix}
+\frac{\partial f(A)}{\partial A_{11}} &amp; \cdots\\
+\vdots &amp; \vdots\\
+\cdots &amp; \frac{\partial f(A)}{\partial A_{mn}}
+\end{bmatrix}
+\]</div>
+<h3 id="hessian">Hessian</h3>
+<p>We have <span class="arithmatex">\(f: \mathbb R^d \to \mathbb R^p\)</span> thus, <span class="arithmatex">\(f(x_1, \cdots, x_d) = \begin{bmatrix}
+f_1(x_1, \cdots, x_d)\\
+\vdots \\ f_p(x_1, \cdots, x_d)
+\end{bmatrix}\)</span></p>
+<p>Note: Hessians are square-symmetric matrices.</p>
+<div class="arithmatex">\[
+\nabla_x^2 f(x) = \begin{bmatrix}
+\frac{\partial^2f(x)}{\partial x_1^2} &amp; \frac{\partial^2f(x)}{\partial x_1x_2} &amp; \cdots\\
+\vdots &amp; \ddots &amp; \vdots \\
+\vdots &amp;\cdots &amp; \frac{\partial^2f(x)}{\partial x_n^2}
+\end{bmatrix}
+\]</div>
+<h3 id="jacobian">Jacobian</h3>
+<div class="arithmatex">\[
+J = \begin{bmatrix}  \dfrac{\partial \mathbf{f}}{\partial x_1} &amp; \cdots &amp; \dfrac{\partial \mathbf{f}}{\partial x_d}\end{bmatrix}= \begin{bmatrix}  \nabla^{\mathrm T} f_1 \\    \vdots \\  \nabla^{\mathrm T} f_p   \end{bmatrix}= \begin{bmatrix}    \dfrac{\partial f_1}{\partial x_1} &amp; \cdots &amp; \dfrac{\partial f_1}{\partial x_n}\\    
+\vdots                             &amp; \ddots &amp; \vdots\\    \dfrac{\partial f_p}{\partial x_1} &amp; \cdots &amp; \dfrac{\partial f_p}{\partial x_d}\end{bmatrix}
+\]</div>
+<p>where <span class="arithmatex">\(\nabla^{\mathrm T} f_i\)</span> is the transpose (row vector) of the gradient of the <span class="arithmatex">\(i\)</span> component.</p>
+<h3 id="examples">Examples</h3>
+<ul>
+<li><span class="arithmatex">\(\nabla_xb^Tx = b\)</span></li>
+<li><span class="arithmatex">\(\nabla_x^2 b^Tx = 0\)</span></li>
+<li><span class="arithmatex">\(\nabla_xx^TAx = 2Ax\)</span>, if <span class="arithmatex">\(A\)</span> is symmetric</li>
+<li><span class="arithmatex">\(\nabla_x^2x^TAx = 2A\)</span>, if <span class="arithmatex">\(A\)</span> is symmetric</li>
+</ul>
               
             </div>
           </div><footer>
