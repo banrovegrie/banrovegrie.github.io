@@ -393,6 +393,44 @@ a_3 = -ie^{i\alpha}sin(\theta/2)n_z
 <div class="arithmatex">\[
 U= e^{iα}(\cos(\frac{θ}{2})I − i\sin(\frac{\theta}{2})(n_xX+n_yY+n_zZ))= e^{iα}R_{\hat n}(θ)
 \]</div>
+<h2 id="chsh-inequality">CHSH Inequality</h2>
+<p>In a classical experiment, we have the following setup where Alice can choose to measure either Q or R and Bob chooses either S or T. The measurements are performed imultaneously and far off from each other.</p>
+<p>!https://s3-us-west-2.amazonaws.com/secure.notion-static.com/609febe9-da3a-4f92-b5a1-d35b81a8be3a/Untitled.png</p>
+<p>$$
+E(QS) + E(RS) + E(RT) - E(QT) = E(QS + RS + RT-QT)\</p>
+<p>$$</p>
+<div class="arithmatex">\[
+\implies E(QS) + E(RS) + E(RT) - E(QT) = \sum_{q,r,s,t}p(q, r, s, t)(qs + rs + rt - qt)
+\]</div>
+<div class="arithmatex">\[
+\implies E(QS) + E(RS) + E(RT) - E(QT) \leq \sum_{q,r,s,t}p\times 2 = 2
+\]</div>
+<p>and thereby we obtain the inequality <span class="arithmatex">\(E(QS) + E(RS) + E(RT) - E(QT) \leq 2\)</span>.</p>
+<p>This is one of the set of Bell inequalities, the first of which was found by John Bell. This one in particular is named CHSH inequality.</p>
+<h3 id="quantum-anomaly">Quantum Anomaly</h3>
+<p>In the quantum case, let us consider the measurements to be based on the following observables over the EPR pair <span class="arithmatex">\(|\psi\rangle = \frac{|01\rangle - |10\rangle}{\sqrt 2}\)</span>.</p>
+<div class="arithmatex">\[
+Q = Z_1, R= X_1,
+\]</div>
+<div class="arithmatex">\[
+S = \frac{-Z_2-X_2}{\sqrt 2},
+\]</div>
+<div class="arithmatex">\[
+T = \frac{Z_2 - X_2}{\sqrt 2}
+\]</div>
+<p>Then, we have the following result.</p>
+<div class="arithmatex">\[
+E(QS) + E(RS) + E(RT) - E(QT) = \frac{1}{\sqrt 2} + \frac{1}{\sqrt 2} + \frac{1}{\sqrt 2} - \frac{1}{\sqrt 2} = 2\sqrt 2 &gt; 2
+\]</div>
+<p>Thus, in other words, CHSH inequality doesn't hold. </p>
+<h3 id="interpretation">Interpretation</h3>
+<p>The fact that CHSH doesn't hold in the quantum scenario implies that two of the major assumptions about nature is wrong in case of the classical experiment.</p>
+<p>The assumptions are:</p>
+<ul>
+<li>Realism: Q, R, S, T are physical quantities which have defininte values irrespective of observation.</li>
+<li>Locality: Alice's measurement doesn't influence that of Bob's.</li>
+</ul>
+<p>Thus, the result of CHSH being false when accounted for the quantum mechanical properties of nature (we can perform the experiment in a lab with particles) suggests that nature cannot be locally real and neither can any true mathematical representation of it be locally real.</p>
               
             </div>
           </div><footer>
