@@ -130,7 +130,7 @@
 P(A \cup B) = P(A) + P(B) - P(A \cap B)
 \]</div>
 <div class="arithmatex">\[
-P(A) \leq P(B), \text{ if } A \sub B
+P(A) \leq P(B), \text{ if } A \subseteq B
 \]</div>
 <h3 id="conditional-probability">Conditional Probability</h3>
 <div class="arithmatex">\[
@@ -337,10 +337,10 @@ P(X = k) = \frac{\lambda^k}{k!}e^{-\lambda}
 <p>Optimal theoretical size for a bet is given by the https://en.wikipedia.org/wiki/Kelly_criterion.</p>
 </li>
 <li>
-<p>Random variable X is distributed as N(a, b), and random variable Y is distributed as N(c, d). What is the distribution of (1) X+Y, (2) X-Y, (3) X*Y, (4) X/Y?</p>
+<p>Random variable X is distributed as N(a, b), and random variable Y is distributed as N(c, d). What is the distribution of (1) <span class="arithmatex">\(X+Y\)</span>, (2) <span class="arithmatex">\(X-Y\)</span>, (3) <span class="arithmatex">\(X\times Y\)</span>, (4) <span class="arithmatex">\(X/Y\)</span>?</p>
 <p>(1) <span class="arithmatex">\(X+Y \sim N(a+c, \sqrt{(b^2 + d^2 + 2\rho bd)})\)</span></p>
 <p>(2) <span class="arithmatex">\(X+Y \sim N(a+c, \sqrt{(b^2 + d^2 - 2\rho bd)})\)</span></p>
-<p>(3) <span class="arithmatex">\(X*Y \sim N(a*c, \sqrt{(a^2 d + c^2 b + bd)})\)</span></p>
+<p>(3) <span class="arithmatex">\(X\times Y \sim N(a\times c, \sqrt{(a^2 d + c^2 b + bd)})\)</span></p>
 </li>
 <li>
 <p>The Monty Hall Problem</p>
