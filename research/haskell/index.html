@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://banrovegrie.github.io/research/probability/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://banrovegrie.github.io/research/haskell/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Probability and Gambling - Alapan Chaudhuri</title>
+    <title>Haskell in Harsh Words - Alapan Chaudhuri</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Probability and Gambling";
-        var mkdocs_page_input_path = "research/probability.md";
-        var mkdocs_page_url = "/research/probability/";
+        var mkdocs_page_name = "Haskell in Harsh Words";
+        var mkdocs_page_input_path = "research/haskell.md";
+        var mkdocs_page_url = "/research/haskell/";
       </script>
     
     <!--[if lt IE 9]>
@@ -68,7 +68,7 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../linear-algebra/">Linear Algebra</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Probability and Gambling</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Haskell in Harsh Words</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#meaning-of-the-above-bullshit-words">Meaning of the above bullshit words?</a>
         <ul>
@@ -108,7 +108,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Research</li>
-      <li class="breadcrumb-item active">Probability and Gambling</li>
+      <li class="breadcrumb-item active">Haskell in Harsh Words</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -118,6 +118,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="the-fuck-is-haskell">The Fuck is Haskell?</h1>
+<hr />
 <p>A <em>pure</em>, <em>lazy</em>, <em>functional</em> programming language. Basically, it is something that happens when like-minded cool people come together.</p>
 <h2 id="meaning-of-the-above-bullshit-words">Meaning of the above bullshit words?</h2>
 <h3 id="functional">Functional</h3>
@@ -157,6 +158,7 @@
 <li>High-load concurrent programming (web back-end)</li>
 </ul>
 <h1 id="haskell-a-functional-programming-langauge">Haskell: A Functional Programming Langauge</h1>
+<hr />
 <p>What does it mean for Haskell to be a functional programming language? Well, it means that Haskell follows the principle of functional programming — a programming paradigm where functions are the basic building blocks of computation.</p>
 <p><strong>Def:</strong> <em>A function is a mapping that takes one or more arguments and produces a single result.</em></p>
 <h2 id="properties-of-haskell">Properties of Haskell</h2>
@@ -172,6 +174,7 @@
 <li>Equational reasoning</li>
 </ul>
 <h1 id="first-steps">First Steps</h1>
+<hr />
 <p>Haskell comes with a large number of built-in functions, which are defined in a library file called the standard prelude.</p>
 <ul>
 <li><code>head &lt;list&gt;</code></li>
@@ -326,7 +329,6 @@ y = (1+) 2
 z = (+2) 1
 </code></pre>
 <p>This is very useful to construct certain functions.</p>
-<p>!https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3958b1e2-98f6-495f-b71d-19a673a0655c/Untitled.png</p>
 <h1 id="list-comprehension">List Comprehension</h1>
 <hr />
 <p>The idea is based on set construction from other sets.</p>
@@ -416,9 +418,7 @@ filter f (x:xs) | f x = x : filter f xs
 f (x:xs) = x ⊕ f xs
 </code></pre>
 <p>Here <span class="arithmatex">\(f\)</span> maps the empty list to some value <span class="arithmatex">\(v\)</span> and any non-empty list  to some function <span class="arithmatex">\(⊕\)</span> applied to its head and <span class="arithmatex">\(f\)</span> of its tail.</p>
-<p>!https://s3-us-west-2.amazonaws.com/secure.notion-static.com/44120e4a-af97-48ab-8414-8bff8ebfb10d/Untitled.png</p>
-<p>The higher-order library function foldr (fold-right) encapsulates this simple pattern of recursion with the function  $$<span class="arithmatex">\(⊕\)</span> and the value <span class="arithmatex">\(v\)</span> as arguments.</p>
-<p>!https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b4139812-d0d4-49d0-bb97-794c88b8d8c5/Untitled.png</p>
+<p>The higher-order library function foldr (fold-right) encapsulates this simple pattern of recursion with the function  <span class="arithmatex">\(⊕\)</span> and the value <span class="arithmatex">\(v\)</span> as arguments.</p>
 <pre><code class="language-haskell">foldr :: (a -&gt; b -&gt; b) -&gt; b -&gt; [a] -&gt; b
 foldr f v [] = v
 foldr f v (x:xs) = f x (foldr f v xs)
