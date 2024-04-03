@@ -164,10 +164,12 @@ x_{k + 1} = x_k - \frac{f'(x_k)}{f''(x_k)}
 </ul>
 <p>Quasi Newtown method:</p>
 <div class="arithmatex">\[
-GD:\ \ \ \ x_{k + 1} = x_k - \eta \cdot I\cdot \nabla f(x_k)$$
-$$
-NM:\ \ \ \ x_{k + 1} = x_k - \eta \cdot \frac{1}{\nabla^{2}f(x_k)}\cdot \nabla f(x_k)$$
-$$
+GD:\ \ \ \ x_{k + 1} = x_k - \eta \cdot I\cdot \nabla f(x_k)
+\]</div>
+<div class="arithmatex">\[
+NM:\ \ \ \ x_{k + 1} = x_k - \eta \cdot \frac{1}{\nabla^{2}f(x_k)}\cdot \nabla f(x_k)
+\]</div>
+<div class="arithmatex">\[
 QNM:\ \ \ \ x_{k + 1} = x_k - \eta \cdot H_k\cdot \nabla f(x_k)
 \]</div>
 <p>A good choice for <span class="arithmatex">\(H\)</span>  can be the following. This is the BFGS method and <span class="arithmatex">\(H_k\)</span> holds curvature information. Key idea is to match curvature along trajectory.</p>
