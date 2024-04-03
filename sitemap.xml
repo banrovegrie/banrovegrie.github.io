@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://banrovegrie.github.io/research/data-analysis/</loc>
+         <lastmod>2024-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://banrovegrie.github.io/research/haskell/</loc>
          <lastmod>2024-04-03</lastmod>
          <changefreq>daily</changefreq>
@@ -26,12 +31,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://banrovegrie.github.io/research/millennium/</loc>
+         <lastmod>2024-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://banrovegrie.github.io/research/multi-variate/</loc>
          <lastmod>2024-04-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://banrovegrie.github.io/research/music-theory/</loc>
+         <lastmod>2024-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://banrovegrie.github.io/research/prog-lang/</loc>
          <lastmod>2024-04-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
