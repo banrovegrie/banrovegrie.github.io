@@ -153,6 +153,101 @@
 <li>Composite systems: <span class="arithmatex">\(N = N_aN_b \text{ and } K = K_aK_b\)</span></li>
 <li>Continuity: <span class="arithmatex">\(\exists\)</span> a continuous reversible transformation on a system between anytwo pure states of that system</li>
 </ol>
+<h2 id="landauers-principle">Landauer's Principle</h2>
+<p>Landauer's Principle explains that when info is erased, it requires work.</p>
+<p>Each bit erased <span class="arithmatex">\(\implies \Delta S = -K \ln(2)\)</span>. Hence, heat associated is given by <span class="arithmatex">\(Q = -KT \ln(2)\)</span>.</p>
+<p>Hence to keep constant temp, that amount of work needs to be put in. This generalises to reversible processes requiring work.</p>
+<h2 id="postulates-of-quantum-mechanics">Postulates of Quantum Mechanics</h2>
+<p>I shall state here the four major generic postulates of Quantum Mechanics stated in terms of both state-vector formalization and density-matrix formalization.</p>
+<h3 id="state-is-a-vector">State is a vector</h3>
+<ol>
+<li>
+<p>Isolated physical system is given by its state vector operating on a certain Hilbert space.</p>
+</li>
+<li>
+<p>Evolution of a closed quantum system is given by a unitary transformation.</p>
+<p>In its physical interpretation we have this postulate governed by the Schrodinger Equation, as stated.</p>
+<div class="arithmatex">\[
+i{\hbar}\frac{d\vert\psi\rangle}{dt} = H\vert\psi\rangle
+\]</div>
+<p>The Hamiltonian is a hermitian operator and has a spectral decomposition, <span class="arithmatex">\(H = \sum E\vert E\rangle\langle E\vert\)</span>.</p>
+</li>
+<li>
+<p>The state space of a composite physical system is the tensor product of the state spaces of the component systems.</p>
+<div class="arithmatex">\[
+\vert\psi\rangle = \vert\psi_1\rangle\otimes...\otimes\vert\psi_n\rangle
+\]</div>
+</li>
+<li>
+<p>Quantum measurements are described by a collection <span class="arithmatex">\(\{M_m\}\)</span> of measurement operators acting on the state space of the system. </p>
+<p>Probability that upon measurement the outcome is <span class="arithmatex">\(m = p(m) = \langle\psi\vert M_m^\dagger M_m\vert\psi\rangle\)</span> and the state of the system becomes as follows.</p>
+<div class="arithmatex">\[
+\vert\psi\rangle \xrightarrow{\text{on measuring}} \frac{M_m\vert\psi\rangle}{\sqrt{p(m)}} = \frac{M_m\vert\psi\rangle}{||M_m\vert\psi\rangle||}
+\]</div>
+<p>Measurement operators also follow the completeness equation, <span class="arithmatex">\(\sum_m M_m^\dagger M_m = I\)</span>.</p>
+</li>
+</ol>
+<h3 id="state-is-a-density-matrix">State is a density matrix</h3>
+<ol>
+<li>
+<p>Isolated physical system is given by its density matrix operating on a certain Hilbert space.</p>
+</li>
+<li>
+<p>Evolution of a closed quantum system is given by a unitary transformation as <span class="arithmatex">\(\rho \xrightarrow{U} U\rho U^\dagger\)</span>.</p>
+</li>
+<li>
+<p>The state space of a composite physical system is the tensor product of the state spaces of the component systems.</p>
+<div class="arithmatex">\[
+\rho = \rho_1\otimes...\otimes\rho_n
+\]</div>
+</li>
+<li>
+<p>Quantum measurements are described by a collection <span class="arithmatex">\(\{M_m\}\)</span> of measurement operators acting on the state space of the system. </p>
+<p>Probability that upon measurement the outcome is <span class="arithmatex">\(m = p(m) = tr(M_m^\dagger M_m\rho)\)</span> and the state of the system becomes as follows.</p>
+<div class="arithmatex">\[
+\rho \xrightarrow{\text{on measuring}} \frac{M_m\rho M_m^\dagger}{p(m)}
+\]</div>
+<p>Measurement operators also follow the completeness equation, <span class="arithmatex">\(\sum_m M_m^\dagger M_m = I\)</span>.</p>
+</li>
+</ol>
+<h2 id="measurement">Measurement</h2>
+<h3 id="postulate">Postulate</h3>
+<p>Quantum Measurements are descrivbed by a collection of  measurement operators <span class="arithmatex">\(\{M_m\}\)</span> with <span class="arithmatex">\(p(m)= \langle \psi | M_m^\dagger M_m | \psi \rangle,\ \sum{p(m)} = 1\)</span>.</p>
+<div class="arithmatex">\[
+\vert \psi \rangle \xrightarrow{\text{on   measurement}} \frac{M_m \vert \psi \rangle}{\sqrt{p(m)}}
+\]</div>
+<p>If <span class="arithmatex">\(M_i = |i\rangle \langle i|,\ \forall i\)</span>  then we are measuring in a computational basis.</p>
+<h3 id="non-distinguishability-of-arbitrary-states">Non-distinguishability of arbitrary states</h3>
+<p>We cannot distinguish any two arbitrary non-orthogonal quantum states.</p>
+<p>Proof: Let <span class="arithmatex">\(|\psi_1\rangle\)</span> and <span class="arithmatex">\(|\psi_2\rangle\)</span> be two non-orthogonal states. </p>
+<p>Then <span class="arithmatex">\(\exists\ E_1, E_2\)</span> such that <span class="arithmatex">\(E_1 = \sum_{j:f(j) = 1} M_j^\dagger M_j\)</span> and similarly <span class="arithmatex">\(E_2\)</span> then <span class="arithmatex">\(\langle \psi_1 | E_1 | \psi_1 \rangle = 1\)</span> and <span class="arithmatex">\(\langle \psi_2 | E_2 | \psi_2 \rangle = 1\)</span>.</p>
+<p>Thus, <span class="arithmatex">\(\sqrt{E_2}| \psi_1\rangle = 0\)</span> and let <span class="arithmatex">\(\psi_2 = a\psi_1 + b \phi\)</span> where <span class="arithmatex">\(\psi\)</span> and <span class="arithmatex">\(\phi\)</span> are orthogonal.</p>
+<div class="arithmatex">\[
+\langle \psi_2 | E_2 \psi_2 \rangle = |\beta|^2 \langle \psi_2 | \phi \psi_2 \leq  |\beta|^2 &lt; 1
+\]</div>
+<p>Hence, proved by contradiction.</p>
+<h3 id="projective-measurements">Projective Measurements</h3>
+<p>We can use projective measurement formalism for any general measurement too.</p>
+<p>In case of projective measurements, <span class="arithmatex">\(M = \sum mP_m\)</span> and <span class="arithmatex">\(p(m) = \langle \psi | P_m | \psi \rangle\)</span>.</p>
+<div class="arithmatex">\[
+\vert \psi \rangle \rightarrow \frac{P_m \vert \psi\rangle}{\sqrt {p(m)}}
+\]</div>
+<div class="arithmatex">\[
+E(M) = \sum mp(m) = \langle \psi | M | \psi \rangle = \langle M\rangle
+\]</div>
+<div class="arithmatex">\[
+\Delta(M) = \sqrt{\langle M^2\rangle - \langle M \rangle^2}
+\]</div>
+<p>Here, <span class="arithmatex">\(E(M)\)</span> is expectation and <span class="arithmatex">\(\Delta(M)\)</span> is standard deviation or the square root of variance.</p>
+<h3 id="povm-measurements">POVM Measurements</h3>
+<p>POVM Measurements are a formalism where only measurement statistics matters.</p>
+<div class="arithmatex">\[
+\{E_m\} \rightarrow \sum{E_m} = I,\ p(m) = \langle \psi | E_m |\psi \rangle
+\]</div>
+<p>Here, each of <span class="arithmatex">\(E_m\)</span> are hermitian.</p>
+<h3 id="global-phase-doesnt-matter">Global Phase doesn't matter</h3>
+<p>We say <span class="arithmatex">\(e^{i\theta} |\psi\rangle \equiv |\psi\rangle\)</span> but why? Because, <span class="arithmatex">\(\langle \psi | M_m^{\dagger}M_m | \psi \rangle = \langle \psi \vert e^{-i\theta}M_m^\dagger M_m e^{i\theta}\vert \psi \rangle\)</span>.</p>
+<p>However, be aware that the global phase is quite different from the relative phase.</p>
               
             </div>
           </div><footer>
