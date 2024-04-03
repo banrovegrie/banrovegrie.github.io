@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://banrovegrie.github.io/research/multi-variate/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Multivariate Calculus - Alapan Chaudhuri</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Multivariate Calculus";
+        var mkdocs_page_input_path = "research/multi-variate.md";
+        var mkdocs_page_url = "/research/multi-variate/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Alapan Chaudhuri
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../weblog/">Weblog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reading-list/">Reading List</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Writings</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/on-composition/">On Composition</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/search-for-meaning/">Search for Meaning</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/on-problem-solving/">On Problem Solving</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/kotobaro-bhebechhinu/">Kotobaro Bhebechhinu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/sanskrit/">Random Sanskrit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/reality-of-fiction/">Reality of Fiction</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Research</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../quantum-theory/">Quantum Theory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../quantum-channels/">Quantum Channels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../linear-algebra/">Linear Algebra</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../music-theory/">Music Theory</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Multivariate Calculus</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../haskell/">Haskell in Harsh Words</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Alapan Chaudhuri</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Research</li>
+      <li class="breadcrumb-item active">Multivariate Calculus</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="differentials">Differentials</h2>
+<ul>
+<li><span class="arithmatex">\(df = f_xdx + f_ydy+f_zdz\)</span></li>
+<li><span class="arithmatex">\(df \neq \Delta f\)</span></li>
+<li><span class="arithmatex">\(\Delta f =  f_x\Delta x + f_y\Delta y + f_z\Delta z\)</span></li>
+<li><span class="arithmatex">\(df\)</span> is used to encode infinitesimal changes</li>
+<li>used to act as a placegolder value</li>
+<li>divide wrt time to get rate of change <span class="arithmatex">\(\rightarrow\)</span> CHAIN RULE</li>
+</ul>
+<h2 id="chain-rule-with-more-variables">Chain Rule with More Variables</h2>
+<p>Let <span class="arithmatex">\(w = f(x, y)\)</span> when <span class="arithmatex">\(x(u, v), y(u, v)\)</span> then,</p>
+<div class="arithmatex">\[
+dw = f_x dx + f_y dy = (f_xx_u+ f_yy_u)du + (f_xx_v+ f_yy_v)dv = \frac{\partial f}{\partial u}du + \frac{\partial f}{\partial v}dv
+\]</div>
+<h2 id="gradient-vector">Gradient Vector</h2>
+<div class="arithmatex">\[
+\frac{dw}{dt} = w_x \frac{dx}{dt} + w_y \frac{dy}{dt} + w_z \frac{dz}{dt} = \vec{\nabla} w.\frac{d\vec{r}}{dt}
+\]</div>
+<p>Note: <span class="arithmatex">\(\vec{\nabla}w \ \perp \text{ level surfaces}\)</span> (tangent to the level surface at any given point)</p>
+<h2 id="directional-derivatives">Directional Derivatives</h2>
+<div class="arithmatex">\[
+\frac{dw}{ds}|_{\hat{u}} = \vec{\nabla}w \cdot \frac{d\vec{r}}{ds} = \vec{\nabla}w \cdot \hat{u}
+\]</div>
+<h2 id="implications">Implications</h2>
+<p>Direction of <span class="arithmatex">\(\vec{\nabla}w\)</span> is the direction of fastest increase of <span class="arithmatex">\(w\)</span></p>
+<h2 id="lagrange-multipliers">Lagrange Multipliers</h2>
+<p>Goal: minima/maximize a multi-variable function (<span class="arithmatex">\(min/max\ \  f(x, y, z)\)</span>) where <span class="arithmatex">\(x, y, z\)</span> are not independent and <span class="arithmatex">\(\exists\)</span> <span class="arithmatex">\(g(x, y, z) = c\)</span>.</p>
+<p>These can be obtained on combining the given restraints with the following.</p>
+<div class="arithmatex">\[
+\vec{\nabla}f = \lambda \vec{\nabla}g
+\]</div>
+<p>Basic idea: to find <span class="arithmatex">\((x, y)\)</span> where the level curves of <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span>  are tangent to each other (<span class="arithmatex">\(\vec{\nabla}f \parallel \vec{\nabla}g\)</span>). </p>
+<p>Note: Take care that the point is indeed a maxima or minima as required and not just a saddle point (second derivative test won't be applicable so be vigilant).</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../music-theory/" class="btn btn-neutral float-left" title="Music Theory"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../haskell/" class="btn btn-neutral float-right" title="Haskell in Harsh Words">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../music-theory/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../haskell/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../javascripts/config.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
