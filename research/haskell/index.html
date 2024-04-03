@@ -305,7 +305,9 @@ f :: (\text{Type}(a),\ \text{Type}(b),\ \text{Type}(c)) \to \text{Type}(x)
 \]</div>
 <p>Upon currying, this gets translated to the below expression.</p>
 <div class="arithmatex">\[
-f :: \text{Type}(a) \to (\text{Type}(b) \to (\text{Type}(c) \to (\text{Type}(x))))\\
+f :: \text{Type}(a) \to (\text{Type}(b) \to (\text{Type}(c) \to (\text{Type}(x))))
+\]</div>
+<div class="arithmatex">\[
 \text{or, } f :: \text{Type}(a) \to \text{Type}(b) \to \text{Type}(c) \to \text{Type}(x)
 \]</div>
 <p>This is because, <span class="arithmatex">\(x = f(a, b, c)\)</span> becomes <span class="arithmatex">\(h = g(a), i = h(b), x = i(c)\)</span> or if called in sequence <span class="arithmatex">\(x = g(a)(b)(c)\)</span>.</p>
