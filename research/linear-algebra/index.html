@@ -337,6 +337,33 @@ AA^{\text{right inv}} = I
 <li>The leading entry in each nonzero row is a 1 (called a leading 1).</li>
 <li>Each column containing a leading 1 has zeros in all its other entries.</li>
 </ul>
+<h2 id="spectral-decomposition_1">Spectral Decomposition</h2>
+<p>Any normal operator <span class="arithmatex">\(M\)</span> on a vector space <span class="arithmatex">\(V\)</span> is diagonal with respect to some orthonormal basis for <span class="arithmatex">\(V\)</span>. </p>
+<p>Conversely, any diagonalizable operator is normal.</p>
+<h3 id="proof">Proof</h3>
+<div class="arithmatex">\[
+M = (P+Q)M(P+Q) = PMP+QMP+PMQ+QMQ = PMP + QMQ
+\]</div>
+<p>Now we have</p>
+<div class="arithmatex">\[
+QM = QM(P+Q) = QMQ \text{ and } QM^\dagger = QM^\dagger Q
+\]</div>
+<div class="arithmatex">\[
+QMQQM^\dagger Q = QMM^\dagger Q = QM^\dagger MQ = QM^\dagger QQMQ
+\]</div>
+<p>Thus, if <span class="arithmatex">\(M\)</span> is normal then <span class="arithmatex">\(M = PMP + QMQ\)</span> where <span class="arithmatex">\(PMP = \lambda P^2 = \lambda P\)</span> and thus is diagonalizable wrt orthonormal basis for <span class="arithmatex">\(P\)</span>. Similarly, <span class="arithmatex">\(QMQ\)</span> is also diagonalizable wrt some orthonormal basis for <span class="arithmatex">\(Q\)</span>.</p>
+<p>Thus, <span class="arithmatex">\(M\)</span> is diagonalizable for orthonormal basis of the entire vector space.</p>
+<div class="arithmatex">\[
+M = \Sigma \lambda_i \vert i\rangle \langle i \vert = \Sigma \lambda_i P_i
+\]</div>
+<h2 id="polar-value-decomposition_1">Polar Value Decomposition</h2>
+<p>Let <span class="arithmatex">\(A\)</span> be a matrix on vector space <span class="arithmatex">\(V\)</span>. Then there exists unitary <span class="arithmatex">\(U\)</span> and positive operators <span class="arithmatex">\(J\)</span> and <span class="arithmatex">\(K\)</span> such that, <span class="arithmatex">\(A= UJ=KU\)</span> where the unique positive operators shall satisfy the equations <span class="arithmatex">\(J \equiv \sqrt{A^\dagger A}\)</span> and <span class="arithmatex">\(K \equiv \sqrt{AA^\dagger}\)</span>.</p>
+<p>Moreover, if <span class="arithmatex">\(A\)</span> is invertible then <span class="arithmatex">\(U\)</span> is unique.</p>
+<h2 id="singular-value-decomposition_1">Singular Value Decomposition</h2>
+<p>Let <span class="arithmatex">\(A\)</span> be a square matrix. Then there exist unitary matrices <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(V\)</span>, and a diagonal matrix <span class="arithmatex">\(D\)</span> with non-negative entries such that <span class="arithmatex">\(A = UDV\)</span>.</p>
+<p>The diagonal elements of <span class="arithmatex">\(D\)</span> are called the singular values of <span class="arithmatex">\(A\)</span>.</p>
+<h3 id="proof_1">Proof</h3>
+<p>From polar value decomposition we have, <span class="arithmatex">\(A = SJ = STDT^\dagger = (ST)D(T^\dagger) = UDV\)</span>.</p>
               
             </div>
           </div><footer>
