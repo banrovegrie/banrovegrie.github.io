@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://banrovegrie.github.io/research/probability/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Probability and Gambling - Alapan Chaudhuri</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Probability and Gambling";
+        var mkdocs_page_input_path = "research/probability.md";
+        var mkdocs_page_url = "/research/probability/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Alapan Chaudhuri
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../weblog/">Weblog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reading-list/">Reading List</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Writings</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/on-composition/">On Composition</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/search-for-meaning/">Search for Meaning</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/on-problem-solving/">On Problem Solving</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/kotobaro-bhebechhinu/">Kotobaro Bhebechhinu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/sanskrit/">Random Sanskrit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../src/reality-of-fiction/">Reality of Fiction</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Research</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../linear-algebra/">Linear Algebra</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Probability and Gambling</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#meaning-of-the-above-bullshit-words">Meaning of the above bullshit words?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#functional">Functional</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pure">Pure</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lazy">Lazy</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#haskell-the-new-cool-guy-in-campus">Haskell, the new cool guy in campus</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#types">Types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#abstraction">Abstraction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-can-i-do-with-it">What can I do with it?</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Alapan Chaudhuri</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Research</li>
+      <li class="breadcrumb-item active">Probability and Gambling</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="the-fuck-is-haskell">The Fuck is Haskell?</h1>
+<p>A <em>pure</em>, <em>lazy</em>, <em>functional</em> programming language. Basically, it is something that happens when like-minded cool people come together.</p>
+<h2 id="meaning-of-the-above-bullshit-words">Meaning of the above bullshit words?</h2>
+<h3 id="functional">Functional</h3>
+<ul>
+<li>All hail functions. Children of the idea behind lambda calculus. Use functions just like any other sort of values.</li>
+<li>Evaluate not execute.</li>
+</ul>
+<h3 id="pure">Pure</h3>
+<ul>
+<li>Immutability is the key.</li>
+<li>Fuck all side-effects.</li>
+<li>Deterministic as fuck.</li>
+<li>Benefits: equational reasoning, parallelism, happiness</li>
+</ul>
+<h3 id="lazy">Lazy</h3>
+<ul>
+<li>Infinity? ez.</li>
+<li>Compositional programming — you feel like Mozart.</li>
+<li>Disadvantage: Wot is time? Wot is space?</li>
+</ul>
+<h2 id="haskell-the-new-cool-guy-in-campus">Haskell, the new cool guy in campus</h2>
+<h3 id="types">Types</h3>
+<ul>
+<li>Statically typed: run time errors <span class="arithmatex">\(\rightarrow\)</span> compile-time errors</li>
+<li>Expressive: the code is the documentation</li>
+<li>Expressive: brings clarity into coding</li>
+</ul>
+<h3 id="abstraction">Abstraction</h3>
+<ul>
+<li>Eat, Code, Sleep, ~~Repeat~~: Haskell has polymorphism, higher-order functions and type classes — so fuck repetition.</li>
+<li>Think about the big picture and don't cry about some stupid exception.</li>
+</ul>
+<h3 id="what-can-i-do-with-it">What can I do with it?</h3>
+<ul>
+<li>Program Correctness (QuickCheck)</li>
+<li>Fail safe programming (Cardano)</li>
+<li>High-load concurrent programming (web back-end)</li>
+</ul>
+<h1 id="haskell-a-functional-programming-langauge">Haskell: A Functional Programming Langauge</h1>
+<p>What does it mean for Haskell to be a functional programming language? Well, it means that Haskell follows the principle of functional programming — a programming paradigm where functions are the basic building blocks of computation.</p>
+<p><strong>Def:</strong> <em>A function is a mapping that takes one or more arguments and produces a single result.</em></p>
+<h2 id="properties-of-haskell">Properties of Haskell</h2>
+<ul>
+<li>Consice programs</li>
+<li>Powerful type system</li>
+<li>List comprehension</li>
+<li>Recursive functions</li>
+<li>Higher-order functions</li>
+<li>Effectful functions</li>
+<li>Generic functions</li>
+<li>Lazy evaluation</li>
+<li>Equational reasoning</li>
+</ul>
+<h1 id="first-steps">First Steps</h1>
+<p>Haskell comes with a large number of built-in functions, which are defined in a library file called the standard prelude.</p>
+<ul>
+<li><code>head &lt;list&gt;</code></li>
+<li><code>tail &lt;list&gt;</code></li>
+<li><code>take &lt;num&gt; &lt;list&gt;</code></li>
+<li><code>drop &lt;num&gt; &lt;list&gt;</code></li>
+<li><code>sum &lt;list&gt;</code></li>
+<li><code>reverse &lt;list&gt;</code></li>
+<li><code>product &lt;list&gt;</code></li>
+</ul>
+<h2 id="function-format">Function Format</h2>
+<p>Just as in lambda calculus haskell follows a fixed pattern for functions. Here are some examples to elaborate:</p>
+<ul>
+<li><span class="arithmatex">\(f(x)\)</span> as <code>f x</code></li>
+<li><span class="arithmatex">\(f(x, y)\)</span> as <code>f x y</code></li>
+<li><span class="arithmatex">\(f(g(x))\)</span> as <code>f (g x)</code></li>
+<li><span class="arithmatex">\(f(x, g(y))\)</span> as <code>f x (g y)</code></li>
+<li><span class="arithmatex">\(f(x)g(y)\)</span> as <code>f x * g y</code></li>
+<li>Function application has the highest priority than all other operators.</li>
+<li><code>x</code>f<code>y</code> is a syntactic sugar for <code>f x y</code></li>
+</ul>
+<h2 id="examples">Examples</h2>
+<pre><code class="language-haskell">-- Program 1
+main = print (a ++ b ++ c)
+a = [((2**3) * 4)]
+b = [(2*3) + (4*5)]
+c = [2 + (3 * (4**5))]
+
+-- Program 2
+main = print (n)
+n = (a `div` (length xs))
+    where
+        a = 10
+        xs = [1 .. 5]
+
+-- Program 3
+main = print (a [1 .. 5])
+a xs = sum (drop (length xs - 1) (take (length xs) xs))
+main = putStrLn &quot;hello, world&quot;
+</code></pre>
+<h1 id="types-and-class">Types and class</h1>
+<hr />
+<h3 id="types_1"><strong>Types</strong></h3>
+<ul>
+<li>They are a collection of related values.</li>
+<li><code>f :: A -&gt; B</code> and <code>e :: A</code> then, <code>f e :: B</code></li>
+<li><strong>Bool</strong> – logical values</li>
+<li><strong>Char</strong> – single characters</li>
+<li><strong>String</strong> – strings of characters</li>
+<li><strong>Int</strong> – fixed-precision integers</li>
+<li><strong>Integer</strong> – arbitrary-precision integers</li>
+<li><strong>Float</strong> – single-precision floating-point numbers</li>
+<li><strong>Double</strong> – double-precision floating-point numbers</li>
+<li><code>[[’a’,’b’],[’c’,’d’,’e’]] :: [[Char]]</code></li>
+<li><strong>List</strong> types — <code>["One","Two","Three"] :: [String]</code></li>
+<li><strong>Tuple</strong> types — <code>("Yes",True,’a’) :: (String,Bool,Char)</code></li>
+<li><strong>Function</strong> types — <code>not :: Bool -&gt; Bool</code> and <code>add :: (Int,Int) -&gt; Int</code></li>
+<li><strong>Polymorphic</strong> types — <code>length :: [a] -&gt; Int</code> and <code>zip :: [a] -&gt; [b] -&gt; [(a, b)]</code></li>
+</ul>
+<h3 id="classes">Classes</h3>
+<ul>
+<li>They are collections of types that support certain overloaded operations called methods.</li>
+<li>Eq — <code>(==) :: Eq a =&gt; a -&gt; a -&gt; Bool</code></li>
+<li>Ord — <code>&lt;, &gt;, min, max</code> with <code>(&lt;) :: Ord a =&gt; a -&gt; a -&gt; Bool</code></li>
+<li>Show — <code>show :: a -&gt; String</code></li>
+<li>Read — <code>read :: String -&gt; a</code></li>
+<li>Num — e.g., <code>(+), (-), negate, abs, signum</code> with <code>(+) :: Num a =&gt; a -&gt; a -&gt; a</code></li>
+<li>Integral — <code>div :: Int a =&gt; a -&gt; a -&gt; a</code> and <code>mod :: Int a =&gt; a -&gt; a -&gt; a</code>, also Int and Integer types are instances of this class.</li>
+<li>Fractional — Float and Double are instances of this class. We also have methods such as <code>/</code> and <code>recip</code>.</li>
+</ul>
+<h1 id="functions">Functions</h1>
+<hr />
+<p>Let us now introduce some really cool implementation techniques in haskell with respect to defining functions.</p>
+<ul>
+<li>Conditionals</li>
+</ul>
+<pre><code class="language-haskell">-- Let's see an example
+even :: a -&gt; Bool
+even n = (n `mod` 2 == 0)
+
+-- Conditional using &quot;if else&quot;
+signum n = if n &gt; 0 then 1 
+                    else if n &lt; 0 then -1 
+                    else 0
+
+-- Conditional using &quot;such that&quot;
+signum n | n &gt; 0 = 1
+                 | n &lt; 0 = -1
+                 | otherwise  = 0
+</code></pre>
+<ul>
+<li>Pattern Matching</li>
+</ul>
+<pre><code class="language-haskell">-- Define functions using '_'
+len [] = 0
+len (_:xs) = 1 + len xs
+
+initials :: String -&gt; String -&gt; String  
+initials firstname lastname = [f] ++ &quot;. &quot; ++ [l] ++ &quot;.&quot;  
+        where (f:_) = firstname  (l:_) = lastname
+
+-- Defining using '_' fundamentally
+test :: Int -&gt; Int
+test 0 = 1
+test 1 = 2
+test _ = 0
+</code></pre>
+<ul>
+<li>Lambda Functions</li>
+</ul>
+<pre><code class="language-haskell">\x -&gt; x + 1
+</code></pre>
+<pre><code class="language-haskell">-- For example,
+add :: Int -&gt; Int -&gt; Int
+add x y = x + y
+-- and
+odds n = map f [0 .. n - 1]
+            where
+                    f x = x * 2 + 1
+
+-- can be written as 
+add :: Int -&gt; (Int -&gt; Int)
+add = \x -&gt; (\y -&gt; x + y)
+-- and
+odds n = map (\x -&gt; x * 2 + 1) [0 .. n - 1]
+</code></pre>
+<h3 id="currying-functions">Currying Functions</h3>
+<p>Let <span class="arithmatex">\(x = f(a, b, c)\)</span> then, we shall have the following.</p>
+<div class="arithmatex">\[
+f :: (\text{Type}(a),\ \text{Type}(b),\ \text{Type}(c)) \to \text{Type}(x)
+\]</div>
+<p>Upon currying, this gets translated to the below expression.</p>
+<div class="arithmatex">\[
+f :: \text{Type}(a) \to (\text{Type}(b) \to (\text{Type}(c) \to (\text{Type}(x))))\\
+\text{or, } f :: \text{Type}(a) \to \text{Type}(b) \to \text{Type}(c) \to \text{Type}(x)
+\]</div>
+<p>This is because, <span class="arithmatex">\(x = f(a, b, c)\)</span> becomes <span class="arithmatex">\(h = g(a), i = h(b), x = i(c)\)</span> or if called in sequence <span class="arithmatex">\(x = g(a)(b)(c)\)</span>.</p>
+<pre><code class="language-haskell">fst :: (a, b) -&gt; a
+zip :: [a] -&gt; [b] -&gt; [(a, b)]
+id :: a -&gt; a
+take :: Int -&gt; [a] -&gt; [a]
+head :: [a] -&gt; a
+</code></pre>
+<h3 id="operator-sections">Operator Sections</h3>
+<pre><code class="language-haskell">-- Operator Sections
+w = 1 + 2
+-- is same as
+x = (+) 1 2
+-- is same as
+y = (1+) 2
+-- or
+z = (+2) 1
+</code></pre>
+<p>This is very useful to construct certain functions.</p>
+<p>!https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3958b1e2-98f6-495f-b71d-19a673a0655c/Untitled.png</p>
+<h1 id="list-comprehension">List Comprehension</h1>
+<hr />
+<p>The idea is based on set construction from other sets.</p>
+<pre><code class="language-haskell">xy = [(x, y) | x &lt;- [1..3], y &lt;- [x..3]]
+
+-- The above is an example of dependent generators.
+-- Definitions of x and y serve as generators.
+-- Check out the usability of .. operator.
+
+concat :: [[a]] -&gt; [a]
+concat xss = [x | xs &lt;- xss, x &lt;- xs]
+
+-- Guards are possible for example as bellow.
+evens = [x | x &lt;- [1..10], even x]
+</code></pre>
+<h1 id="recursion">Recursion</h1>
+<hr />
+<h2 id="how-to-think-recursively">How to think recursively?</h2>
+<ul>
+<li>Name the function</li>
+<li>Define its type</li>
+<li>Enumerate the cases</li>
+<li>Define the base cases</li>
+<li>List the "ingredients"</li>
+<li>Reason about the parameters</li>
+<li>Define the transition (non-trivial cases)</li>
+<li>Think about the result</li>
+</ul>
+<h3 id="recursion_1">Recursion</h3>
+<pre><code class="language-haskell">-- Example of a recursion
+zip :: [a] -&gt; [b] -&gt; [(a, b)]
+zip [] _ = []
+zip _ [] = []
+zip (x:xs) (y:ys) = (x, y) : zip xs ys
+
+-- Append Definition
+(++) :: [a] -&gt; [a] -&gt; [a]
+[] ++ ys = ys
+(x:xs) ++ ys = x : (xs ++ ys)
+</code></pre>
+<h3 id="memoization">Memoization</h3>
+<p>The following memoize function takes a function of type <code>Int -&gt; a</code> and returns a memoized version of the same function. The trick is to turn a function into a value because, in Haskell, functions are not memoized but values are.</p>
+<pre><code class="language-haskell">import Data.Function (fix)
+
+memoize :: (Int -&gt; a) -&gt; (Int -&gt; a)
+memoize f = (map f [0 ..] !!)
+
+fib :: (Int -&gt; Integer) -&gt; Int -&gt; Integer
+fib f 0 = 0
+fib f 1 = 1
+fib f n = f (n - 1) + f (n - 2)
+
+fibMemo :: Int -&gt; Integer
+fibMemo = fix (memoize . fib)
+</code></pre>
+<h2 id="higher-order-function">Higher Order Function</h2>
+<p>A function is called a higher order if it takes a function as an argument or returns a function as a result.</p>
+<pre><code class="language-haskell">twice :: (a -&gt; a) -&gt; a -&gt; a
+twice f x = f (f x)
+</code></pre>
+<ul>
+<li>Common programming idioms can be encoded as functions within the language itself.</li>
+<li>Domain specific languages can be defined as collections of higher order functions.</li>
+<li>Algebraic properties of higher-order functions can be used to reason about numbers.</li>
+</ul>
+<pre><code class="language-haskell">-- Example
+map :: (a -&gt; b) -&gt; [a] -&gt; [b]
+map f xs = [f x | x &lt;- xs]
+
+-- Alternate
+map :: (a -&gt; b) -&gt; [a] -&gt; [b]
+map f [] = []
+map f (x:xs) = f x : map f xs
+</code></pre>
+<pre><code class="language-haskell">-- Example
+filter :: (a -&gt; Bool) -&gt; [a] -&gt; [a]
+filter f xs = [x | x &lt;- xs, f x]
+
+-- Alternatively
+filter f [] = []
+filter f (x:xs) | f x = x : filter f xs
+                                | otherwise = filter f xs
+</code></pre>
+<h3 id="foldr">Foldr</h3>
+<p>A number of functions on lists can be defined using the following simple pattern of recursion.</p>
+<pre><code class="language-haskell">f [] = v
+f (x:xs) = x ⊕ f xs
+</code></pre>
+<p>Here <span class="arithmatex">\(f\)</span> maps the empty list to some value <span class="arithmatex">\(v\)</span> and any non-empty list  to some function <span class="arithmatex">\(⊕\)</span> applied to its head and <span class="arithmatex">\(f\)</span> of its tail.</p>
+<p>!https://s3-us-west-2.amazonaws.com/secure.notion-static.com/44120e4a-af97-48ab-8414-8bff8ebfb10d/Untitled.png</p>
+<p>The higher-order library function foldr (fold-right) encapsulates this simple pattern of recursion with the function  $$<span class="arithmatex">\(⊕\)</span> and the value <span class="arithmatex">\(v\)</span> as arguments.</p>
+<p>!https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b4139812-d0d4-49d0-bb97-794c88b8d8c5/Untitled.png</p>
+<pre><code class="language-haskell">foldr :: (a -&gt; b -&gt; b) -&gt; b -&gt; [a] -&gt; b
+foldr f v [] = v
+foldr f v (x:xs) = f x (foldr f v xs)
+</code></pre>
+<pre><code class="language-haskell">-- Generic Examples
+sum = foldr (+) 0
+product = foldr (*) 1
+or = foldr (||) False
+and = foldr (&amp;&amp;) True
+
+-- Other examples
+length = foldr (\ _ n -&gt; 1 + n) 0
+reverse = foldr (\ x xs -&gt; xs ++ [x]) []
+(++ ys) = foldr (:) ys
+</code></pre>
+<h3 id="composition">Composition</h3>
+<pre><code class="language-haskell">(.) :: (b -&gt; c) -&gt; (a -&gt; b) -&gt; (a -&gt; c)
+f . g = \x -&gt; f (g x)
+
+odd :: Int -&gt; Bool
+odd = not . even
+</code></pre>
+<h3 id="other-nice-library-functions">Other nice library functions</h3>
+<pre><code class="language-haskell">all :: (a -&gt; Bool) -&gt; [a] -&gt; Bool
+all f xs = and [f x | x &lt;- xs]
+
+any :: (a -&gt; Bool) -&gt; [a] -&gt; Bool
+any f xs = or [f x | x &lt;- xs]
+
+takeWhile :: (a -&gt; Bool) -&gt; [a] -&gt; [a]
+takeWhile f [] = []
+takeWhile f (x:xs) | f x = x : takeWhile f xs
+                                     | otherwise  = []
+
+dropWhile :: (a -&gt; Bool) -&gt; [a] -&gt; [a]
+dropWhile f [] = []
+dropWhile f (x:xs) | f x = dropWhile f xs
+                                     | otherwise  = x:xs
+</code></pre>
+<p>Moreover, curried functions are higher-order functions that returns a function.</p>
+<h3 id="where-and-let-clauses">Where and Let Clauses</h3>
+<pre><code class="language-haskell">-- Let
+f = let x = 1; y = 2 in (x + y)
+
+-- Where
+f = x + y where x = 1; y = 1
+</code></pre>
+<h1 id="type-and-class-declaration">Type and Class Declaration</h1>
+<hr />
+<pre><code class="language-haskell">type Pos = (Int, Int)
+type Trans = Pos -&gt; Pos
+
+type Tree = (Int, [Tree])
+</code></pre>
+<p>A completely new type can be defined by specifying its values in context-free formulation.</p>
+<pre><code class="language-haskell">data Bool = False | True
+</code></pre>
+<pre><code class="language-haskell">data Answer = Yes | No | Unknown
+
+answers :: [Answer]
+answers = [Yes, No, Unknown]
+
+flip :: Answer -&gt; Answer
+flip Yes = No
+flip No = Yes
+flip Unknown = Unknown
+</code></pre>
+<pre><code class="language-haskell">Circle :: Float -&gt; Shape
+Rect :: Float -&gt; Float -&gt; Shape
+
+data Shape = Circle Float | Rect Float Float
+
+square :: Float -&gt; Shape
+square n = Rect n n
+
+area :: Shape -&gt; Float
+area (Circle r) = pi * r^2
+area (Rect x y) = x * y
+</code></pre>
+<h3 id="maybe-nothing-just">Maybe, Nothing, Just</h3>
+<pre><code class="language-haskell">data Maybe a = Nothing | Just a
+
+safediv :: Int -&gt; Int -&gt; Maybe Int
+safediv _ 0 = Nothing
+safediv m n = Just (m `div` n)
+
+safehead :: [a] -&gt; Maybe a
+safehead [] = Nothing
+safehead xs = Just (head xs)
+</code></pre>
+<p>This is basically a cool syntactic encapsulation to prevent crashing. This is used to often deal with exceptions and create failsafe programs.</p>
+<h3 id="recursive-types">Recursive Types</h3>
+<pre><code class="language-haskell">data Nat = Zero | Succ Nat
+
+-- we have Zero :: Nat
+-- and Succ :: Nat -&gt; Nat
+</code></pre>
+<pre><code class="language-haskell">data Expr = Val Int
+          | Add Expr Expr
+          | Mul Expr Expr
+
+eval :: Expr -&gt; Int
+eval (Val n) = n
+eval (Add x y) = eval x + eval y
+eval (Mul x y) = eval x * eval y
+</code></pre>
+<h1 id="interactive-programming">Interactive Programming</h1>
+<hr />
+<p>This is a problem because Haskell is designed to have no side effects and thus only to create batch programs.</p>
+<p>Interactive programs, on the other hand, necessarily require side effects.</p>
+<h3 id="solution">Solution</h3>
+<ul>
+<li>We will use types to describe impure actions involving side effects (<code>IO a</code>).</li>
+<li><code>IO Char</code> is the type of actions that return a character.</li>
+<li><code>IO ()</code> is the type of purely side effecting actions that return no result value.</li>
+</ul>
+<p>The standard library provides a number of actions including the following three primitives.</p>
+<pre><code class="language-haskell">-- reads character from the keyboard 
+-- and echoes it o the screen
+-- returning the character as the result value
+getChar :: IO Char
+
+-- takes a character as a input and writes it to the screen 
+-- and returns no result value
+putChar :: Char -&gt; IO ()
+
+-- simply return value without performing any interaction
+-- this is basically a pure to impure conversion
+return :: a -&gt; IO a
+</code></pre>
+<h3 id="sequencing">Sequencing</h3>
+<pre><code class="language-haskell">act :: IO (Char, Char)
+act = do x &lt;- getChar
+                getChar
+                y &lt;- getChar
+                return (x, y)
+</code></pre>
+<h3 id="derived-primitives">Derived Primitives</h3>
+<pre><code class="language-haskell">getLine :: IO String
+getLine = do x &lt;- getChar
+                         if x == '\n' then return []
+                         else
+                                do xs &lt;- getLine
+                                    return (x:xs)
+</code></pre>
+<pre><code class="language-haskell">putStr :: String -&gt; IO ()
+putStr [] = return ()
+putStr (x:xs) = do putChar x
+                                        putStr xs
+</code></pre>
+<pre><code class="language-haskell">-- Just mentioned here so that 
+-- one can try out problems with input
+
+import Control.Arrow ((&gt;&gt;&gt;))
+
+main :: IO ()
+main = interact $
+        lines &gt;&gt;&gt; head &gt;&gt;&gt; read &gt;&gt;&gt; solve &gt;&gt;&gt; (++ &quot;\n&quot;)
+
+solve :: Int -&gt; String
+
+-- Type 2
+import Control.Arrow ((&gt;&gt;&gt;))
+
+main :: IO ()
+main =
+  interact $
+    words &gt;&gt;&gt; map read &gt;&gt;&gt; solve &gt;&gt;&gt; show &gt;&gt;&gt; (++ &quot;\n&quot;)
+
+solve :: [Integer] -&gt; Integer
+</code></pre>
+<h3 id="simple-io-operations">Simple I/O Operations</h3>
+<p>These are in-built.</p>
+<pre><code class="language-haskell">putChar :: Char -&gt; IO()
+putStr :: String -&gt; IO ()
+putStrLn :: String -&gt; IO ()
+print :: Show a =&gt; a -&gt; IO ()
+
+getChar :: IO Char
+getLine :: IO String
+getContents :: IO String
+interact :: (String -&gt; String) -&gt; IO ()
+
+show :: Show a =&gt; a -&gt; String
+read :: Read a =&gt; String -&gt; a
+</code></pre>
+<pre><code class="language-haskell">main = do
+             putStrLn &quot;enter value for x: &quot;
+               input1 &lt;- getLine
+           putStrLn &quot;enter value for y: &quot; 
+           input2 &lt;- getLine 
+           let x = (read input1 :: Int)
+           let y = (read input2 :: Int)
+           print (x + y)
+</code></pre>
+<h1 id="lazy-evaluation">Lazy Evaluation</h1>
+<hr />
+<div class="arithmatex">\[
+\text{lazy evaluation} = \text{outermost evaluation}\ +\ \text{shared arguments}
+\]</div>
+<p>Why is it important?</p>
+<ul>
+<li>No unnecessary evaluation</li>
+<li>Ensures termination when possible</li>
+<li>Supports programming with infinite structures</li>
+<li>Allows programs to be modular (separates control from data)</li>
+</ul>
+<h1 id="notes-on-functional-programming">Notes on Functional Programming</h1>
+<hr />
+<p>Haskell is very expressive language. It makes you think abstractly and forces to model and define the problem mathematically.</p>
+<ul>
+<li>Focus on what to compute (definitions) rather than how</li>
+<li>Power of abstraction and modularity</li>
+<li>Equational reasoning</li>
+<li>How powerful types are</li>
+</ul>
+<p>The main drawback is that it is hard to reason about efficiency.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../linear-algebra/" class="btn btn-neutral float-left" title="Linear Algebra"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../linear-algebra/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../javascripts/config.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
