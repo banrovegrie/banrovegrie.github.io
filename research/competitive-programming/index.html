@@ -140,29 +140,6 @@ typedef pair&lt;int, int&gt; pii;
 typedef vector&lt;int&gt; vi;
 
 void solve() {
-    int N, W;
-    cin &gt;&gt; N &gt;&gt; W;
-
-    vi w(N, 0), v(N, 0);
-    for (int i = 0; i &lt; N; i++)
-        cin &gt;&gt; w[i] &gt;&gt; v[i];
-
-    vector&lt;vector&lt;int&gt; &gt; dp(N + 1, vi(W + 1, 0));
-
-    for (int i = 1; i &lt;= N; i++) {
-        for (int j = 1; j &lt;= W; j++) {
-                dp[i][j] = dp[i - 1][j];
-            if (j - w[i - 1] &gt;= 0)
-                dp[i][j] = max(dp[i][j], dp[i - 1][j - w[i - 1]] + v[i - 1]);
-        }
-    }
-
-    int mx = 0;
-    for (int i = 1; i &lt;= N; i++)
-        for (int j = 1; j &lt;= W; j++)
-            mx = max(mx, dp[i][j]);
-
-    cout &lt;&lt; mx &lt;&lt; endl;
     return;
 }
 
@@ -170,7 +147,12 @@ signed main() {
     cin.tie(0)-&gt;sync_with_stdio(0);
     cin.exceptions(cin.failbit);
 
-    solve();
+    int t;
+    cin &gt;&gt; t;
+
+    while (t--) {
+        solve();
+    }
 }
 </code></pre>
 <h2 id="courage-is-all-you-need">Courage is all you need?</h2>
@@ -181,7 +163,6 @@ signed main() {
 <li><strong>Implementation</strong>: Writing the solution fast, bug-free and naturally understandable.</li>
 </ol>
 <p>Make sure that you understand various aspects of the problem statement and prove your way towards the solution. Don't be afraid of any type of problem or implementation.</p>
-<h2 id="_1"></h2>
 <h2 id="list-of-basic-and-important-techniques">List of basic and important techniques</h2>
 <ul>
 <li>greedy</li>
