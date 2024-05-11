@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://banrovegrie.github.io/research/psdp/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://banrovegrie.github.io/research/chess/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>PSDP Problem - Alapan Chaudhuri</title>
+    <title>Chess - Alapan Chaudhuri</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "PSDP Problem";
-        var mkdocs_page_input_path = "research/psdp.md";
-        var mkdocs_page_url = "/research/psdp/";
+        var mkdocs_page_name = "Chess";
+        var mkdocs_page_input_path = "research/chess.md";
+        var mkdocs_page_url = "/research/chess/";
       </script>
     
     <!--[if lt IE 9]>
@@ -68,7 +68,9 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../competitive-programming/">Competitive Programming</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../chess/">Chess</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Chess</a>
+    <ul class="current">
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../quantum-theory/">Quantum Theory</a>
                   </li>
@@ -92,9 +94,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../millennium/">What gets you a million dollars?</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">PSDP Problem</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../psdp/">PSDP Problem</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../haskell/">Haskell in Harsh Words</a>
                   </li>
@@ -114,7 +114,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Research</li>
-      <li class="breadcrumb-item active">PSDP Problem</li>
+      <li class="breadcrumb-item active">Chess</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -123,73 +123,50 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="definitions">Definitions</h2>
-<div class="arithmatex">\[
-PSDP: \min_{P\in S^n_{\geq}} ||F - PG||
-\]</div>
-<div class="arithmatex">\[
-SP: \min_{S\in S^n} ||F - SG||
-\]</div>
-<p>Here, <span class="arithmatex">\(F, G \in R^{\ n\times m}\)</span>.</p>
-<h2 id="background">Background</h2>
+                <p>“We learn by chess the habit of not being discouraged by present bad appearances in the state of our affairs, the habit of hoping for a favorable change, and that of persevering in the search of resources.” (Benjamin Franklin)</p>
+<h3 id="the-checklist">The Checklist</h3>
+<ol>
+<li>Checks</li>
+<li>Captures</li>
+<li>Threaten</li>
+<li>Thwart</li>
+</ol>
+<h3 id="opening-principles">Opening Principles</h3>
 <ul>
-<li><span class="arithmatex">\(\tilde{S}\)</span> denotes a minimizer for the SP problem.</li>
-<li><span class="arithmatex">\(\tilde{P}\)</span> denotes a minimizer for the PSDP problem.</li>
-<li><span class="arithmatex">\(\tilde{S}GG'+ GG'\tilde{S} = FG' + GF' = Q\)</span></li>
-<li>When  <span class="arithmatex">\(rank(G) = n\)</span>, a sufficient condition for <span class="arithmatex">\(\tilde{S}\)</span> to be in <span class="arithmatex">\(S^n_{\geq}\)</span> is that <span class="arithmatex">\(Q \in S^n_{\geq}\)</span>.</li>
-<li>A sufficient condition for <span class="arithmatex">\(\tilde{S}\)</span> to be in <span class="arithmatex">\(S^n_{\geq}\)</span> is that <span class="arithmatex">\(FG' \in S^m_{\geq}\)</span>.</li>
-<li><span class="arithmatex">\(rank(G) = n\)</span> is also necessary and sufficient for uniqueness of minimizers in case of PSDP.</li>
+<li>The checkboard is a hill. The centre is the most important space.</li>
+<li>Castling must be done early.</li>
+<li>First we can move pawns but then we must defend them.</li>
+<li>Try to go towards the PERFECT setup.</li>
+<li>Knights love the centre.</li>
+<li>Bishops love open diagonals.</li>
 </ul>
-<h2 id="previous-approches">Previous Approches</h2>
+<h3 id="calculation-principles">Calculation Principles</h3>
 <ul>
-<li>The objective function and the feasible set in case of PSDP are both convex.</li>
-<li>We can use convex optimization which directly exploits the convexity of <span class="arithmatex">\(S^n_{\geq}\)</span>.</li>
-<li>Solutions involve finite convergence towards global minimas bringing the approximate minimizer arbitrarily close to the unique global minimizer.</li>
+<li>Determine all meaningful options before going deep.</li>
+<li>Consider forcing moves first.</li>
+<li>Calculate maximum 3 moves ahead.</li>
+<li>Calculate for both sides.</li>
+<li>If a combination fails, try reordering the moves.</li>
 </ul>
-<h2 id="approach-of-this-paper">Approach of this paper</h2>
-<div class="arithmatex">\[
-PSDP^*: \min_{E \in R^{n\times n}} ||F - E'EG||
-\]</div>
-<div class="arithmatex">\[
-\tilde{P}_{\text{global}} = \tilde{E}_{\text{local}}'\tilde{E}_{\text{local}}
-\]</div>
-<p>Algorithm ideas:</p>
+<h3 id="endgame-principles">Endgame Principles</h3>
 <ul>
-<li>Steepest descent (doesn’t converge, proven)</li>
-<li>Newton’s algorithm (modified, superior than known convex programs of that time)</li>
-<li>Where do we obtain the data? Take stuff, perturb by errors to make sure that <span class="arithmatex">\(\tilde{S} \neq \tilde{P}\)</span>.</li>
+<li>King stuck in last rank: make sure that a way to escape remains.</li>
+<li>Trapped queen: Knight and Bishop can checkmate if your development is bad.</li>
+<li>Scholar's mate: Thwart with Pawns and then with Knight.</li>
+<li>Basic mating strategies:<ul>
+<li>2 Rooks, at initial/last rank/file.</li>
+<li>Queen and King, at corners.</li>
+<li>Rook and King, its a long one.</li>
+<li>2 Bishops, at board end-corners.</li>
 </ul>
-<p>Newton’s method:</p>
-<div class="arithmatex">\[
-x_{k + 1} = x_k - \frac{f'(x_k)}{f''(x_k)}
-\]</div>
-<ul>
-<li>Has quadratic convergence.</li>
-<li>Can find complex zeroes.</li>
-<li>If you have <span class="arithmatex">\(n\)</span> variables, then <span class="arithmatex">\(n^2\)</span> operations is needed to find <span class="arithmatex">\(\nabla^2 f\)</span> (Hessian) and <span class="arithmatex">\(n^3\)</span>  operations to find the inverse of the Hessian.</li>
+</li>
 </ul>
-<p>Quasi Newtown method:</p>
-<div class="arithmatex">\[
-GD:\ \ \ \ x_{k + 1} = x_k - \eta \cdot I\cdot \nabla f(x_k)
-\]</div>
-<div class="arithmatex">\[
-NM:\ \ \ \ x_{k + 1} = x_k - \eta \cdot \frac{1}{\nabla^{2}f(x_k)}\cdot \nabla f(x_k)
-\]</div>
-<div class="arithmatex">\[
-QNM:\ \ \ \ x_{k + 1} = x_k - \eta \cdot H_k\cdot \nabla f(x_k)
-\]</div>
-<p>A good choice for <span class="arithmatex">\(H\)</span>  can be the following. This is the BFGS method and <span class="arithmatex">\(H_k\)</span> holds curvature information. Key idea is to match curvature along trajectory.</p>
-<div class="arithmatex">\[
-H = \begin{bmatrix}
-1&amp; 1\\
-\end{bmatrix}
-\]</div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../millennium/" class="btn btn-neutral float-left" title="What gets you a million dollars?"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../haskell/" class="btn btn-neutral float-right" title="Haskell in Harsh Words">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../competitive-programming/" class="btn btn-neutral float-left" title="Competitive Programming"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../quantum-theory/" class="btn btn-neutral float-right" title="Quantum Theory">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -212,10 +189,10 @@ H = \begin{bmatrix}
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../millennium/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../competitive-programming/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../haskell/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../quantum-theory/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
