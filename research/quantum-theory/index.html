@@ -1,0 +1,2212 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Essays and research notes on language, computation, mathematics and engineering, by Alapan Chaudhuri.">
+      
+      
+        <meta name="author" content="Alapan Chaudhuri">
+      
+      
+        <link rel="canonical" href="https://banrovegrie.github.io/research/quantum-theory/">
+      
+      
+        <link rel="prev" href="../information-security/">
+      
+      
+        <link rel="next" href="../quantum-channels/">
+      
+      
+      <link rel="icon" href="../../img/homotopy.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Quantum Theory - Why Not?</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../files/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#on-the-formulations-of-quantum-mechanics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Why Not?" class="md-header__button md-logo" aria-label="Why Not?" data-md-component="logo">
+      
+  <img src="../../img/homotopy.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Why Not?
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quantum Theory
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Why Not?" class="md-nav__button md-logo" aria-label="Why Not?" data-md-component="logo">
+      
+  <img src="../../img/homotopy.png" alt="logo">
+
+    </a>
+    Why Not?
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alapan Chaudhuri
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Essays
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Essays
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/weblog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Weblog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/composition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Composition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/yoda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    There is no Try
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/frame/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frame
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/show/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Show
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/stories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/problem-solving/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Problem Solving
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Doing Engineering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/economics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Economics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/about-that-question/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About that Question
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/poker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Poker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Research
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Research
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Finance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../information-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Information Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Quantum Theory
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Theory
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#on-the-formulations-of-quantum-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      On the Formulations of Quantum Mechanics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history-of-quantum-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      History of Quantum Computing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="History of Quantum Computing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models-of-classical-computation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Models of Classical Computation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#super-universal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Super-Universal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantum-computation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantum Computation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#history-of-quantum-mechanics-and-computation" class="md-nav__link">
+    <span class="md-ellipsis">
+      History of Quantum Mechanics and Computation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantum-theory-from-5-reasonable-axioms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantum Theory from 5 reasonable Axioms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quantum Theory from 5 reasonable Axioms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    <span class="md-ellipsis">
+      State
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#axioms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Axioms
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#landauers-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Landauer's Principle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#postulates-of-quantum-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Postulates of Quantum Mechanics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Postulates of Quantum Mechanics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-is-a-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      State is a vector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-is-a-density-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      State is a density matrix
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Measurement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#postulate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Postulate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-distinguishability-of-arbitrary-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-distinguishability of arbitrary states
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projective-measurements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projective Measurements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#povm-measurements" class="md-nav__link">
+    <span class="md-ellipsis">
+      POVM Measurements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-phase-doesnt-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Phase doesn't matter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#density-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Density Matrices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Density Matrices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#postulates-in-density-matrices-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Postulates in Density Matrices formulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduced-density-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reduced Density Operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schmidt-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schmidt Decomposition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloch-sphere-and-rotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bloch Sphere and Rotations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bloch Sphere and Rotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-qubit-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Qubit Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Some Algebra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proof-that-bloch-sphere-unitaries-as-rotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proof that Bloch Sphere Unitaries as Rotations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chsh-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      CHSH Inequality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CHSH Inequality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quantum-anomaly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantum Anomaly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interpretation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quantum-channels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Channels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prog-lang/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programming Language Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language-thought/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Language and Thought
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chess
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../competitive-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Competitive Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linear-algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear Algebra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../music-theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Music Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../millennium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What gets you a million dollars?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi-variate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multivariate Calculus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ads-cft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ads-CFT Correspondance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Probability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../psdp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PSDP Problem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haskell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Haskell in Harsh Words
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#on-the-formulations-of-quantum-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      On the Formulations of Quantum Mechanics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history-of-quantum-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      History of Quantum Computing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="History of Quantum Computing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models-of-classical-computation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Models of Classical Computation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#super-universal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Super-Universal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantum-computation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantum Computation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#history-of-quantum-mechanics-and-computation" class="md-nav__link">
+    <span class="md-ellipsis">
+      History of Quantum Mechanics and Computation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantum-theory-from-5-reasonable-axioms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantum Theory from 5 reasonable Axioms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quantum Theory from 5 reasonable Axioms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    <span class="md-ellipsis">
+      State
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#axioms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Axioms
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#landauers-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Landauer's Principle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#postulates-of-quantum-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Postulates of Quantum Mechanics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Postulates of Quantum Mechanics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-is-a-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      State is a vector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-is-a-density-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      State is a density matrix
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Measurement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#postulate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Postulate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-distinguishability-of-arbitrary-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-distinguishability of arbitrary states
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projective-measurements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projective Measurements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#povm-measurements" class="md-nav__link">
+    <span class="md-ellipsis">
+      POVM Measurements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-phase-doesnt-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Phase doesn't matter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#density-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Density Matrices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Density Matrices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#postulates-in-density-matrices-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Postulates in Density Matrices formulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduced-density-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reduced Density Operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schmidt-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schmidt Decomposition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloch-sphere-and-rotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bloch Sphere and Rotations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bloch Sphere and Rotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-qubit-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Qubit Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Some Algebra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proof-that-bloch-sphere-unitaries-as-rotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proof that Bloch Sphere Unitaries as Rotations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chsh-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      CHSH Inequality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CHSH Inequality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quantum-anomaly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantum Anomaly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interpretation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Quantum Theory</h1>
+
+<h2 id="on-the-formulations-of-quantum-mechanics">On the Formulations of Quantum Mechanics<a class="headerlink" href="#on-the-formulations-of-quantum-mechanics" title="Permanent link">&para;</a></h2>
+<p>Argument: Quantum Theory <span class="arithmatex">\(=\)</span> Classical Probability Theory with <span class="arithmatex">\(2\)</span>-norm and continuity axiom (complex numbers).</p>
+<ol>
+<li>
+<p>Why <span class="arithmatex">\(2\)</span>-norm and why not <span class="arithmatex">\(p\)</span>-norm?</p>
+<p>Because if there are any linear transformations other than these trivial ones that preserve the <span class="arithmatex">\(p\)</span>-norm, then either <span class="arithmatex">\(p = 1\)</span> or <span class="arithmatex">\(p=2\)</span>. </p>
+<p>If <span class="arithmatex">\(p=1\)</span> we get classical probability theory, while if <span class="arithmatex">\(p =2\)</span> we get quantum mechanics.</p>
+<p>Also all transformations must be norm preserving. So what kind of matrix or linear transformation preserves the <span class="arithmatex">\(2\)</span>-norm? Unitary Matrices <span class="arithmatex">\((UU^\dagger = I)\)</span>.</p>
+</li>
+<li>
+<p>Why complex numbers and not real numbers?</p>
+<p>Axiom of continuity: There exists a continuous reversible transformation on a system between any two pure states of that system.</p>
+<p>Thus, we need our field associated with vector spaces to be algebraically closed. Hence, we need complex numbers.</p>
+<p>If you want every unitary operation to have a square root, then you have to go to the complex numbers.</p>
+</li>
+<li>
+<p>Why do transformations need to be linear?</p>
+<p>If quantum mechanics were nonlinear, then one could build a computer to solve NP-complete problems in polynomial time. (Abrams and Lloyd).</p>
+</li>
+</ol>
+<h2 id="history-of-quantum-computing">History of Quantum Computing<a class="headerlink" href="#history-of-quantum-computing" title="Permanent link">&para;</a></h2>
+<h3 id="models-of-classical-computation">Models of Classical Computation<a class="headerlink" href="#models-of-classical-computation" title="Permanent link">&para;</a></h3>
+<p>The following serve as universal models of computation:</p>
+<ul>
+<li>Turing Machines</li>
+<li><span class="arithmatex">\(\lambda\)</span>-calculus</li>
+<li>Circuits</li>
+</ul>
+<h3 id="super-universal">Super-Universal<a class="headerlink" href="#super-universal" title="Permanent link">&para;</a></h3>
+<p>Circuits can describe computations which are beyond what a Turing machine can do.</p>
+<p>Apparently, we can solve the halting problem under some circuit model. But, what is that supposed to mean?</p>
+<h3 id="quantum-computation">Quantum Computation<a class="headerlink" href="#quantum-computation" title="Permanent link">&para;</a></h3>
+<p>The idea of a QC model is to have information in superposition. If we want Turing Machines to be part of the quantum computational model then we will somehow have to make the read/write head to be in a superposition. But that is not possible (doubt). Hence we use a circuit where we keep the bits in a superposition and operate on them with gates.</p>
+<h3 id="history-of-quantum-mechanics-and-computation">History of Quantum Mechanics and Computation<a class="headerlink" href="#history-of-quantum-mechanics-and-computation" title="Permanent link">&para;</a></h3>
+<p>Major questions in QM started arising with the EPR paradox in 1936 when faster than light travel was questioned. </p>
+<p>Here's the paradox: Consider <span class="arithmatex">\(2\)</span> particles that are moving away. Their positions are <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(-x\)</span> and momenta are <span class="arithmatex">\(p\)</span> and <span class="arithmatex">\(-p\)</span>. Now we can't measure the exact position and momentum of one particle due to the uncertainty principle. But what if we measure the position of one particle and momentum of the other at the same time (Like a split second difference)? Assuming there is no interaction between the particles, we would in principle know the position and momentum of one particle at a time (cause we can know position or momentum of particle <span class="arithmatex">\(1\)</span> if we measure that quantity on the second particle cause its just the negative of it). This would violate the uncertainty principle. Hence, there has to be some sort of interaction between the two particles that makes the wavefunction of particle <span class="arithmatex">\(2\)</span> also collapse instantaneously when I measure position or momentum of particle <span class="arithmatex">\(1\)</span>. This mean that the particles were somehow connected. This was the paradox. But Schrodinger said this is possible by entanglement.</p>
+<p>In 1964 Bell gave his Theorem and then it was later verified too which proved that Quantum Mechanics is cool with EPR pair. But there was another problem that how is faster than light communication possible? It was later proved that faster than light communication is not possible indeed as you cannot actually send 'information' with the entanglement coordination. Basically you cannot manipulate the particles to actually transmit any useful information.</p>
+<p>Non-cloning theorem: In physics, the no-cloning theorem states that it is impossible to create an independent and identical copy of an arbitrary unknown quantum state, a statement which has profound implications in the field of quantum computing among others.</p>
+<h2 id="quantum-theory-from-5-reasonable-axioms">Quantum Theory from 5 reasonable Axioms<a class="headerlink" href="#quantum-theory-from-5-reasonable-axioms" title="Permanent link">&para;</a></h2>
+<h3 id="state">State<a class="headerlink" href="#state" title="Permanent link">&para;</a></h3>
+<p>Mathematical object that can be used to deter-mine the probability associated with the out-comes of any measurement that may be per-formed on a system prepared by the given preparation.</p>
+<p>However, we do not need to measure all possible probability measurements to determine the state of a system.</p>
+<ul>
+<li><strong>K (degrees of freedom)</strong>: minimum number of probability measurements required to determine the state of a system, i.e., number of real parameters re-quired to specify the state.</li>
+<li><strong>N (dimension)</strong>: maximum number of states that can be reliably distinguished from one another in a single shot measurement.</li>
+</ul>
+<h3 id="axioms">Axioms<a class="headerlink" href="#axioms" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Probabilities</li>
+<li>Simplicity: <span class="arithmatex">\(K = K(N)\)</span></li>
+<li>Subspaces: If state of a system <span class="arithmatex">\(A\)</span> <span class="arithmatex">\(\in M_{dim}\)</span> subspace <span class="arithmatex">\(\implies dim(A) = M\)</span></li>
+<li>Composite systems: <span class="arithmatex">\(N = N_aN_b \text{ and } K = K_aK_b\)</span></li>
+<li>Continuity: <span class="arithmatex">\(\exists\)</span> a continuous reversible transformation on a system between anytwo pure states of that system</li>
+</ol>
+<h2 id="landauers-principle">Landauer's Principle<a class="headerlink" href="#landauers-principle" title="Permanent link">&para;</a></h2>
+<p>Landauer's Principle explains that when info is erased, it requires work.</p>
+<p>Each bit erased <span class="arithmatex">\(\implies \Delta S = -K \ln(2)\)</span>. Hence, heat associated is given by <span class="arithmatex">\(Q = -KT \ln(2)\)</span>.</p>
+<p>Hence to keep constant temp, that amount of work needs to be put in. This generalises to reversible processes requiring work.</p>
+<h2 id="postulates-of-quantum-mechanics">Postulates of Quantum Mechanics<a class="headerlink" href="#postulates-of-quantum-mechanics" title="Permanent link">&para;</a></h2>
+<p>I shall state here the four major generic postulates of Quantum Mechanics stated in terms of both state-vector formalization and density-matrix formalization.</p>
+<h3 id="state-is-a-vector">State is a vector<a class="headerlink" href="#state-is-a-vector" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Isolated physical system is given by its state vector operating on a certain Hilbert space.</p>
+</li>
+<li>
+<p>Evolution of a closed quantum system is given by a unitary transformation.</p>
+<p>In its physical interpretation we have this postulate governed by the Schrodinger Equation, as stated.</p>
+<div class="arithmatex">\[
+i{\hbar}\frac{d\vert\psi\rangle}{dt} = H\vert\psi\rangle
+\]</div>
+<p>The Hamiltonian is a hermitian operator and has a spectral decomposition, <span class="arithmatex">\(H = \sum E\vert E\rangle\langle E\vert\)</span>.</p>
+</li>
+<li>
+<p>The state space of a composite physical system is the tensor product of the state spaces of the component systems.</p>
+<div class="arithmatex">\[
+\vert\psi\rangle = \vert\psi_1\rangle\otimes...\otimes\vert\psi_n\rangle
+\]</div>
+</li>
+<li>
+<p>Quantum measurements are described by a collection <span class="arithmatex">\(\{M_m\}\)</span> of measurement operators acting on the state space of the system. </p>
+<p>Probability that upon measurement the outcome is <span class="arithmatex">\(m = p(m) = \langle\psi\vert M_m^\dagger M_m\vert\psi\rangle\)</span> and the state of the system becomes as follows.</p>
+<div class="arithmatex">\[
+\vert\psi\rangle \xrightarrow{\text{on measuring}} \frac{M_m\vert\psi\rangle}{\sqrt{p(m)}} = \frac{M_m\vert\psi\rangle}{||M_m\vert\psi\rangle||}
+\]</div>
+<p>Measurement operators also follow the completeness equation, <span class="arithmatex">\(\sum_m M_m^\dagger M_m = I\)</span>.</p>
+</li>
+</ol>
+<h3 id="state-is-a-density-matrix">State is a density matrix<a class="headerlink" href="#state-is-a-density-matrix" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Isolated physical system is given by its density matrix operating on a certain Hilbert space.</p>
+</li>
+<li>
+<p>Evolution of a closed quantum system is given by a unitary transformation as <span class="arithmatex">\(\rho \xrightarrow{U} U\rho U^\dagger\)</span>.</p>
+</li>
+<li>
+<p>The state space of a composite physical system is the tensor product of the state spaces of the component systems.</p>
+<div class="arithmatex">\[
+\rho = \rho_1\otimes...\otimes\rho_n
+\]</div>
+</li>
+<li>
+<p>Quantum measurements are described by a collection <span class="arithmatex">\(\{M_m\}\)</span> of measurement operators acting on the state space of the system. </p>
+<p>Probability that upon measurement the outcome is <span class="arithmatex">\(m = p(m) = tr(M_m^\dagger M_m\rho)\)</span> and the state of the system becomes as follows.</p>
+<div class="arithmatex">\[
+\rho \xrightarrow{\text{on measuring}} \frac{M_m\rho M_m^\dagger}{p(m)}
+\]</div>
+<p>Measurement operators also follow the completeness equation, <span class="arithmatex">\(\sum_m M_m^\dagger M_m = I\)</span>.</p>
+</li>
+</ol>
+<h2 id="measurement">Measurement<a class="headerlink" href="#measurement" title="Permanent link">&para;</a></h2>
+<h3 id="postulate">Postulate<a class="headerlink" href="#postulate" title="Permanent link">&para;</a></h3>
+<p>Quantum Measurements are descrivbed by a collection of  measurement operators <span class="arithmatex">\(\{M_m\}\)</span> with <span class="arithmatex">\(p(m)= \langle \psi | M_m^\dagger M_m | \psi \rangle,\ \sum{p(m)} = 1\)</span>.</p>
+<div class="arithmatex">\[
+\vert \psi \rangle \xrightarrow{\text{on   measurement}} \frac{M_m \vert \psi \rangle}{\sqrt{p(m)}}
+\]</div>
+<p>If <span class="arithmatex">\(M_i = |i\rangle \langle i|,\ \forall i\)</span>  then we are measuring in a computational basis.</p>
+<h3 id="non-distinguishability-of-arbitrary-states">Non-distinguishability of arbitrary states<a class="headerlink" href="#non-distinguishability-of-arbitrary-states" title="Permanent link">&para;</a></h3>
+<p>We cannot distinguish any two arbitrary non-orthogonal quantum states.</p>
+<p>Proof: Let <span class="arithmatex">\(|\psi_1\rangle\)</span> and <span class="arithmatex">\(|\psi_2\rangle\)</span> be two non-orthogonal states. </p>
+<p>Then <span class="arithmatex">\(\exists\ E_1, E_2\)</span> such that <span class="arithmatex">\(E_1 = \sum_{j:f(j) = 1} M_j^\dagger M_j\)</span> and similarly <span class="arithmatex">\(E_2\)</span> then <span class="arithmatex">\(\langle \psi_1 | E_1 | \psi_1 \rangle = 1\)</span> and <span class="arithmatex">\(\langle \psi_2 | E_2 | \psi_2 \rangle = 1\)</span>.</p>
+<p>Thus, <span class="arithmatex">\(\sqrt{E_2}| \psi_1\rangle = 0\)</span> and let <span class="arithmatex">\(\psi_2 = a\psi_1 + b \phi\)</span> where <span class="arithmatex">\(\psi\)</span> and <span class="arithmatex">\(\phi\)</span> are orthogonal.</p>
+<div class="arithmatex">\[
+\langle \psi_2 | E_2 \psi_2 \rangle = |\beta|^2 \langle \psi_2 | \phi \psi_2 \leq  |\beta|^2 &lt; 1
+\]</div>
+<p>Hence, proved by contradiction.</p>
+<h3 id="projective-measurements">Projective Measurements<a class="headerlink" href="#projective-measurements" title="Permanent link">&para;</a></h3>
+<p>We can use projective measurement formalism for any general measurement too.</p>
+<p>In case of projective measurements, <span class="arithmatex">\(M = \sum mP_m\)</span> and <span class="arithmatex">\(p(m) = \langle \psi | P_m | \psi \rangle\)</span>.</p>
+<div class="arithmatex">\[
+\vert \psi \rangle \rightarrow \frac{P_m \vert \psi\rangle}{\sqrt {p(m)}}
+\]</div>
+<div class="arithmatex">\[
+E(M) = \sum mp(m) = \langle \psi | M | \psi \rangle = \langle M\rangle
+\]</div>
+<div class="arithmatex">\[
+\Delta(M) = \sqrt{\langle M^2\rangle - \langle M \rangle^2}
+\]</div>
+<p>Here, <span class="arithmatex">\(E(M)\)</span> is expectation and <span class="arithmatex">\(\Delta(M)\)</span> is standard deviation or the square root of variance.</p>
+<h3 id="povm-measurements">POVM Measurements<a class="headerlink" href="#povm-measurements" title="Permanent link">&para;</a></h3>
+<p>POVM Measurements are a formalism where only measurement statistics matters.</p>
+<div class="arithmatex">\[
+\{E_m\} \rightarrow \sum{E_m} = I,\ p(m) = \langle \psi | E_m |\psi \rangle
+\]</div>
+<p>Here, each of <span class="arithmatex">\(E_m\)</span> are hermitian.</p>
+<h3 id="global-phase-doesnt-matter">Global Phase doesn't matter<a class="headerlink" href="#global-phase-doesnt-matter" title="Permanent link">&para;</a></h3>
+<p>We say <span class="arithmatex">\(e^{i\theta} |\psi\rangle \equiv |\psi\rangle\)</span> but why? Because, <span class="arithmatex">\(\langle \psi | M_m^{\dagger}M_m | \psi \rangle = \langle \psi \vert e^{-i\theta}M_m^\dagger M_m e^{i\theta}\vert \psi \rangle\)</span>.</p>
+<p>However, be aware that the global phase is quite different from the relative phase.</p>
+<h2 id="density-matrices">Density Matrices<a class="headerlink" href="#density-matrices" title="Permanent link">&para;</a></h2>
+<p>We can represent a system as an ensemble of pure states <span class="arithmatex">\(\{p_i, \psi_i\}\)</span>. Now, if you have exact knowledge of the system then it is for sure in a pure state, i.e., <span class="arithmatex">\(\rho = |\psi\rangle\langle\psi|\)</span>. However, if we have classical uncertainty amongst the possible states. The system can be represented as a mixed state <span class="arithmatex">\(\rho = \sum_{i} p_i\psi_i\)</span> where the probabilities <span class="arithmatex">\(p_i\)</span> are classical in nature.</p>
+<p>This formulation helps us a lot in dealing with quantum information, noisy systems and helps us represent measurements better, as well. Why? Because it provides a convenient means for describing quantum systems whose state is not completely known.</p>
+<h3 id="postulates-in-density-matrices-formulation">Postulates in Density Matrices formulation<a class="headerlink" href="#postulates-in-density-matrices-formulation" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Isolated physical system is given by its density matrix operating on a certain Hilbert space.</p>
+</li>
+<li>
+<p>Evolution of a closed quantum system is given by a unitary transformation as <span class="arithmatex">\(\rho \xrightarrow{U} U\rho U^\dagger\)</span>.</p>
+</li>
+<li>
+<p>The state space of a composite physical system is the tensor product of the state spaces of the component systems.</p>
+<div class="arithmatex">\[
+\rho = \rho_1\otimes...\otimes\rho_n
+\]</div>
+</li>
+<li>
+<p>Quantum measurements are described by a collection <span class="arithmatex">\(\{M_m\}\)</span> of measurement operators acting on the state space of the system. </p>
+<p>Probability that upon measurement the outcome is <span class="arithmatex">\(m = p(m) = tr(M_m^\dagger M_m\rho)\)</span> and the state of the system becomes as follows.</p>
+<div class="arithmatex">\[
+\rho \xrightarrow{\text{on measuring}} \frac{M_m\rho M_m^\dagger}{p(m)}
+\]</div>
+<p>Measurement operators also follow the completeness equation, <span class="arithmatex">\(\sum_m M_m^\dagger M_m = I\)</span>.</p>
+</li>
+</ol>
+<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
+<p>Theorem 1: An operator <span class="arithmatex">\(\rho\)</span> is a density operator if and only if it is both positive semi-definite <span class="arithmatex">\((\rho = \rho^\dagger\)</span> and non-negative eigenvalues<span class="arithmatex">\()\)</span> and <span class="arithmatex">\(tr(\rho) = 1\)</span>.</p>
+<p>Converse is easy to prove. If an operator is both positive and has trace as one, then it shall have a spectral decomposition of the form <span class="arithmatex">\(\sum_i\lambda_i|i\rangle\langle i|\)</span>.</p>
+<p>For the direct proof, let us consider <span class="arithmatex">\(tr(\rho) = \sum_i p_i tr(|\psi_i\rangle\langle\psi_i|) = 1\)</span>.</p>
+<p>Theorem 2: The sets <span class="arithmatex">\(|\tilde\psi\rangle\)</span> and <span class="arithmatex">\(|\tilde\phi\rangle\)</span> generate the same density matrix if and only if,</p>
+<div class="arithmatex">\[
+|\tilde\psi_i\rangle = \sum_j u_{ij} |\tilde\phi_j\rangle
+\]</div>
+<p>where <span class="arithmatex">\(u_{ij}\)</span> is a unitary matrix of complex numbers, with indices <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span>, and we 'pad' whichever set of vectors <span class="arithmatex">\(|\tilde\psi_i\rangle\)</span> or <span class="arithmatex">\(|\tilde\phi_j\rangle\)</span> is smaller with additional vectors <span class="arithmatex">\(0\)</span> so that the two sets have the same number of elements.</p>
+<p>As a consequence of the theorem, note that <span class="arithmatex">\(\rho = \sum_i p_i |\psi_i\rangle\langle\psi_i| = \sum_j q_j |\phi_j\rangle\langle\phi_j|\)</span> if and only if we have the following as true for some unitary matrix <span class="arithmatex">\(u_{ij}\)</span>.</p>
+<div class="arithmatex">\[
+\sqrt p_i |\psi_i\rangle = \sum_j u_{ij} \sqrt q_j |\phi_j\rangle
+\]</div>
+<p>Theorem 3: If <span class="arithmatex">\(\rho\)</span> is a density operator, then <span class="arithmatex">\(\rho\)</span> is a pure state if and only if <span class="arithmatex">\(tr(\rho^2) = 1\)</span> and mixed state if and only if <span class="arithmatex">\(tr(\rho^2) &lt; 1\)</span>.</p>
+<p>Theorem 4: Observable <span class="arithmatex">\(M\)</span> has expectation <span class="arithmatex">\(\sum_x \langle \psi_x|M|\psi_x\rangle = tr(M\rho)\)</span>.</p>
+<h3 id="reduced-density-operator">Reduced Density Operator<a class="headerlink" href="#reduced-density-operator" title="Permanent link">&para;</a></h3>
+<p>This is the single-most important application of density operator formulation is the existence of reduced density operator. It is defined as follows.</p>
+<div class="arithmatex">\[
+\rho_A = tr_B(\rho_{AB})
+\]</div>
+<p>This allows us to talk about sub-systems of a composite system.</p>
+<div class="arithmatex">\[
+tr_B(|a_1\rangle\langle a_2| \otimes |b_1\rangle\langle b_2|) = |a_1\rangle\langle a_2| tr(|b_1\rangle\langle b_2|)
+\]</div>
+<h3 id="schmidt-decomposition">Schmidt Decomposition<a class="headerlink" href="#schmidt-decomposition" title="Permanent link">&para;</a></h3>
+<p>Suppose <span class="arithmatex">\(|\psi\rangle\)</span> is a pure state of a composite system, <span class="arithmatex">\(AB\)</span>. Then, there exists orthonormal states <span class="arithmatex">\(|i_A\rangle\)</span> for system <span class="arithmatex">\(A\)</span>, and orthonormal states <span class="arithmatex">\(|i_B\rangle\)</span> of system <span class="arithmatex">\(B\)</span> such that</p>
+<div class="arithmatex">\[
+|\psi\rangle = \sum_i \lambda_i |i_A\rangle |i_B\rangle
+\]</div>
+<p>where <span class="arithmatex">\(\lambda_i\)</span> are non-negative real numbers satisfying <span class="arithmatex">\(\sum_i \lambda_i^2 = 1\)</span> known as Schmidt co-efficients.</p>
+<h3 id="purification">Purification<a class="headerlink" href="#purification" title="Permanent link">&para;</a></h3>
+<p>Suppose we have a mixed state <span class="arithmatex">\(\rho_A\)</span> for a system <span class="arithmatex">\(A\)</span>. Then, we can introduce another system <span class="arithmatex">\(R\)</span> such that <span class="arithmatex">\(AR\)</span> forms a pure state <span class="arithmatex">\(|AR\rangle\)</span> and <span class="arithmatex">\(\rho_A = tr_R(|AR\rangle\langle AR|)\)</span>.</p>
+<p>Given  <span class="arithmatex">\(\rho_A = \sum_i p_i |i_A\rangle\langle i_A|\)</span>, we shall have the following where  <span class="arithmatex">\(|i_R\rangle\)</span> are orthonormal basis states.</p>
+<div class="arithmatex">\[
+|AR\rangle = \sum_i \sqrt{p_i}|i_A\rangle|i_R\rangle
+\]</div>
+<h2 id="bloch-sphere-and-rotations">Bloch Sphere and Rotations<a class="headerlink" href="#bloch-sphere-and-rotations" title="Permanent link">&para;</a></h2>
+<p>We can represent any <span class="arithmatex">\(\rho\)</span>  (density matrix) as <span class="arithmatex">\(\frac 1 2 (I + \vec{r}\cdot\vec{\sigma})\)</span></p>
+<h3 id="single-qubit-operations">Single Qubit Operations<a class="headerlink" href="#single-qubit-operations" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+e^{iAx} = cos(x) + isin(x)A
+\]</div>
+<p>Thus, <span class="arithmatex">\(R_x(\theta) = e^{i\theta X/2}\)</span>, <span class="arithmatex">\(R_y(\theta) = e^{i\theta Y/2}\)</span> and <span class="arithmatex">\(R_z(\theta) = e^{i\theta Z/2}\)</span>.</p>
+<div class="arithmatex">\[
+R_{\hat{n}}(\theta) = e^{i\theta \hat n\cdot\vec\sigma/2}
+\]</div>
+<p>In general, we have the above equation where <span class="arithmatex">\(\vec\sigma = X\hat i + Y\hat j + Z\hat k\)</span>.</p>
+<h3 id="some-algebra">Some Algebra<a class="headerlink" href="#some-algebra" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+X^2 = Y^2 = Z^2 = -iXYZ = I
+\]</div>
+<div class="arithmatex">\[
+R_{\hat n}(\alpha) = R_z(\phi)R_y(\theta)R_z(\alpha)R_y(-\theta)R_z(-\phi)\\
+= R_z(\phi)R_y(\theta)R_z(\alpha)R_y(\theta)^\dagger R_z(\phi)^\dagger
+\]</div>
+<h3 id="theorems">Theorems<a class="headerlink" href="#theorems" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Any arbitrary single qubit unitary operator can be written in the form <span class="arithmatex">\(U = e^{i\alpha}R_{\hat n}(\theta)\)</span>.</li>
+<li>Suppose <span class="arithmatex">\(U\)</span> is a unitary operation over a single qubit then <span class="arithmatex">\(\exists\ \alpha, \beta, \gamma, \delta\)</span> such that <span class="arithmatex">\(U = e^{i\alpha}R_{\hat n}(\beta)R_{\hat m}(\gamma)R_{\hat n}(\delta)\)</span>.</li>
+<li>There exists unitaries <span class="arithmatex">\(A, B, C\)</span> for any given unitary <span class="arithmatex">\(U\)</span> such that <span class="arithmatex">\(ABC = I\)</span> and <span class="arithmatex">\(U = e^{i\alpha} AXBXC\)</span>.</li>
+</ol>
+<h3 id="proof-that-bloch-sphere-unitaries-as-rotations">Proof that Bloch Sphere Unitaries as Rotations<a class="headerlink" href="#proof-that-bloch-sphere-unitaries-as-rotations" title="Permanent link">&para;</a></h3>
+<p>A single qubit operator can be represented as <span class="arithmatex">\(U = a_0I + a_1X + a_2Y +a_3Z\)</span>.</p>
+<p>Also, such a unitary can also be represented this way,</p>
+<div class="arithmatex">\[
+U = \begin{bmatrix}
+a &amp; b\\
+c &amp; d
+\end{bmatrix}
+\]</div>
+<p>and thus, we obtain the following equivalences.</p>
+<div class="arithmatex">\[
+a_0 = (a+d)/2,\ a_1 = (b+c)/2,
+\]</div>
+<div class="arithmatex">\[
+a_2 = (c-b)/2i,\ a_3 = (d-a)/2
+\]</div>
+<p>Also from <span class="arithmatex">\(UU^\dagger = I\)</span> we get,</p>
+<div class="arithmatex">\[
+|a_0|^2 + |a_1|^2 + |a_2|^2 + |a_3|^2 = 1
+\]</div>
+<div class="arithmatex">\[
+a^∗_0a_1+a^∗_1a_0+ia^∗_2a_3−ia^∗_3a_2 = 0
+\]</div>
+<div class="arithmatex">\[
+a^∗_0a_2−ia^∗_1a_3+a^∗_2a_0+ia^∗_3a_1 = 0
+\]</div>
+<div class="arithmatex">\[
+a^∗_0a_3+ia^∗_1a_2−ia^∗_2a_1+a^∗_3a_0 = 0
+\]</div>
+<p>where we define <span class="arithmatex">\(|a_0| = cos(\theta/2)\)</span> then <span class="arithmatex">\(|a_1|^2 + |a_2|^2 + |a_3|^2 = |sin(\theta/2)|\)</span>.</p>
+<p>Then define,</p>
+<div class="arithmatex">\[
+n_x = |a_1|/|sin(\theta/2)|
+\]</div>
+<div class="arithmatex">\[
+n_y = |a_2|/|sin(\theta/2)|
+\]</div>
+<div class="arithmatex">\[
+n_z = |a_3|/|sin(\theta/2)|
+\]</div>
+<p>and further we get <span class="arithmatex">\(n_x^2 + n_y^2 + n_z^2 = 1\)</span>.</p>
+<p>Now, we define <span class="arithmatex">\(exp(iα) =a_0/cos(θ/2)\)</span> and denote the phase of <span class="arithmatex">\(a_1,a_2,a_3\)</span> as <span class="arithmatex">\(α_1,α_2,α_3\)</span> respectively.</p>
+<p>By putting these in the other constraints we get, <span class="arithmatex">\(α_1=α_2=α_3=α−π/2\)</span>.</p>
+<div class="arithmatex">\[
+a_0 = e^{i\alpha}cos(\theta/2),
+\]</div>
+<div class="arithmatex">\[
+a_1 = -ie^{i\alpha}sin(\theta/2)n_x,
+\]</div>
+<div class="arithmatex">\[
+a_2 = -ie^{i\alpha}sin(\theta/2)n_y,
+\]</div>
+<div class="arithmatex">\[
+a_3 = -ie^{i\alpha}sin(\theta/2)n_z
+\]</div>
+<div class="arithmatex">\[
+U= e^{iα}(\cos(\frac{θ}{2})I − i\sin(\frac{\theta}{2})(n_xX+n_yY+n_zZ))= e^{iα}R_{\hat n}(θ)
+\]</div>
+<h2 id="chsh-inequality">CHSH Inequality<a class="headerlink" href="#chsh-inequality" title="Permanent link">&para;</a></h2>
+<p>In a classical experiment, we have the following setup where Alice can choose to measure either Q or R and Bob chooses either S or T. The measurements are performed imultaneously and far off from each other.</p>
+<!-- <img style="width:80%;" id="image" src="https://file.notion.so/f/f/6ad4622e-38fc-4f69-b458-0d5cc1cce783/609febe9-da3a-4f92-b5a1-d35b81a8be3a/Untitled.png?id=eabce912-0ec4-468f-a11c-03b3e98857ac&table=block&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&expirationTimestamp=1712239200000&signature=AyNRUZIa6gA_dwtRP1ay0nwB5LKthnuQJEzj-IHgDLQ&downloadName=Untitled.png"> -->
+
+<div class="arithmatex">\[
+E(QS) + E(RS) + E(RT) - E(QT) = E(QS + RS + RT-QT)
+\]</div>
+<div class="arithmatex">\[
+\implies E(QS) + E(RS) + E(RT) - E(QT) = \sum_{q,r,s,t}p(q, r, s, t)(qs + rs + rt - qt)
+\]</div>
+<div class="arithmatex">\[
+\implies E(QS) + E(RS) + E(RT) - E(QT) \leq \sum_{q,r,s,t}p\times 2 = 2
+\]</div>
+<p>and thereby we obtain the inequality <span class="arithmatex">\(E(QS) + E(RS) + E(RT) - E(QT) \leq 2\)</span>.</p>
+<p>This is one of the set of Bell inequalities, the first of which was found by John Bell. This one in particular is named CHSH inequality.</p>
+<h3 id="quantum-anomaly">Quantum Anomaly<a class="headerlink" href="#quantum-anomaly" title="Permanent link">&para;</a></h3>
+<p>In the quantum case, let us consider the measurements to be based on the following observables over the EPR pair <span class="arithmatex">\(|\psi\rangle = \frac{|01\rangle - |10\rangle}{\sqrt 2}\)</span>.</p>
+<div class="arithmatex">\[
+Q = Z_1, R= X_1,
+\]</div>
+<div class="arithmatex">\[
+S = \frac{-Z_2-X_2}{\sqrt 2},
+\]</div>
+<div class="arithmatex">\[
+T = \frac{Z_2 - X_2}{\sqrt 2}
+\]</div>
+<p>Then, we have the following result.</p>
+<div class="arithmatex">\[
+E(QS) + E(RS) + E(RT) - E(QT) = \frac{1}{\sqrt 2} + \frac{1}{\sqrt 2} + \frac{1}{\sqrt 2} - \frac{1}{\sqrt 2} = 2\sqrt 2 &gt; 2
+\]</div>
+<p>Thus, in other words, CHSH inequality doesn't hold. </p>
+<h3 id="interpretation">Interpretation<a class="headerlink" href="#interpretation" title="Permanent link">&para;</a></h3>
+<p>The fact that CHSH doesn't hold in the quantum scenario implies that two of the major assumptions about nature is wrong in case of the classical experiment.</p>
+<p>The assumptions are:</p>
+<ul>
+<li>Realism: Q, R, S, T are physical quantities which have defininte values irrespective of observation.</li>
+<li>Locality: Alice's measurement doesn't influence that of Bob's.</li>
+</ul>
+<p>Thus, the result of CHSH being false when accounted for the quantum mechanical properties of nature (we can perform the experiment in a lab with particles) suggests that nature cannot be locally real and neither can any true mathematical representation of it be locally real.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/banrovegrie" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../files/sidebar-toggle.js"></script>
+      
+    
+  </body>
+</html>

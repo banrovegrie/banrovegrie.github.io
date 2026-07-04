@@ -1,0 +1,210 @@
+/* Make header non-sticky */
+.md-header {
+  position: fixed !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+  z-index: 10;
+}
+
+/* Remove any additional shadow effects */
+.md-header--shadow {
+  box-shadow: none !important;
+}
+
+/* Remove the border from the header */
+.md-header--border {
+  border-bottom: none !important;
+}
+
+/* Hide the footer completely */
+.md-footer {
+  display: none !important;
+}
+
+/* Hide the site title text and the logo (no logo wanted in the header) */
+.md-header__title .md-header__ellipsis {
+  display: none !important;
+}
+.md-header__button.md-logo {
+  display: none !important;
+}
+
+/* Suppress Material's own drawer toggle; we use our own hamburger */
+.md-header__button[for="__drawer"] {
+  display: none !important;
+}
+
+/* Push hamburger to the extreme left and search to the extreme right
+   (flush, no edge padding), consistently at every width. */
+.md-header__inner {
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0.3rem !important;
+  padding-right: 0.3rem !important;
+  min-height: 3.4rem; /* a little fatter; room for a title later */
+}
+
+/* Resting: just a magnifier icon (no box, no shadow). On click it expands to
+   the left into Material's original search box + results (pre-changes behaviour). */
+@media screen and (min-width: 60em) {
+  .md-search__inner {
+    width: 2.2rem !important;
+    transition: width 0.25s cubic-bezier(0.1, 0.7, 0.1, 1) !important;
+  }
+  .md-search__form {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+  [data-md-toggle="search"]:checked ~ .md-header .md-search__inner,
+  .md-search:focus-within .md-search__inner {
+    width: 23.4rem !important;
+  }
+  [data-md-toggle="search"]:checked ~ .md-header .md-search__form,
+  .md-search:focus-within .md-search__form {
+    background-color: var(--md-default-bg-color) !important;
+    box-shadow: 0 0 0.6rem #00000012 !important;
+    border-radius: 0.1rem 0.1rem 0 0;
+  }
+}
+.md-hamburger {
+  margin-left: 0 !important;
+}
+.md-header__inner > .md-search {
+  margin-right: 0 !important;
+}
+
+/* === Top bar: hamburger far left, search far right =============== */
+.md-hamburger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 0 0.4rem 0 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  cursor: pointer;
+}
+.md-hamburger:hover {
+  color: var(--md-default-fg-color);
+}
+.md-hamburger svg {
+  width: 1.3rem;
+  height: 1.3rem;
+  fill: currentColor;
+}
+
+/* Blog name in the top bar, just after the hamburger */
+.md-blogname {
+  align-self: center;
+  margin-left: 0.3rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.md-blogname:hover {
+  color: var(--md-default-fg-color);
+  opacity: 0.7;
+}
+
+/* Home page: hide the auto-injected title heading */
+body.md-home .md-content__inner > h1:first-child {
+  display: none;
+}
+
+/* Nav + TOC live in the panel; hide the persistent sidebars (kept in the
+   DOM so the panel can read the nav links) at every width. */
+.md-sidebar--primary,
+.md-sidebar--secondary {
+  display: none !important;
+}
+
+/* Centered reading column (only constrains once the viewport is wide). */
+.md-content {
+  max-width: 37rem;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Push content down so the taller fixed header doesn't clip the title. */
+.md-main {
+  padding-top: 1.2rem;
+}
+
+/* === Left navigation panel (rendered on top, not full screen) ===== */
+#md-navpanel {
+  position: fixed;
+  top: 3.4rem;
+  left: 0;
+  width: 14rem;
+  max-width: 82vw;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  z-index: 8;
+  display: none;
+  padding: 1rem 1.1rem 1.4rem;
+  background: var(--md-default-bg-color);
+}
+body.nav-open #md-navpanel {
+  display: block;
+}
+
+/* On phones / narrow screens the panel takes the whole screen (below the bar),
+   like the original drawer, instead of partially covering content. */
+@media screen and (max-width: 59.99em) {
+  #md-navpanel {
+    width: 100%;
+    max-width: 100%;
+    bottom: 0;
+    height: auto;
+    max-height: none;
+    padding: 1.2rem 1.4rem;
+    overscroll-behavior: none;
+  }
+  /* lock the page behind the full-screen panel */
+  body.nav-open {
+    overflow: hidden;
+  }
+}
+
+.md-np__page {
+  display: block;
+  padding: 0.16rem 0;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+}
+.md-np__page:hover {
+  color: var(--md-accent-fg-color, #4051b5);
+}
+.md-np__group {
+  margin-top: 1.1rem;
+}
+.md-np__title {
+  margin-bottom: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+}
+.md-np__group a {
+  display: block;
+  padding: 0.14rem 0;
+  font-size: 0.7rem;
+  line-height: 1.45;
+  color: var(--md-default-fg-color--light);
+  text-decoration: none;
+}
+.md-np__group a:hover {
+  color: var(--md-default-fg-color);
+}
+.md-np__current {
+  color: var(--md-accent-fg-color, #4051b5) !important;
+}

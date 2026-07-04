@@ -1,0 +1,2421 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Essays and research notes on language, computation, mathematics and engineering, by Alapan Chaudhuri.">
+      
+      
+        <meta name="author" content="Alapan Chaudhuri">
+      
+      
+        <link rel="canonical" href="https://banrovegrie.github.io/research/language-thought/">
+      
+      
+        <link rel="prev" href="../prog-lang/">
+      
+      
+        <link rel="next" href="../chess/">
+      
+      
+      <link rel="icon" href="../../img/homotopy.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Language and Thought - Why Not?</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../files/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Why Not?" class="md-header__button md-logo" aria-label="Why Not?" data-md-component="logo">
+      
+  <img src="../../img/homotopy.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Why Not?
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Language and Thought
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Why Not?" class="md-nav__button md-logo" aria-label="Why Not?" data-md-component="logo">
+      
+  <img src="../../img/homotopy.png" alt="logo">
+
+    </a>
+    Why Not?
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alapan Chaudhuri
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Essays
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Essays
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/weblog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Weblog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/composition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Composition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/yoda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    There is no Try
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/frame/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frame
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/show/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Show
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/stories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/problem-solving/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Problem Solving
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Doing Engineering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/economics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Economics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/about-that-question/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About that Question
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/poker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Poker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Research
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Research
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Finance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../information-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Information Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quantum-theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quantum-channels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Channels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prog-lang/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programming Language Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Language and Thought
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chess
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../competitive-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Competitive Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linear-algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear Algebra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../music-theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Music Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../millennium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What gets you a million dollars?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi-variate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multivariate Calculus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ads-cft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ads-CFT Correspondance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Probability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../psdp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PSDP Problem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haskell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Haskell in Harsh Words
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+<p>Table of Contents:</p>
+<ol>
+<li>Basics and Language</li>
+<li>Logic and Computation</li>
+<li>Language Games</li>
+<li>Naming and Necessity</li>
+<li>Deep Learning</li>
+<li>Large Language Models</li>
+<li>Algebraic Topology and Categories</li>
+<li>Type Theory</li>
+<li>Theorem Proving</li>
+<li>Models of the Mind</li>
+<li>Scaling RL for LLMs</li>
+<li>Compression</li>
+<li>Symbolic Reasoning</li>
+<li>Strong Trial and Error</li>
+<li>Thinking Machines</li>
+</ol>
+<p>The purpose of this article is not to convince you of anything or spare you from thinking about the foundation of mathematics, language or computation which have evolved over centuries. Rather it is to give you enough context and rigor that you can start questioning and thinking about these things for yourself.</p>
+<p><img style="width:80%;" id="image" src="../../img/Screenshot_2025-06-29_at_12.48.54_PM.png"></p>
+<p>Now what could be a better place to start introducing you to everything that we want to talk about than a question phrased in the likening of Socrates.</p>
+<blockquote>
+<p>What is a symbol that you and I may know it,
+what are we that symbols may be known to us, and
+how may we arrange rocks that they may know a symbol too?
+</p>
+</blockquote>
+<p>It’s a simple question (inspired from a Warren McCulloch <a href="https://www.nsl.com/k/parry/mcculloch_what-is-a-number.pdf">article</a>) but its underbelly forms a fucking Langlands Program.</p>
+<ul>
+<li>Does a symbol represent anything (reality / meaning / concepts) beyond its syntax?<ul>
+<li>Intentionality, Philosophy of Mind</li>
+<li>Definition Problem, Philosophical Logic</li>
+<li>Internal Representation Problem, Cognitive Science</li>
+</ul>
+</li>
+<li>How does a symbol acquire meaning?<ul>
+<li>Grounding Problem, Philosophy of Language</li>
+</ul>
+</li>
+<li>Can we replace symbol for program (in a machine) / proof (in a logic) / path (in a shape)?<ul>
+<li>Foundation Problem, Mathematics</li>
+<li>Curry Howard Lambek Correspondence, Computer Science</li>
+<li>Definition Problem, Mathematical Logic</li>
+</ul>
+</li>
+<li>Is knowing not computational?<ul>
+<li>Church-Turing Hypothesis, Computer Science</li>
+<li>Weak and Hard Problem of Consciousness, Cognitive Science</li>
+</ul>
+</li>
+<li>What does it mean to know?<ul>
+<li>Gettier Problem, Epistemology</li>
+</ul>
+</li>
+</ul>
+<p>Going with our parable of arranging rocks, if there is one thing that I would want you to take away from this article, it is that everything we discuss here is utterly useless if we don't try to build anything out of it and to build anything would be utterly useless if it doesn't free us to do useless things (absurd subjective destitution).</p>
+<p>As you read, you'll notice this article is poor in academic jargon and formalism. This is intentional. I've seen too many papers and books prioritize “sophistication” over being genuinely helpful.</p>
+<p>Sometimes such sophistication is essential. Especially if you want to do careful maintenance and authoritative referencing. But not when you want to plant a tree rather than tend a garden.</p>
+<p>I will try to keep things:</p>
+<ul>
+<li>Simple and coherent enough to understand</li>
+<li>Rigorous enough to experiment with</li>
+<li>Succinct enough to use as a primitive module / concept / abstraction</li>
+<li>Interesting enough to actually give a shit</li>
+</ul>
+<p>This isn’t just hand-waving. The dynamic between coherence or semantic fidelity with succinctness or compression reflects a fundamental tradeoff in how we <a href="http://www.ai.mit.edu/projects/dm/Tversky-features.pdf">learn</a> and <a href="https://en.wikipedia.org/wiki/Prototype_theory">understand</a>.</p>
+<h1 id="basics-and-language">Basics and Language<a class="headerlink" href="#basics-and-language" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>In the beginning, God created “אב”. (Genesis 1:1)
+</p>
+</blockquote>
+<p>In the beginning God created “naming and asserting definite existence from names, with which he made” the heavens and the earth. An homage to the importance of language and naming.</p>
+<p><img style="width:60%;" id="image" src="../../img/Screenshot_2025-06-22_at_6.41.29_AM.png"></p>
+<h2 id="conceptual-representation">Conceptual Representation<a class="headerlink" href="#conceptual-representation" title="Permanent link">&para;</a></h2>
+<p>Conceptual representation can be (at least):</p>
+<ul>
+<li>Compositional</li>
+<li>Recursive</li>
+<li>Narrative (&gt; strong temporal coherence)</li>
+<li>Self-referential</li>
+<li>Multi-modal</li>
+</ul>
+<p>Thus, the CR space has to be hierarchical by definition. Spanning and binding requirements must exist which can also tell us why some representations are better than others for particular use cases.</p>
+<p>Can spanning and binding (SR dynamics) be the base for compression and coherence? Can we think of precision, reliability, efficiency and fidelity just in terms of SR dynamics or do we need more axes?</p>
+<ul>
+<li>Planning and reasoning as computational processes?</li>
+<li>Is world model an emergent property? If not should it be completely inside CR-space? The argument for world model is satisfying the need to learn representing the world in a non task-specific way.</li>
+<li>Any collapsibility criteria?</li>
+</ul>
+<p>We mentioned that CR is multimodal. Well, what are some of the modes of operation (ranked in order of abstractness)? </p>
+<ul>
+<li>Logical</li>
+<li>Spatial</li>
+<li>Linguistic</li>
+<li>Musical (more to do with timing than hearing)</li>
+<li>Emotional (includes interpersonal too, hence lower)</li>
+<li>Naturalistic (general observation)</li>
+<li>Kinesthetic (movement)</li>
+</ul>
+<h2 id="intelligence">Intelligence<a class="headerlink" href="#intelligence" title="Permanent link">&para;</a></h2>
+<p>What is intelligence and how should we measure it for machines? </p>
+<ul>
+<li>If we want to do it in terms of generalization, we need to control experience and priors (already learnt concepts).</li>
+<li>Examinations are not a good proxy for measuring intelligence of current machines since these were designed for humans under the latent assumptions that they need to perform generalization to do well. Such latent assumptions do not hold for machines.</li>
+</ul>
+<p>Is being conscious necessary to being generally intelligent (probably not)?</p>
+<p><img style="width:80%;" id="image" src="../../img/Screenshot_2025-06-25_at_1.12.34_PM.png"></p>
+<h2 id="language">Language<a class="headerlink" href="#language" title="Permanent link">&para;</a></h2>
+<p>Stories are how we sense reality. And language serves as an approximate communicator of (and about, hence recursive) stories.</p>
+<p>But words can also utterly confound us. Hop on the wrong ones while playing across language games, and you shall see.</p>
+<ul>
+<li>All of language is analogy. Some of those analogies are logical.</li>
+<li>To communicate is not the same as to be.</li>
+<li>Isn’t all of symbolic representation language?</li>
+</ul>
+<h2 id="knowledge">Knowledge<a class="headerlink" href="#knowledge" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>I know that I know nothing. (Socrates)
+</p>
+</blockquote>
+<p>Plato said knowledge, classically, is defined as justified true belief. In other words:</p>
+<p><span class="arithmatex">\(S\)</span> knows <span class="arithmatex">\(P\)</span> if and only if:</p>
+<ol>
+<li><span class="arithmatex">\(P\)</span> is true.</li>
+<li><span class="arithmatex">\(S\)</span> accepts <span class="arithmatex">\(P\)</span>.</li>
+<li><span class="arithmatex">\(S\)</span> has adequate evidence for <span class="arithmatex">\(P\)</span>.</li>
+</ol>
+<p>But is that sufficient? Well it was thought to be so until in 1963 <a href="https://en.wikipedia.org/wiki/Edmund_Gettier">Edmund Gettier</a> under pressure to publish something submitted a 3 page article to the Analysis journal.</p>
+<h3 id="gettier-problem">Gettier Problem<a class="headerlink" href="#gettier-problem" title="Permanent link">&para;</a></h3>
+<p>Suppose: You have asked John about his car multiple times to infer that yep, it is indeed owned by him. And Blake, as far as you know, has never even been to Staten Island.</p>
+<div class="arithmatex">\[
+A = \text{John owns a Ford}
+\]</div>
+<div class="arithmatex">\[
+B = \text{Blake is in Staten Island}
+\]</div>
+<div class="arithmatex">\[
+\text{Claim:}\quad A, (A \to A\vee B) \vdash A\vee B
+\]</div>
+<p>Now suppose that due to some random event, John doesn’t own a Ford (the bank took it away, they say) but Blake ends up in Staten Island. Then <span class="arithmatex">\(P = A \vee B\)</span> is still true. Thus we have that:</p>
+<ol>
+<li><span class="arithmatex">\(P\)</span> is true</li>
+<li>You have accepted <span class="arithmatex">\(P\)</span> to be true.</li>
+<li>You have reasonable justification for <span class="arithmatex">\(P\)</span> being true.</li>
+</ol>
+<p>But did you really know <span class="arithmatex">\(P\)</span>?</p>
+<h2 id="meaning">Meaning<a class="headerlink" href="#meaning" title="Permanent link">&para;</a></h2>
+<p>Knowledge turned out to be slippery. That's because it sits downstream of something slipperier: meaning. What does it take for a symbol to mean anything at all?</p>
+<p>Every theory of meaning is an attempt to prove Humpty Dumpty wrong, the guy who insisted a word means whatever he chooses it to mean. The main contenders:</p>
+<table>
+<thead>
+<tr>
+<th>Theory</th>
+<th>Slogan</th>
+<th>Meaning of "dog"</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Referential</td>
+<td>words are labels for things</td>
+<td>the set of all dogs</td>
+</tr>
+<tr>
+<td>Ideational (Locke)</td>
+<td>words are labels for ideas</td>
+<td>your mental image of a dog</td>
+</tr>
+<tr>
+<td>Truth-conditional (Frege, Tarski, Davidson)</td>
+<td>knowing meaning = knowing truth conditions</td>
+<td>its contribution to when "the dog barks" is true</td>
+</tr>
+<tr>
+<td>Use (Wittgenstein)</td>
+<td>meaning is use in the language game</td>
+<td>everything the word lets you do</td>
+</tr>
+<tr>
+<td>Intentional (Grice)</td>
+<td>speaker intentions ground meaning</td>
+<td>what speakers intend hearers to recognize</td>
+</tr>
+<tr>
+<td>Externalist (Kripke, Putnam)</td>
+<td>meaning is partly outside the head</td>
+<td>whatever the community's usage is causally hooked to</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sense-and-reference">Sense and Reference<a class="headerlink" href="#sense-and-reference" title="Permanent link">&para;</a></h3>
+<p>Frege noticed that <span class="arithmatex">\(a = a\)</span> is trivial while <span class="arithmatex">\(a = b\)</span> can be a discovery. "Hesperus is Phosphorus" (the evening star is the morning star, both Venus) was astronomy, not tautology. If meaning were just reference, the two sentences would say the same thing. They don't.</p>
+<p>So meaning splits in two:</p>
+<ul>
+<li>Reference: the object a term picks out. Venus, for both names.</li>
+<li>Sense: the mode of presentation, the route the term takes to its object. "Brightest light at dusk" and "brightest light at dawn" are different roads to the same rock.</li>
+</ul>
+<p>Two consequences worth holding onto:</p>
+<ul>
+<li>Sense can exist without reference: "the largest prime", "Pegasus". A symbol can be perfectly meaningful and point at nothing. Remember this when we get to hallucinations.</li>
+<li>Compositionality: the sense of a whole is built from the senses of its parts plus how they are arranged. This is the load-bearing wall of every formal semantics, and the reason conceptual representation had to be compositional back in our wishlist.</li>
+</ul>
+<h3 id="meanings-aint-in-the-head">Meanings Ain't in the Head<a class="headerlink" href="#meanings-aint-in-the-head" title="Permanent link">&para;</a></h3>
+<p>Putnam's Twin Earth: a planet exactly like ours except the clear, drinkable stuff filling its lakes is XYZ, not H₂O. Twin-you is molecule-for-molecule identical to you: same brain state, same inner movie. But when Twin-you says "water" it refers to XYZ, and when you say it, it refers to H₂O. Same head, different meanings. His conclusion, verbatim: meanings just ain't in the head.</p>
+<p>Two companion observations to keep you unsettled:</p>
+<ul>
+<li>Division of linguistic labor (Putnam again): you likely can't tell an elm from a beech, yet you mean elm when you say "elm." Reference is held up by experts elsewhere in your community; you're borrowing it. Most of everyone's vocabulary is borrowed reference.</li>
+<li>Speaker meaning (Grice): what a sentence means and what a speaker means by it come apart ("lovely weather" mid-hurricane). Sentence meaning is convention; speaker meaning is intention recognized as intended. Communication is cooperative mind-reading with props.</li>
+</ul>
+<p>And then the operational payoff, from a linguist decades ahead of the curve (Firth): you shall know a word by the company it keeps. Take that literally, at scale, and you get distributional semantics: word2vec, embeddings, and eventually the models the back half of this article is about. Distributional semantics is the use theory of meaning turned into an algorithm.</p>
+<p>Whether it captures meaning or only its shadow (sense unmoored from reference, at scale) is quietly the central question of this entire article. Park it. We'll be back.</p>
+<h1 id="logic-and-computation">Logic and Computation<a class="headerlink" href="#logic-and-computation" title="Permanent link">&para;</a></h1>
+<p>The shortest history of a dream:</p>
+<ul>
+<li>Leibniz (1670s): build a language so precise that arguing reduces to calculating. When men disagree, let them say <em>calculemus</em>: let us compute.</li>
+<li>Hilbert (1920s): prove that mathematics is consistent, complete and decidable, using only finite mechanical means.</li>
+<li>Gödel (1931): no system worth its salt gets to be both consistent and complete. Consistency can't even be self-certified.</li>
+<li>Turing (1936): here is what "mechanical" means, exactly: a machine. And no, it can't decide everything either.</li>
+</ul>
+<p>The dream of total certainty died, and the autopsy invented the computer. Logic is the rulebook of the symbol game; computation is what happens when you play it fast, blind and indefinitely. That the second thing fell out of the failure of the first is the best joke the twentieth century ever told.</p>
+<h2 id="logic">Logic<a class="headerlink" href="#logic" title="Permanent link">&para;</a></h2>
+<p>A logic is three interlocking machines:</p>
+<ol>
+<li>Syntax: which strings of symbols are well-formed at all. Grammar, not truth.</li>
+<li>Proof theory: axioms plus inference rules for pushing symbols around. <span class="arithmatex">\(\Gamma \vdash \varphi\)</span> means that from assumptions <span class="arithmatex">\(\Gamma\)</span>, the formula <span class="arithmatex">\(\varphi\)</span> is derivable.</li>
+<li>Semantics: interpretations that assign truth. <span class="arithmatex">\(\Gamma \vDash \varphi\)</span> means that every model making <span class="arithmatex">\(\Gamma\)</span> true makes <span class="arithmatex">\(\varphi\)</span> true.</li>
+</ol>
+<p><span class="arithmatex">\(\vdash\)</span> is a claim about ink. <span class="arithmatex">\(\vDash\)</span> is a claim about worlds. The entire subject lives in the gap between them:</p>
+<ul>
+<li>Soundness: <span class="arithmatex">\(\vdash\)</span> implies <span class="arithmatex">\(\vDash\)</span>. The game never certifies a falsehood.</li>
+<li>Completeness: <span class="arithmatex">\(\vDash\)</span> implies <span class="arithmatex">\(\vdash\)</span>. Everything true in all models is reachable by the game.</li>
+</ul>
+<p>First-order logic has both (Gödel's completeness theorem, 1929: his PhD thesis, the good news). The bad news came two years later and is about theories, not the logic itself: any consistent, effectively axiomatized theory containing basic arithmetic must leave true sentences unprovable, and cannot prove its own consistency. People forever confuse the completeness theorem with the incompleteness theorems; blame whoever names things in logic.</p>
+<h3 id="object-logic-and-meta-logic">Object Logic and Meta Logic<a class="headerlink" href="#object-logic-and-meta-logic" title="Permanent link">&para;</a></h3>
+<p>"This sentence is false." The liar is what happens when a language is allowed to freely talk about its own semantics.</p>
+<p>Tarski's fix: split the tower. The object language is the one you reason <em>in</em>; the metalanguage is the one you reason <em>about it</em> with. Truth for the object language is only definable one floor up:</p>
+<div class="arithmatex">\[
+\text{“snow is white” is true} \iff \text{snow is white}
+\]</div>
+<p>The left side mentions a sentence; the right side uses one. Use versus mention is the original sin of symbol manipulation; most paradoxes are just floors of the tower collapsing into each other.</p>
+<p>And the tower is engineering, not philosophy:</p>
+<ul>
+<li>Gödel numbering is the discovery that arithmetic is expressive enough to serve as its own metalanguage. The engine of incompleteness is the object/meta wall being breachable from inside.</li>
+<li>Proof assistants are literally built this way: Isabelle's kernel is a tiny meta logic (an intuitionistic fragment of higher-order logic, with its own implication <span class="arithmatex">\(\Longrightarrow\)</span>) inside which object logics like FOL, HOL and ZF live as guests with their own <span class="arithmatex">\(\to\)</span>. More on this when we reach theorem proving.</li>
+<li>A compiler is a metaprogram, a program whose subject matter is programs. Once you see the object/meta split you see it everywhere: quoting in Lisp, <code>eval</code>, quines, prompt versus prompted model.</li>
+</ul>
+<p>One more distinction, because it comes back with a vengeance in the type theory section: a logic can be classical (every statement is true or false whether or not anyone can check: the law of excluded middle) or intuitionistic (truth is constructibility; to assert existence, produce the witness). Classical logic is the logic of an omniscient spectator; intuitionistic logic is the logic of a builder. Guess which one compiles.</p>
+<h2 id="computation">Computation<a class="headerlink" href="#computation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>CTD Principle: A (quantum) Turing machine can simulate any physical process.</li>
+<li>CTD Thesis: A quantum Turing machine can efficiently (within polynomial overhead; why polynomial? because compositionality) simulate any realistic model of computation.</li>
+<li>But what is computation? Any process that transforms information.</li>
+</ul>
+<p>Why does the CTD Principle make sense? Because we assume that most process in the universe follow some form of logic. And Turing machines are just models which can execute such logic.</p>
+<p>Interestingly, from this we can also figure out requirements that a Turing machine must satisfy. Namely, being able to execute any condition and doing so again and again indefinitely. It implements:</p>
+<ol>
+<li>Conditional branching</li>
+<li>Indefinite iteration</li>
+<li>Read, write or update operations over symbols</li>
+<li>Unbounded storage (let’s not call it memory)</li>
+</ol>
+<p>A Turing machine is a 5 tuple. Anything a universal Turing machine can decide on or compute is an algorithm.</p>
+<div class="arithmatex">\[M = \left(Q, \Gamma, \delta, q_0, h\right)\]</div>
+<div class="arithmatex">\[\text{where } \Gamma = \Sigma \cup \{\_\}\]</div>
+<div class="arithmatex">\[\delta: Q \times \Gamma \to Q \times \Gamma \times \{\text{left, right}\}\]</div>
+<ul>
+<li>
+<p>So what are then uncomputable things like? Here is an <code>example</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Hypothetical HALTS function</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">HALTS</span><span class="p">(</span><span class="n">program_text</span><span class="p">,</span> <span class="n">input_data</span><span class="p">):</span>
+    <span class="c1"># Somehow magically determines if program_text halts on input_data</span>
+    <span class="c1"># Returns True if halts, False if runs forever</span>
+    <span class="k">pass</span>
+
+<span class="c1"># The troublemaker program</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">TROUBLE</span><span class="p">(</span><span class="n">program_text</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">HALTS</span><span class="p">(</span><span class="n">program_text</span><span class="p">,</span> <span class="n">program_text</span><span class="p">):</span>
+        <span class="c1"># If it halts, loop forever</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># If it doesn&#39;t halt, halt immediately</span>
+        <span class="k">return</span>
+
+<span class="c1"># Convert TROUBLE to its string representation</span>
+<span class="n">trouble_source</span> <span class="o">=</span> <span class="n">get_program_text</span><span class="p">(</span><span class="n">TROUBLE</span><span class="p">)</span>
+
+<span class="c1"># What happens here?</span>
+<span class="c1"># We prove that HALTS cannot exist</span>
+<span class="n">TROUBLE</span><span class="p">(</span><span class="n">trouble_source</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>Language: Set of strings over alphabet <span class="arithmatex">\(\Sigma\)</span></p>
+<ul>
+<li><span class="arithmatex">\(L \subseteq \{0, 1\}^*\)</span> when we fuck everything into binary shit, <span class="arithmatex">\(\Sigma\)</span> becomes <span class="arithmatex">\(\{0, 1\}\)</span></li>
+<li>Any mathematical object can be encoded as a binary string.</li>
+</ul>
+</li>
+<li>
+<p>Decision Problem: Is <span class="arithmatex">\(w \in L\)</span>?</p>
+<ul>
+<li>Any problem is a mapping from a set of inputs to a set of outputs.</li>
+<li>
+<p>Any computational problem can be converted into a decision problem.</p>
+<div class="arithmatex">\[f:\{0,1\}^*\to \{0,1\}^*\]</div>
+<div class="arithmatex">\[G(f)=\{(x,y):f(x)=y\}\subseteq\{0,1\}^*\]</div>
+</li>
+<li>
+<p>Any function <span class="arithmatex">\(f\)</span> can be computed iff its graph <span class="arithmatex">\(G(f)\)</span> can be decided.</p>
+</li>
+<li>TM decides <span class="arithmatex">\(L\)</span>: <span class="arithmatex">\(\forall w\)</span>, TM halts, accepts iff <span class="arithmatex">\(w \in L\)</span>, rejects iff <span class="arithmatex">\(w \notin L\)</span>.</li>
+<li>A language <span class="arithmatex">\(L\)</span> is called decidable if <span class="arithmatex">\(\forall w,\ \exists M\)</span> which accepts when <span class="arithmatex">\(w \in L\)</span> and rejects otherwise.</li>
+<li>A language <span class="arithmatex">\(L\)</span> is called recognizable if when <span class="arithmatex">\(w \notin L\)</span>, <span class="arithmatex">\(M\)</span> doesn’t halt but accepts otherwise.</li>
+<li>A language is called unrecognizable if <span class="arithmatex">\(\nexists M\)</span> that recognizes it. Example: complement of the halting problem.</li>
+<li>If <span class="arithmatex">\(C\)</span> is a complexity class, it can be defined as follows. Often while defining resource bounds we try to deal with polynomials because they are closed under composition.</li>
+</ul>
+</li>
+</ul>
+<div class="arithmatex">\[
+C =\{L \subseteq \{0,1\}^*: L \text{ can be decided within resource bound } f(n) \text{ on model } M\}
+\]</div>
+<p>Here is a list of <a href="https://plato.stanford.edu/entries/computability/">several complexity classes</a>.</p>
+<p><img style="width:60%;" id="image" src="../../img/Screenshot_2025-06-21_at_10.11.25_AM.png"></p>
+<p>Say you have two decision problems <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>. Then, <span class="arithmatex">\(A\)</span> is said to be reducible to <span class="arithmatex">\(B\)</span> if <span class="arithmatex">\(B\)</span> can be used as a subroutine for <span class="arithmatex">\(A\)</span>. Then obviously, <span class="arithmatex">\(A\)</span> is at most as hard as <span class="arithmatex">\(B\ (A\leq B)\)</span> .</p>
+<ul>
+<li>
+<p>Comparing logic systems and their <code>complexities</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Logic System</th>
+<th>Intuitive Explanation</th>
+<th>Satisfiability</th>
+<th>Validity</th>
+<th>Model Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Classical Logic</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Propositional Logic</td>
+<td>Basic logic with AND, OR, NOT - no quantifiers over variables</td>
+<td>NP-c</td>
+<td>coNP-c</td>
+<td><span class="arithmatex">\(\in P\)</span></td>
+</tr>
+<tr>
+<td>Horn Clauses</td>
+<td>Restricted propositional logic where each clause has <span class="arithmatex">\(\leq1\)</span> positive literal</td>
+<td>P-c</td>
+<td>P-c</td>
+<td><span class="arithmatex">\(\in P\)</span></td>
+</tr>
+<tr>
+<td>First-Order Logic</td>
+<td>Logic with quantifiers <span class="arithmatex">\(\exists, \forall\)</span> over individual objects/variables</td>
+<td>coRE-c</td>
+<td>RE-c</td>
+<td>PSPACE-c</td>
+</tr>
+<tr>
+<td>Monadic First-Order</td>
+<td>First-order logic restricted to unary (single-argument) predicates only</td>
+<td>NEXP-c</td>
+<td>coNEXP-c</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Intuitionistic Logic</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Propositional</td>
+<td>Constructive logic, rejects law of excluded middle, requires explicit proofs</td>
+<td>PSPACE-c</td>
+<td>PSPACE-c</td>
+<td>P-c</td>
+</tr>
+<tr>
+<td>First-Order</td>
+<td>Constructive first-order logic with explicit existence proofs required</td>
+<td>coRE-c</td>
+<td>RE-c</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Modal Logic</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(K, T, S4\)</span></td>
+<td>Necessity (<span class="arithmatex">\(\square\)</span>) and possibility (<span class="arithmatex">\(\large\diamond\)</span>) with different axioms about accessibility</td>
+<td>PSPACE-c</td>
+<td>PSPACE-c</td>
+<td>P-c</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(S5\)</span></td>
+<td>Modal logic where accessibility relation is equivalence (reflexive, symmetric, transitive)</td>
+<td>NP-c</td>
+<td>coNP-c</td>
+<td><span class="arithmatex">\(\in P\)</span></td>
+</tr>
+<tr>
+<td><strong>Epistemic Logic</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(S5_n (n\geq 2)\)</span></td>
+<td>Multi-agent knowledge logic - what agents know about others' knowledge</td>
+<td>PSPACE-c</td>
+<td>PSPACE-c</td>
+<td>-</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(K_n^C, T_n^C (n\geq2)\)</span></td>
+<td>Epistemic logic with common knowledge operator - what everyone knows that everyone knows</td>
+<td>EXP-c</td>
+<td>EXP-c</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p>What does asking computational complexity of logic systems even mean?</p>
+<ul>
+<li>Model checking asks: "In this model (object value assignment), is the formula satisfied?"</li>
+<li>Satisfiability asks: "Does any model (object value assignment) satisfy this formula?"</li>
+<li>Validity asks: "Do all models (object value assignments) satisfy this formula?"</li>
+</ul>
+<h2 id="disjunctions">Disjunctions<a class="headerlink" href="#disjunctions" title="Permanent link">&para;</a></h2>
+<p>Is all thinking computational?</p>
+<p>Gödel was more careful with his own theorem than his fans are. What he claimed follows from incompleteness (in his 1951 Gibbs lecture) is only a disjunction. Compressed:</p>
+<blockquote>
+<p>Either the human mind surpasses every finite machine, or there exist absolutely unsolvable mathematical problems. Or both.
+</p>
+</blockquote>
+<p>Reasoning: take the mathematical mind. If it <em>is</em> some consistent formal system <span class="arithmatex">\(F\)</span>, then by incompleteness there are truths, starting with "<span class="arithmatex">\(F\)</span> is consistent", that it can never prove: mathematics has questions we are constitutionally unable to settle. If it is <em>not</em> any such <span class="arithmatex">\(F\)</span>, then minds do something no machine does. Mechanism or permanent mystery: pick at least one.</p>
+<p>Lucas and later Penrose tried to collect the first disjunct for free. The pitch: hand me any formal system <span class="arithmatex">\(F\)</span> claimed to model my mathematical reasoning; I can write down its Gödel sentence <span class="arithmatex">\(G(F)\)</span> and <em>see</em> that it is true, which <span class="arithmatex">\(F\)</span> cannot prove. So I am not <span class="arithmatex">\(F\)</span>, for any <span class="arithmatex">\(F\)</span>. Therefore minds are not machines.</p>
+<p>The hole, found independently by basically everyone (Putnam and Chalmers wrote the canonical versions): you can see that <span class="arithmatex">\(G(F)\)</span> is true only if you know <span class="arithmatex">\(F\)</span> is consistent. For toy systems, sure. For a formal system big enough to be a candidate model of <em>your entire mathematical mind</em>, a few trillion synapses of undocumented legacy code, you have no such knowledge. Gödel's second theorem doesn't show you're not a machine; it predicts exactly how it would feel to be one: unable to certify your own consistency from the inside.</p>
+<p>The escape routes sort into four (Dershowitz's paper sorts the family tree of responses to Penrose):</p>
+<ol>
+<li>We are consistent machines, but can never know <em>which</em> machine; our own program is unknowable to us.</li>
+<li>We are consistent machines, but cannot prove our own consistency. The limitation isn't evidence against mechanism, it's the signature of mechanism.</li>
+<li>We are inconsistent machines. Have you met us? (Paraconsistent logics even make this respectable: systems where a contradiction stays local instead of exploding into everything. A mind could contain its own falsehoods and still function.)</li>
+<li>We are not machines, at which point you owe an account of what non-computable physics the brain runs, and "quantum gravity in the microtubules" has so far convinced approximately nobody who wasn't already sold.</li>
+</ol>
+<p>Note what survives all this: the disjunction itself. It is as close to a theorem about minds as logic delivers: either mind exceeds mechanism, or some mathematics is forever out of our reach. What does not survive is the shortcut from incompleteness straight to "therefore minds beat machines."</p>
+<p>My stance is deflationary, and it's the bet of this article: whether or not all thinking is computation, every piece of thinking we have ever <em>built</em> is computation. If there is a non-computational residue, we will find its true boundary only by building up to it, not by declaring it from an armchair.</p>
+<h1 id="language-games">Language Games<a class="headerlink" href="#language-games" title="Permanent link">&para;</a></h1>
+<p>Wittgenstein is the only philosopher who published the thesis and then outlived it long enough to write the rebuttal himself. Both halves matter here, because the twentieth century built machines out of each.</p>
+<h2 id="language-as-picture">Language as Picture<a class="headerlink" href="#language-as-picture" title="Permanent link">&para;</a></h2>
+<p>The early move (the <em>Tractatus</em>, 1921): language works by picturing.</p>
+<ul>
+<li>The world is the totality of facts, not of things.</li>
+<li>A proposition is a picture of a fact: names stand for objects, and the arrangement of names mirrors the arrangement of objects.</li>
+<li>Logic is the shared scaffolding of language and world, which is why logic says nothing <em>about</em> the world. It is the frame, not the paint.</li>
+<li>Whatever cannot be pictured (ethics, aesthetics, the picturing relation itself) cannot be said. Proposition 7, the mic drop: "Whereof one cannot speak, thereof one must be silent."</li>
+</ul>
+<p>Look at what this is: a compositional, referential semantics where meaning is a mapping from symbols to world. The Tractatus is the philosophical spec for symbolic AI, written thirty years early. Wittgenstein finished it, declared philosophy solved, and went off to teach elementary school in the Austrian mountains.</p>
+<h2 id="language-as-use">Language as Use<a class="headerlink" href="#language-as-use" title="Permanent link">&para;</a></h2>
+<p>Then he came back and spent twenty years demolishing his own building.</p>
+<p>The <em>Philosophical Investigations</em> opens with Augustine's picture of learning language (adults point, name, the child maps names to things) and then pulls a single thread until the whole sweater is gone:</p>
+<ul>
+<li>Ostension underdetermines. Point at two nuts and say "two": how does the learner know you mean the number and not the nuts, the color, the direction of your finger? Every act of pointing needs prior stage-setting to be understood. (Every dataset needs an inductive bias to be learned from. Same theorem, different century.)</li>
+<li>Naming is not the foundation of language; it is one move among thousands. Ordering, asking, joking, cursing, praying, greeting: each is a language game, a weave of words, actions and stakes into a practice. The builders' game of "Slab!" and "Block!" is a complete language with a four-word vocabulary.</li>
+<li>There is no essence shared by everything we call "language" (or "game": board games, card games, solitaire, ring-a-ring-a-roses; go find the one common feature, I'll wait). Just family resemblance: overlapping similarities, like a rope in which no single fiber runs the whole length. Categories with prototypes and fuzzy edges rather than definitions. Cognitive science spent the 1970s rediscovering this with data.</li>
+<li>And the slogan: for most purposes, the meaning of a word is its use in the language.</li>
+</ul>
+<h2 id="rule-following">Rule Following<a class="headerlink" href="#rule-following" title="Permanent link">&para;</a></h2>
+<p>The deepest cut, and the one machine learning people should have tattooed somewhere visible.</p>
+<p>You have seen "2, 4, 6, 8" and you continue "10, 12, …". Why not "2, 4, 6, 8, who do we appreciate"? Wittgenstein's point: any finite stretch of behavior accords with infinitely many rules, so no pile of examples, by itself, fixes the rule. Kripke sharpened it into a horror story: maybe by "+" you have always meant <em>quus</em>, which behaves exactly like plus below 57 and returns 5 above. Every calculation you have ever performed is consistent with both hypotheses. So what fact about you makes it the case that you meant plus?</p>
+<p>The answer: no fact <em>inside</em> you. Rule-following is a practice. You follow rules the way your community follows them, trained by correction, and the regress of interpretations bottoms out not in more rules but in shared behavior, a form of life.</p>
+<p>This is the generalization problem, stated eighty years before the first train/test split. A finite training set never determines the function; what a learner "means" by the pattern it found is fixed by its inductive biases, its form of life. Gradient descent has customs too: smoothness, locality, simplicity. When a model extrapolates weirdly it is not breaking the rule; it is following a different one that happened to agree with ours on the training set. Quus, all the way down.</p>
+<h2 id="private-language">Private Language<a class="headerlink" href="#private-language" title="Permanent link">&para;</a></h2>
+<p>Could there be a language only I can understand, naming my private inner sensations (this feeling, which I hereby christen "S")? Wittgenstein: no. With no public criterion of correctness there is no difference between using "S" rightly and merely <em>seeming</em> to. A sign that cannot be misused is not a sign; it is a noise. Meaning needs an outside: correction, practice, other players.</p>
+<p>Cash this out for the machines. LLMs are trained on the largest archive of language games ever assembled: every move, every correction, every bluff, transcribed. If meaning is use, they have absorbed staggering amounts of it. But they absorbed it the way a spectator absorbs chess: every game watched, none played, nothing staked. Whether spectating a form of life is enough to join it. That is the actual question hiding inside "do LLMs understand?", and we will meet it again properly in the LLM chapters.</p>
+<h1 id="naming-and-necessity">Naming and Necessity<a class="headerlink" href="#naming-and-necessity" title="Permanent link">&para;</a></h1>
+<p>Three lectures, delivered from memory in 1970 by a 29-year-old, transcribed into one of the most influential philosophy books of the century, and fatal to a fifty-year consensus about how words work.</p>
+<p>The consensus (Frege, Russell, roughly everyone): a name is a compressed description. "Gödel" abbreviates something like "the man who proved incompleteness"; reference goes to whatever fits the dossier.</p>
+<p>Kripke's counterexamples are rude little stories:</p>
+<ul>
+<li>Suppose incompleteness was actually proven by a man named Schmidt, and Gödel stole the manuscript. If "Gödel" <em>means</em> "prover of incompleteness," then all along your word "Gödel" referred to Schmidt. But obviously it didn't; you would be saying something <em>false about Gödel</em>, the thief. Reference survives the death of its description.</li>
+<li>Ask someone who Feynman is. "Uh, a physicist?" That description fits ten thousand people. They refer to Feynman anyway, effortlessly.</li>
+</ul>
+<p>So how do names hook onto the world, if not through dossiers?</p>
+<ul>
+<li>Baptism: someone names the baby, the star, the element.</li>
+<li>Chain: the name passes hand to hand, each user intending to refer to whatever the previous user referred to.</li>
+</ul>
+<p>Reference is a causal-historical supply chain, not a mental description. You refer through your community's usage. Putnam's borrowed reference again, arrived at from the naming side. What is in your head can be nearly empty or nearly all wrong, and your words still reach their targets, because the chain does the carrying.</p>
+<h2 id="rigid-designators">Rigid Designators<a class="headerlink" href="#rigid-designators" title="Permanent link">&para;</a></h2>
+<p>The modal half of the lectures. A name picks out the same individual in every possible world where it exists: Aristotle might never have taught Alexander, but he could not have failed to be Aristotle. A description slides: "the teacher of Alexander" picks out different people in different worlds. Names are rigid; descriptions are not. That asymmetry is the technical heart of the refutation.</p>
+<p>And it cracks Kant's tidy wall between the necessary-a-priori and the contingent-a-posteriori:</p>
+<ul>
+<li>Necessary a posteriori: Hesperus = Phosphorus. Water = H₂O. Discovered empirically, yet true in every possible world: both names rigidly grip the same thing, so the identity could not have failed.</li>
+<li>Contingent a priori: "the standard meter bar is one meter long." You know it without measuring, because you fixed the reference that way, yet the bar could have been longer.</li>
+</ul>
+<p>Necessity is metaphysics. A-priority is epistemology. They were only ever accidentally sharing an apartment.</p>
+<h2 id="back-to-the-machines">Back to the Machines<a class="headerlink" href="#back-to-the-machines" title="Permanent link">&para;</a></h2>
+<p>Kripke relocates meaning from the speaker's interior to the speaker's supply chain, which changes what we should ask about machines.</p>
+<ul>
+<li>An LLM's "Gödel" was learned from a corpus that is itself downstream of the actual baptism and the actual chain of use. If reference rides causal-historical chains, the model may inherit reference the way any semi-competent speaker does: for free, from upstream. This is roughly Grindrod's argument that LLM outputs have linguistic intentionality: derived, secondhand, but real. And notice that the anti-grounding slogan, "it has only ever seen text", presumes meaning must live inside the speaker. That is precisely the internalism this chapter has been dismantling.</li>
+<li>A hallucination, in these terms, is a name with no chain: perfect sense, fluent use, zero baptism. Frege showed a symbol can mean and yet refer to nothing; LLMs industrialized the phenomenon.</li>
+</ul>
+<h1 id="deep-learning">Deep Learning<a class="headerlink" href="#deep-learning" title="Permanent link">&para;</a></h1>
+<p>Artificial Intelligence is based on the idea of physical systems which can <code>learn to do</code> (def: solve) <code>stuff</code>.</p>
+<div class="arithmatex">\[
+\text{Stuff:}\quad\text{Puzzles} → \text{Problems} → \text{Class of problems} → \text{Skills} → \text{Processes}
+\]</div>
+<ul>
+<li>Rule based: Conditionals.</li>
+<li>Classical Machine Learning: Constrained geometric optimization where you assume predefined geometric structures for the solution and optimize under its constraints.<ul>
+<li>Linear and non-linear regression: curve fitting.</li>
+<li>Logistic regression and SVM: separating planes (in SVM you map data into higher dimensions where planar separation works).</li>
+<li>Decision trees and random forests: partitioning space.</li>
+<li>Clustering: similarity grouping in space even hierarchically.</li>
+<li>Naive Bayes: Model probability distributions for each feature (assumes features are independent given the class).</li>
+</ul>
+</li>
+<li>Deep Learning: Adaptive geometric optimization with implicit biases.<ul>
+<li>DL biases are more about the learning process (hierarchical feature extraction, reusability of local patterns etc.) and computational structure than solution geometry.</li>
+<li>But then what about graph neural networks and shit?</li>
+<li>Even in GNNs and Geometric DL, the focus is on computational biases that respect geometry (like rotations / translations).</li>
+<li>Why the fuck is “geometry” everywhere? Because geometry is just a good description for spatial relationships.</li>
+</ul>
+</li>
+<li>Reinforcement Learning: trial-and-error and a completely different paradigm.</li>
+</ul>
+<p>One more way to cut all of this: everything above is program search. A rule-based system is a program you wrote. A learned model is a program the optimizer wrote, in a language (weights) that you cannot read. The astonishing empirical fact of the last decade is that gradient descent, a local and greedy and frankly dumb search, reliably finds programs that generalize, provided the substrate is differentiable and the examples are plentiful. Nobody fully knows why. Deep learning, honestly named, is the study of what this particular program-searcher can and cannot find.</p>
+<h2 id="neural-networks">Neural Networks<a class="headerlink" href="#neural-networks" title="Permanent link">&para;</a></h2>
+<p><img style="width:40%;" id="image" src="../../img/Screenshot_2025-06-22_at_8.01.53_AM.png"></p>
+<p><span class="arithmatex">\(\Sigma\)</span> is the transfer function. <span class="arithmatex">\(\vec{w} + [b]\)</span> are the parameters.</p>
+<p><span class="arithmatex">\(f\)</span> is the non-linear activation function. For example, <span class="arithmatex">\(\sigma(\cdot)\)</span> as the sigmoid function.</p>
+<div class="arithmatex">\[
+y= f(\vec w \cdot \vec x + b) = f(\vec z)
+\]</div>
+<p>Some generic notes on deep learning:</p>
+<ul>
+<li>The universal neuron is always a vector-to-scalar map.</li>
+<li>Layers can be vectors and them being adjacently stacked can lead to tensors.</li>
+</ul>
+<p><img style="width:50%;" id="image" src="../../img/Screenshot_2025-07-01_at_9.55.09_AM.png"></p>
+<ul>
+<li>However, we can abstract this into a tensor-to-tensor form through composition of multiple vector-scalar-maps.</li>
+</ul>
+<h2 id="backpropagation">Backpropagation<a class="headerlink" href="#backpropagation" title="Permanent link">&para;</a></h2>
+<p>Backprop is basically a recursive application of chain rule backwards through the computational graph.</p>
+<p>Be amazed at the price tag, though: the gradient of one loss with respect to a million parameters, for the cost of roughly one extra pass through the graph. Learning is credit assignment, credit assignment is the expensive part, and this is the cheapest credit assignment anyone has ever found.</p>
+<h3 id="gradient-descent">Gradient Descent<a class="headerlink" href="#gradient-descent" title="Permanent link">&para;</a></h3>
+<p><img style="width:80%;" id="image" src="../../img/Screenshot_2025-06-14_at_1.09.10_AM.png"></p>
+<p>Consider a computational graph representing the function:</p>
+<div class="arithmatex">\[
+L = (a \times b + c) \times f
+\]</div>
+<p>where the intermediate variables are defined as:</p>
+<div class="arithmatex">\[
+e = a \times b,\quad d = e + c = a \times b + c, \quad L = d \times f
+\]</div>
+<p>Suppose the initial values of the variables are <span class="arithmatex">\(a_0 = 2\)</span>, <span class="arithmatex">\(b_0 = -3\)</span>, <span class="arithmatex">\(c_0 = 10\)</span>, <span class="arithmatex">\(f_0 = -2\)</span>.</p>
+<div class="arithmatex">\[
+L_0 = d_0 \times f_0 = 4 \times (-2) = -8
+\]</div>
+<p>The gradients are manually assigned (fixed) as</p>
+<div class="arithmatex">\[
+\frac{\partial L}{\partial a} = 6, \quad \frac{\partial L}{\partial b} = -4, \quad \frac{\partial L}{\partial c} = -2, \quad \frac{\partial L}{\partial f} = 4
+\]</div>
+<p>and assuming a gradient ascent rule with learning rate <span class="arithmatex">\(\alpha = 0.01\)</span> thus optimizing <span class="arithmatex">\(L\)</span> towards zero using fixed gradient. Hence, we have <span class="arithmatex">\(a_n = 2 + 0.06n, b_n = -3 - 0.04n, c_n = 10 - 0.02n, f_n = -2 + 0.04n\)</span>.</p>
+<div class="arithmatex">\[
+{L_n = -8 + 0.72n - 0.0064n^2 - 0.000096n^3}
+\]</div>
+<ul>
+<li>Plotting the <code>function</code> here.
+    <img style="width:80%;" id="image" src="../../img/image.png"></li>
+</ul>
+<p>This is half the picture. We have been doing fixed gradient descent and it can overshoot optimal solutions if the gradients don't adapt.</p>
+<p>We need to update the parameters themselves. <span class="arithmatex">\(\frac{\partial L}{\partial a} = 6 \not\equiv \frac{\partial L}{\partial a} = bf\)</span> and clearly, <span class="arithmatex">\(b_0f_0 = 6\)</span> but <span class="arithmatex">\(b_1f_1 = 5.96\)</span> and so on. The fixed gradient approach is essentially performing a linear approximation of the loss surface that becomes increasingly inaccurate as you move away from the initial point. We should rather continuously recompute gradients to adapt to the changing curvature of the loss space.</p>
+<h2 id="implementing-backpropagation">Implementing Backpropagation<a class="headerlink" href="#implementing-backpropagation" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+\text{Value} \to \text{Neuron} \to \text{Layer} \to \text{MLP}
+\]</div>
+<ul>
+<li>
+<p>Defining a class <code>Value</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Value</span><span class="p">:</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">parents</span><span class="o">=</span><span class="p">(),</span> <span class="n">op</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">grad</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">op</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">op</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">backprop</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parents</span><span class="p">:</span> <span class="nb">set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">parents</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">label</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Value(data=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="si">}</span><span class="s2">)&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="n">other</span> <span class="o">=</span> <span class="n">other</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Value</span><span class="p">)</span> <span class="k">else</span> <span class="n">Value</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">Value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">),</span> <span class="s2">&quot;+&quot;</span><span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">backprop</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">grad</span> <span class="o">+=</span> <span class="n">out</span><span class="o">.</span><span class="n">grad</span> <span class="o">*</span> <span class="mf">1.0</span>
+            <span class="n">other</span><span class="o">.</span><span class="n">grad</span> <span class="o">+=</span> <span class="n">out</span><span class="o">.</span><span class="n">grad</span> <span class="o">*</span> <span class="mf">1.0</span>
+
+        <span class="n">out</span><span class="o">.</span><span class="n">backprop</span> <span class="o">=</span> <span class="n">backprop</span>
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="n">other</span> <span class="o">=</span> <span class="n">other</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Value</span><span class="p">)</span> <span class="k">else</span> <span class="n">Value</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span>  <span class="n">Value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">*</span> <span class="n">other</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">),</span> <span class="s2">&quot;*&quot;</span><span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">backprop</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">grad</span> <span class="o">+=</span> <span class="n">out</span><span class="o">.</span><span class="n">grad</span> <span class="o">*</span> <span class="n">other</span><span class="o">.</span><span class="n">data</span>
+            <span class="n">other</span><span class="o">.</span><span class="n">grad</span> <span class="o">+=</span> <span class="n">out</span><span class="o">.</span><span class="n">grad</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+
+        <span class="n">out</span><span class="o">.</span><span class="n">backprop</span> <span class="o">=</span> <span class="n">backprop</span>
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__radd__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span> <span class="o">+</span> <span class="n">other</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__rmul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span> <span class="o">*</span> <span class="n">other</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__pow__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)),</span> <span class="s2">&quot;int/float powers for now&quot;</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">Value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">**</span><span class="n">other</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="p">,),</span> <span class="sa">f</span><span class="s2">&quot;**</span><span class="si">{</span><span class="n">other</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">backprop</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">grad</span> <span class="o">+=</span> <span class="n">out</span><span class="o">.</span><span class="n">grad</span> <span class="o">*</span> <span class="n">other</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">**</span><span class="p">(</span><span class="n">other</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">out</span><span class="o">.</span><span class="n">backprop</span> <span class="o">=</span> <span class="n">backprop</span>
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__truediv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span> <span class="o">*</span> <span class="n">other</span><span class="o">**-</span><span class="mi">1</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__neg__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__sub__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span> <span class="o">+</span> <span class="p">(</span><span class="o">-</span><span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">exp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">Value</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="p">,),</span> <span class="s2">&quot;exp&quot;</span><span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">backprop</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">grad</span> <span class="o">+=</span> <span class="n">out</span><span class="o">.</span><span class="n">grad</span> <span class="o">*</span> <span class="n">e</span>
+
+        <span class="n">out</span><span class="o">.</span><span class="n">backprop</span> <span class="o">=</span> <span class="n">backprop</span>
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">tanh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">Value</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="p">,),</span> <span class="s2">&quot;tanh&quot;</span><span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">backprop</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">grad</span> <span class="o">+=</span> <span class="n">out</span><span class="o">.</span><span class="n">grad</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">out</span><span class="o">.</span><span class="n">backprop</span> <span class="o">=</span> <span class="n">backprop</span>
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">relu</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">Value</span><span class="p">(</span><span class="mi">0</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="p">,),</span> <span class="s1">&#39;relu&#39;</span><span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">backprop</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">grad</span> <span class="o">+=</span> <span class="p">(</span><span class="n">out</span><span class="o">.</span><span class="n">data</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="n">out</span><span class="o">.</span><span class="n">grad</span>
+
+        <span class="n">out</span><span class="o">.</span><span class="n">backprop</span> <span class="o">=</span> <span class="n">backprop</span>
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">visited</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">dfs</span><span class="p">(</span><span class="n">u</span><span class="p">):</span>
+            <span class="n">u</span><span class="o">.</span><span class="n">backprop</span><span class="p">()</span>
+            <span class="n">visited</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">u</span><span class="o">.</span><span class="n">parents</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">v</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>
+                    <span class="n">dfs</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">grad</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="n">dfs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>Defining a class <code>Neuron</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Neuron</span><span class="p">:</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_inputs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">=</span> <span class="p">[</span><span class="n">Value</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_inputs</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">Value</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">act</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">wi</span> <span class="o">*</span> <span class="n">xi</span> <span class="k">for</span> <span class="n">wi</span><span class="p">,</span> <span class="n">xi</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">x</span><span class="p">)),</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">tanh</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">+</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">]</span>
+</code></pre></div>
+</li>
+<li>
+<p>Defining a class <code>Layer</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Layer</span><span class="p">:</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_inputs</span><span class="p">,</span> <span class="n">num_outputs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">neurons</span> <span class="o">=</span> <span class="p">[</span><span class="n">Neuron</span><span class="p">(</span><span class="n">num_inputs</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_outputs</span><span class="p">)]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">outs</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">neurons</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">outs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">outs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">outs</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">neuron</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">neurons</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">neuron</span><span class="o">.</span><span class="n">parameters</span><span class="p">()]</span>
+</code></pre></div>
+</li>
+<li>
+<p>Defining a class <code>MLP</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">MLP</span><span class="p">:</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_inputs</span><span class="p">,</span> <span class="n">list_outputs</span><span class="p">):</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="p">[</span><span class="n">num_inputs</span><span class="p">]</span> <span class="o">+</span> <span class="n">list_outputs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="p">[</span><span class="n">Layer</span><span class="p">(</span>
+            <span class="n">size</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+            <span class="n">size</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list_outputs</span><span class="p">))]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">layer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">layer</span><span class="o">.</span><span class="n">parameters</span><span class="p">()]</span>
+</code></pre></div>
+</li>
+</ul>
+<div class="arithmatex">\[
+\text{Forward Pass} \to \text{Loss} \to \text{Backward Pass} \to \text{Update params and grad}
+\]</div>
+<ul>
+<li>
+<p>Implementing training.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="c1"># forward pass</span>
+    <span class="n">ypred</span> <span class="o">=</span> <span class="p">[</span><span class="n">mlp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xs</span><span class="p">]</span>
+    <span class="n">losses</span> <span class="o">=</span> <span class="p">[(</span><span class="n">yout</span> <span class="o">-</span> <span class="n">ygt</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">ygt</span><span class="p">,</span> <span class="n">yout</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ys</span><span class="p">,</span> <span class="n">ypred</span><span class="p">)]</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">losses</span><span class="p">)</span>
+
+    <span class="c1"># backward pass</span>
+    <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+
+    <span class="c1"># update params and grad</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">mlp</span><span class="o">.</span><span class="n">parameters</span><span class="p">():</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">data</span> <span class="o">+=</span> <span class="o">-</span><span class="mf">0.05</span> <span class="o">*</span> <span class="n">p</span><span class="o">.</span><span class="n">grad</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">grad</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">loss</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div>
+</li>
+</ul>
+<h2 id="universal-approximation">Universal Approximation<a class="headerlink" href="#universal-approximation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>A bounded depth (1 hidden) and unbounded width shallow neural network is an universal approximator.</p>
+<ul>
+<li>
+<p>Sigmoid creates stepwise functions (stacking).</p>
+<div class="arithmatex">\[
+\text{Core Idea}:\quad f(x) = \sum \pm\ \text{scale with direction} \cdot \sigma(w(x - \text{position}))
+\]</div>
+<p><img style="width:80%;" id="image" src="../../img/Screenshot_2025-06-22_at_10.04.29_AM.png"></p>
+</li>
+</ul>
+</li>
+<li>
+<p>A bounded width (1 per layer) and unbounded depth neural network is an universal approximator.</p>
+<ul>
+<li>
+<p>ReLU creates piecewise linear functions (composition).</p>
+<p><img style="width:60%;" id="image" src="../../img/Screenshot_2025-06-22_at_10.09.29_AM.png"></p>
+</li>
+</ul>
+</li>
+<li>
+<p>A bounded depth and bounded width (2 of each) NN is a universal approximator.</p>
+</li>
+</ul>
+<p>Hey so isn’t polynomial regression a universal approximator too? Well theoretically yes, but they suffer from:</p>
+<ul>
+<li>being numerically unstable</li>
+<li>oscillate wildly between data points (Runge’s phenomenon)</li>
+<li>overfitting while also being impossibly hard to fit with limited data</li>
+</ul>
+<p>Neural Networks work better because they encode the right inductive biases for real problems.</p>
+<ul>
+<li>Composition matches hierarchical patterns in data (learnable feature extractions) and also helps estimate functions with much less parameters.</li>
+<li>Inductive biases allow easy encoding of geometry.</li>
+</ul>
+<p>And a warning about all three theorems: universal approximation is close to the least interesting property a function class can have; polynomials have it, lookup tables have it. The theorems say a good network <em>exists</em>. They say nothing about whether gradient descent can <em>find</em> it, or how much data the finding takes. Representation, learnability and generalization are three different questions, and the entire game is the second and third.</p>
+<p>Neural networks are the best example to show how computational equivalence differs from mathematical equivalence.</p>
+<h2 id="kolmogorov-arnold-representation">Kolmogorov Arnold Representation<a class="headerlink" href="#kolmogorov-arnold-representation" title="Permanent link">&para;</a></h2>
+<p>Hilbert's thirteenth problem asked (in its continuous reading) whether functions of many variables secretly reduce to functions of fewer. Kolmogorov and his nineteen-year-old student Arnold answered in 1956-57 with maximum insolence: you never need more than one variable, plus addition.</p>
+<div class="arithmatex">\[
+f(x_1,\ldots,x_n) = \sum_{q=0}^{2n} \Phi_q\!\left(\sum_{p=1}^{n} \varphi_{q,p}(x_p)\right)
+\]</div>
+<p>Every continuous <span class="arithmatex">\(f:[0,1]^n \to \mathbb{R}\)</span>, exactly and not just approximately, is a sum of univariate functions of sums of univariate functions. The only genuinely multivariate operation in mathematics is addition.</p>
+<p>Too good to be true? Somewhat. The inner functions <span class="arithmatex">\(\varphi_{q,p}\)</span> the proof constructs are monsters: continuous but savagely non-smooth, fractal-grade objects, as hard to learn as the original <span class="arithmatex">\(f\)</span> was. For decades the theorem sat in a drawer marked "true but useless"; Girosi and Poggio literally titled a paper calling it irrelevant to neural networks.</p>
+<p>The 2024 move (KANs, Kolmogorov-Arnold Networks): stop demanding exactness, keep the shape. Put learnable univariate functions on the <em>edges</em> and plain summation on the <em>nodes</em>, then stack layers and let smoothness plus depth compensate for abandoning the exact theorem.</p>
+<ul>
+<li>MLP: learnable weights on edges, fixed nonlinearity on nodes.</li>
+<li>KAN: learnable nonlinearity on edges, fixed sum on nodes.</li>
+</ul>
+<p>So everything reduces to: how do you parameterize a learnable, smooth, <em>local</em> univariate function? That is not a machine learning question. Computer graphics solved it fifty years ago.</p>
+<p>Suppose you have <span class="arithmatex">\(n+1\)</span> points and you want to find a parametric curve (Bezier curve) around them.</p>
+<div class="arithmatex">\[
+B(t) = (1 - t)P_0 + tP_1
+\]</div>
+<p>This is applicable recursively to give you the following.</p>
+<div class="arithmatex">\[
+B(t) = \sum_{i=0}^n (1 - t)^{n-i}t^iP_i = \sum_{i=0}^n b_{i,n}(t) P_i
+\]</div>
+<p>Now if you have <span class="arithmatex">\(n\)</span> points, then you need a <span class="arithmatex">\(n-1\)</span> degree Bezier curve to interpolate them. That is quite expensive computationally.</p>
+<p>Breakthrough: why not stitch together multiple lower-degree Bezier curves rather than one big curve?</p>
+<p>That is the concept of a B-spline.</p>
+<p>Chop the domain with a knot vector <span class="arithmatex">\(t_0 \le t_1 \le \cdots \le t_m\)</span> and build basis functions by the Cox-de Boor recursion: degree-0 basis functions are indicator boxes on the knot intervals, and each higher degree linearly blends two neighbors from the level below.</p>
+<div class="arithmatex">\[
+N_{i,0}(t) = \begin{cases} 1 &amp; t_i \le t &lt; t_{i+1} \\ 0 &amp; \text{otherwise} \end{cases}
+\]</div>
+<div class="arithmatex">\[
+N_{i,p}(t) = \frac{t - t_i}{t_{i+p} - t_i} N_{i,p-1}(t) + \frac{t_{i+p+1} - t}{t_{i+p+1} - t_{i+1}} N_{i+1,p-1}(t)
+\]</div>
+<div class="arithmatex">\[
+B(t) = \sum_i N_{i,p}(t)\, P_i
+\]</div>
+<p>What you buy for this bookkeeping:</p>
+<ul>
+<li>Local support: <span class="arithmatex">\(N_{i,p}\)</span> lives on just <span class="arithmatex">\(p+1\)</span> knot spans. Move one control point and the curve changes only in its neighborhood; the rest doesn't even hear about it.</li>
+<li>Smoothness: <span class="arithmatex">\(C^{p-1}\)</span> across knots, by construction. Cubics (<span class="arithmatex">\(p=3\)</span>) are the workhorse: smooth enough for eyes and gradients, cheap enough to evaluate.</li>
+<li>Refinability: insert knots where the function is interesting; resolution becomes a local budget you spend where it matters.</li>
+</ul>
+<p>Locality is the word that matters. In an MLP every weight touches every input region, so learning something new smears an update across everything old; catastrophic forgetting is the default physics of dense weights. A spline learns the way a city grows: block by block. And since each edge of a KAN is a plottable univariate function, you can <em>look</em> at what was learned ("oh, that edge became <span class="arithmatex">\(\sin\)</span>") and read symbolic structure straight off a trained network.</p>
+<p>The fine print: at scale, well-tuned MLPs still generally win on raw benchmarks; splines cost more per parameter, and the exact representation theorem stopped applying the moment we asked for smoothness. Mathematical equivalence and computational usefulness part ways yet again. It is the same lesson universal approximation just taught us, from the opposite direction.</p>
+<h2 id="modeling-language">Modeling Language<a class="headerlink" href="#modeling-language" title="Permanent link">&para;</a></h2>
+<p>Suppose I have names. How do I make more?</p>
+<p>What if I pick a random character and then predict the next best one. Next-token prediction (with, in this case, token <span class="arithmatex">\(=\)</span> character).</p>
+<p>Before dismissing that as a parlor trick, look at what the objective actually demands. To predict the next character of a name you must implicitly model everything upstream of it: spelling, phonotactics, the fact that names end. Scale the same objective to all of text and the demand scales with it. Sutskever's test: to predict the final word of a detective novel, the sentence where the culprit is named, you must have understood the novel. Prediction is a tax on ignorance; every structure you fail to model gets billed to you as surprise.</p>
+<ul>
+<li>Model the sequence (or meta-sequence)</li>
+<li>Predict the next token in it</li>
+</ul>
+<p>What are some assumptions we hold in the context of sequence modeling?</p>
+<ul>
+<li>Elements can be repeated</li>
+<li>Order matters</li>
+<li>Of variable (potentially infinite) length</li>
+</ul>
+<h3 id="bigram">Bigram<a class="headerlink" href="#bigram" title="Permanent link">&para;</a></h3>
+<p>Suppose <span class="arithmatex">\(N(i, j) =\)</span> count of “<span class="arithmatex">\(c_i, c_j\)</span>”. Then, we can have our conditional probability matrix as</p>
+<div class="arithmatex">\[
+P = ({N + 1})/{{row_{sum}}}
+\]</div>
+<p>using which we can now generate new characters through a multinomial distribution (weighted dice throw).</p>
+<div class="arithmatex">\[
+\text{next char} \sim \text{Multinomial}(P[c_i, :])
+\]</div>
+<ul>
+<li>
+<p>Code for <code>inference</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="c1"># starts and ends with &#39;.&#39;</span>
+    <span class="c1"># indexed as 0</span>
+    <span class="n">ix</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">ix</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span>
+            <span class="n">P</span><span class="p">[</span><span class="n">ix</span><span class="p">],</span>
+            <span class="n">num_samples</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">replacement</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">generator</span><span class="o">=</span><span class="n">g</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">itos</span><span class="p">[</span><span class="n">ix</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ix</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="nb">print</span><span class="p">()</span>
+</code></pre></div>
+</li>
+</ul>
+<p>Can be generalized to <span class="arithmatex">\(n\)</span>-gram with <span class="arithmatex">\(x_t\)</span> denoting a token rather than a character and we have <span class="arithmatex">\(x\)</span> as a bunch of tokens.</p>
+<div class="arithmatex">\[
+P(x) = \prod_{t = 1}^{T} P(x_t|x_1,\ldots,x_{t - 1})
+\]</div>
+<p>Even though this simplistic model works, it doesn’t scale.</p>
+<h3 id="average-nll-as-loss">Average NLL as Loss<a class="headerlink" href="#average-nll-as-loss" title="Permanent link">&para;</a></h3>
+<p>How do we measure loss while trying to make more names? Assume that you have a model that has learned how to model names and make more. A good way to claim that this model is good is by showing that your model isn’t “surprised” by new real data.</p>
+<p>Thus, we need to measure how much your model is surprised on some given input and use it as loss.</p>
+<p>In our case, we have the following.</p>
+<p>Likelihood: For a sequence of characters <span class="arithmatex">\(c_1, c_2, ..., c_n\)</span>, the likelihood is basically multiplication of probabilities. Note that <span class="arithmatex">\(c_1\)</span> is the start token, so <span class="arithmatex">\(\log P(c_1) = 0\)</span>.</p>
+<div class="arithmatex">\[
+L = P(c_1) \times P(c_2|c_1) \times P(c_3|c_2) \times ... \times P(c_n|c_{n-1})
+\]</div>
+<p>Log likelihood: Take the log to turn multiplication into addition.</p>
+<div class="arithmatex">\[
+\log L = \log P(c_1) + \log P(c_2|c_1) + ... + \log P(c_n|c_{n-1})
+\]</div>
+<p>Negative log likelihood: Flip the sign to follow loss function semantics.</p>
+<div class="arithmatex">\[
+NLL = -\log P(c_1) - \log P(c_2|c_1) - ... - \log P(c_n|c_{n-1})
+\]</div>
+<p>Average: Divide by sequence length <span class="arithmatex">\(n\)</span> to get the loss. It's basically "how wrong were your predictions?" averaged across all predictions.</p>
+<div class="arithmatex">\[
+\mathcal L = -\frac{1}{n}\sum_{i=1}^{n} \log P(c_i|c_{i-1})
+\]</div>
+<p>And one more reading of the same formula, because it is the most important identity in this article: <span class="arithmatex">\(-\log P\)</span> is a code length. Minimizing average NLL is minimizing the number of bits you need to encode the data. Training a language model is building a compressor. Everything downstream of here, generalization included, is what gets forced into existence when the compressor is squeezed. (That is the compression section's entire thesis, arriving early.)</p>
+<h3 id="simple-neural-network">Simple Neural Network<a class="headerlink" href="#simple-neural-network" title="Permanent link">&para;</a></h3>
+<p>What if we calculate the probabilities implicitly through a neural network?</p>
+<p><img style="width:100%;" id="image" src="../../img/a16342a9-7378-4962-aef1-7b9279206454.png"></p>
+<p>Note that this doesn’t include inferencing. What’s inferencing? Well in this case it’s generating the next token (character for us).</p>
+<ul>
+<li>
+<p>Code for <code>training</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Training&quot;&quot;&quot;</span>
+
+<span class="c1"># Setup</span>
+<span class="n">xs</span><span class="p">,</span> <span class="n">ys</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span> <span class="o">+</span> <span class="n">w</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span>
+    <span class="k">for</span> <span class="n">ch1</span><span class="p">,</span> <span class="n">ch2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">w</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
+        <span class="n">ch1_idx</span> <span class="o">=</span> <span class="n">stoi</span><span class="p">[</span><span class="n">ch1</span><span class="p">]</span>
+        <span class="n">ch2_idx</span> <span class="o">=</span> <span class="n">stoi</span><span class="p">[</span><span class="n">ch2</span><span class="p">]</span>
+        <span class="n">xs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch1_idx</span><span class="p">)</span>
+        <span class="n">ys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ch2_idx</span><span class="p">)</span>
+<span class="n">xs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">ys</span><span class="p">)</span>
+<span class="n">num</span> <span class="o">=</span> <span class="n">xs</span><span class="o">.</span><span class="n">nelement</span><span class="p">()</span>
+
+<span class="c1"># Initialize random weights</span>
+<span class="n">W</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">((</span><span class="mi">27</span><span class="p">,</span> <span class="mi">27</span><span class="p">),</span> <span class="n">generator</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">Generator</span><span class="p">(),</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="c1"># Forward Pass</span>
+    <span class="n">xenc</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">one_hot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">num_classes</span><span class="o">=</span><span class="mi">27</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">()</span>
+    <span class="n">logits</span> <span class="o">=</span> <span class="n">xenc</span> <span class="o">@</span> <span class="n">W</span>
+    <span class="c1"># The following is basically softmax.</span>
+    <span class="n">counts</span> <span class="o">=</span> <span class="n">logits</span><span class="o">.</span><span class="n">exp</span><span class="p">()</span>
+    <span class="n">probs</span> <span class="o">=</span> <span class="n">counts</span> <span class="o">/</span> <span class="n">counts</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="o">-</span><span class="n">probs</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">num</span><span class="p">),</span> <span class="n">ys</span><span class="p">]</span><span class="o">.</span><span class="n">log</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+    <span class="c1"># Backward Pass</span>
+    <span class="n">W</span><span class="o">.</span><span class="n">grad</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+
+    <span class="c1"># Update</span>
+    <span class="n">W</span><span class="o">.</span><span class="n">data</span> <span class="o">+=</span> <span class="o">-</span><span class="mf">0.05</span> <span class="o">*</span> <span class="n">W</span><span class="o">.</span><span class="n">grad</span>
+</code></pre></div>
+</li>
+<li>
+<p>Code for <code>inferencing</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Inferencing&quot;&quot;&quot;</span>
+
+<span class="n">ix</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">xenc</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">one_hot</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="n">ix</span><span class="p">]),</span> <span class="n">num_classes</span><span class="o">=</span><span class="mi">27</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">()</span>
+    <span class="n">logits</span> <span class="o">=</span> <span class="n">xenc</span> <span class="o">@</span> <span class="n">W</span>
+    <span class="n">probs</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ix</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">multinomial</span><span class="p">(</span><span class="n">probs</span><span class="p">,</span> <span class="n">num_samples</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">ix</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">name</span> <span class="o">+=</span> <span class="n">itos</span><span class="p">[</span><span class="n">ix</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div>
+</li>
+</ul>
+<p>Notice how the inference setup differs from the training setup. It almost always does.</p>
+<h3 id="regularization">Regularization<a class="headerlink" href="#regularization" title="Permanent link">&para;</a></h3>
+<p>Regularization is any technique that trades “perfect” training accuracy for better generalization.</p>
+<p>Why regularization?</p>
+<ul>
+<li>smooth (simple) weight distribution</li>
+<li>making model less confident or extreme to avoid overfitting</li>
+<li>programming humility and simplicity</li>
+<li>occam's razor and generalization</li>
+</ul>
+<p>How do we do it? Let’s see an example.</p>
+<p>Original loss or just negative log likelihood,</p>
+<div class="arithmatex">\[
+\mathcal{L} = -\frac{1}{n}\sum_{i=1}^{n} \log P(y_i|x_i)
+\]</div>
+<p>and with gravitational force (L2 regularization),</p>
+<div class="arithmatex">\[
+\mathcal{L}_{reg} = -\frac{1}{n}\sum_{i=1}^{n} \log P(y_i|x_i) + \lambda \sum_{i,j} W_{i,j}^2
+\]</div>
+<p>with that <span class="arithmatex">\(\lambda \sum W^2\)</span> term as gravity - it constantly pulls all weights toward zero. The bigger the weights get, the stronger the pull back.</p>
+<p>How does this lead to smoothness? The L2 term in loss function pushes for a flat probability distribution. Smoothness technically behaves like is an implicit prior bias that values simplicity and generalization.</p>
+<h3 id="mlp">MLP<a class="headerlink" href="#mlp" title="Permanent link">&para;</a></h3>
+<p>The bigram's confession: its whole worldview is one previous character. The obvious extension, count tables over the last <span class="arithmatex">\(n\)</span> characters, dies of the curse of dimensionality: <span class="arithmatex">\(27^n\)</span> contexts, almost all never seen, and no way for the table to notice that similar contexts should behave similarly. Every row is a stranger to every other row.</p>
+<p>The fix (Bengio et al., 2003) is arguably the most load-bearing idea in modern AI: embeddings.</p>
+<ul>
+<li>Give every character a learned vector, a lookup table <span class="arithmatex">\(C \in \mathbb{R}^{27 \times d}\)</span>.</li>
+<li>"Similar" becomes geometric: contexts built from nearby vectors produce nearby predictions.</li>
+<li>Generalization comes free: what the model learns about contexts containing "a" transfers to contexts containing "e" exactly to the extent that training pressure pushed those two vectors together. The table couldn't share; the geometry can't help sharing.</li>
+</ul>
+<p>The architecture, in one line: embed the last <span class="arithmatex">\(k\)</span> characters, concatenate, one hidden layer, softmax.</p>
+<div class="arithmatex">\[
+h = \tanh(W_1\,[C[x_1]; \ldots; C[x_k]] + b_1), \qquad P = \operatorname{softmax}(W_2\, h + b_2)
+\]</div>
+<ul>
+<li>
+<p>Code for the <code>network</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">C</span>  <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">((</span><span class="mi">27</span><span class="p">,</span> <span class="n">d</span><span class="p">))</span>                 <span class="c1"># embedding table</span>
+<span class="n">W1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">((</span><span class="n">k</span> <span class="o">*</span> <span class="n">d</span><span class="p">,</span> <span class="n">h_dim</span><span class="p">));</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">h_dim</span><span class="p">)</span>
+<span class="n">W2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">((</span><span class="n">h_dim</span><span class="p">,</span> <span class="mi">27</span><span class="p">));</span>    <span class="n">b2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span>
+
+<span class="n">emb</span>    <span class="o">=</span> <span class="n">C</span><span class="p">[</span><span class="n">X</span><span class="p">]</span>                             <span class="c1"># (N, k, d)</span>
+<span class="n">h</span>      <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">emb</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span> <span class="o">*</span> <span class="n">d</span><span class="p">)</span> <span class="o">@</span> <span class="n">W1</span> <span class="o">+</span> <span class="n">b1</span><span class="p">)</span>
+<span class="n">logits</span> <span class="o">=</span> <span class="n">h</span> <span class="o">@</span> <span class="n">W2</span> <span class="o">+</span> <span class="n">b2</span>                      <span class="c1"># (N, 27)</span>
+<span class="n">loss</span>   <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">cross_entropy</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>       <span class="c1"># same average NLL as before</span>
+</code></pre></div>
+</li>
+</ul>
+<p>Two practicalities that become rituals from here on out:</p>
+<ul>
+<li>Mini-batching: estimate the gradient on a random subset. A noisy gradient you can afford beats an exact one you can't. (Strong trial and error will make a whole philosophy out of this.)</li>
+<li>Splits: train on one slice, tune on dev, report on test, because with enough parameters the model <em>will</em> memorize the training set, and we already agreed that loss means surprise on <em>new</em> data.</li>
+</ul>
+<p>Train it, then look at the embedding space: vowels cluster, rare characters drift off to their own corner. Nobody told the model about vowels. Similarity was learned as a side effect of prediction: structure precipitating out of compression. Keep that image; it is the story of the next several sections at miniature scale.</p>
+<h3 id="rnn">RNN<a class="headerlink" href="#rnn" title="Permanent link">&para;</a></h3>
+<p>Feed the sequence one token at a time and maintain a hidden state, memory as recursion instead of as table:</p>
+<div class="arithmatex">\[
+h_t = \tanh(W_h h_{t-1} + W_x x_t)
+\]</div>
+<p>The same weights run at every step, so any length fits. The catch: the entire history must squeeze through one fixed-size vector that gets rewritten at every step.</p>
+<p><img style="width:60%;" id="image" src="../../img/image 1.png">
+<img style="width:60%;" id="image" src="../../img/image 2.png"></p>
+<h3 id="lstm">LSTM<a class="headerlink" href="#lstm" title="Permanent link">&para;</a></h3>
+<p>The RNN overwrites its state multiplicatively at every step, so old information decays exponentially: the vanishing gradient again, now across time. The LSTM's move: an additive cell state guarded by learned gates (forget, input, output). Writing to memory becomes a choice rather than an inevitability, and gradients get an additive highway to ride back along.</p>
+<p><img style="width:100%;" id="image" src="../../img/image 3.png"></p>
+<h3 id="transformers">Transformers<a class="headerlink" href="#transformers" title="Permanent link">&para;</a></h3>
+<p>RNNs and LSTMs read the way we do: left to right, carrying a lossy memory, forgetting as they go. The transformer stops carrying and starts looking: every token gets to directly interrogate every token before it. Attention is a differentiable dictionary lookup: each position emits</p>
+<ul>
+<li>a query: what am I looking for?</li>
+<li>a key: what do I contain?</li>
+<li>a value: what do I hand over if you pick me?</li>
+</ul>
+<div class="arithmatex">\[
+\operatorname{Attention}(Q, K, V) = \operatorname{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right) V
+\]</div>
+<p>Dot every query with every key, scale, softmax into weights, take the weighted average of values. That's it. That's the trick that ate the whole damn field.</p>
+<ul>
+<li>Why the <span class="arithmatex">\(\sqrt{d_k}\)</span>: dot products of <span class="arithmatex">\(d_k\)</span>-dimensional vectors have variance that grows with <span class="arithmatex">\(d_k\)</span>; unscaled, the softmax saturates into a one-hot and gradients die.</li>
+<li>Causal mask: position <span class="arithmatex">\(t\)</span> may only look at positions <span class="arithmatex">\(\le t\)</span>. Set the forbidden logits to <span class="arithmatex">\(-\infty\)</span> and softmax zeroes them out. Every position of every sequence is a next-token problem, all trained in parallel.</li>
+<li>Multi-head: run several attentions in parallel in lower-dimensional subspaces and concatenate. Different heads learn different relations: previous word, subject of this verb, matching bracket.</li>
+<li>
+<p>Attention is permutation-equivariant, meaning it literally cannot see order, so position must be injected (learned vectors, sinusoids, or rotations).</p>
+</li>
+<li>
+<p>Code for <code>attention</code>, the heart of it.</p>
+<div class="highlight"><pre><span></span><code><span class="n">wei</span> <span class="o">=</span> <span class="n">q</span> <span class="o">@</span> <span class="n">k</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d_k</span><span class="p">)</span>    <span class="c1"># (B, T, T) affinities</span>
+<span class="n">wei</span> <span class="o">=</span> <span class="n">wei</span><span class="o">.</span><span class="n">masked_fill</span><span class="p">(</span><span class="n">tril</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;-inf&quot;</span><span class="p">))</span>   <span class="c1"># causal: no peeking</span>
+<span class="n">wei</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">wei</span><span class="p">,</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">wei</span> <span class="o">@</span> <span class="n">v</span>                                     <span class="c1"># weighted sum of values</span>
+</code></pre></div>
+</li>
+</ul>
+<p>A transformer block then alternates two phases, and the division of labor is clean:</p>
+<ol>
+<li>Communicate: attention moves information <em>between</em> positions.</li>
+<li>Compute: an MLP transforms each position <em>independently</em>.</li>
+</ol>
+<p>Residual connections make every block an <em>edit</em> to a shared stream rather than a rewrite: the stream flows through untouched unless a block has something to add, which is also why gradients survive a hundred layers. LayerNorm keeps the numbers civilized.</p>
+<p>Why this architecture won:</p>
+<ul>
+<li>Parallelism: no recurrence means the whole sequence trains at once. The hardware lottery paid out.</li>
+<li>Path length: any token reaches any other in one hop instead of <span class="arithmatex">\(n\)</span>, so long-range dependencies stop dying in transit.</li>
+<li>It scales: stack more blocks, widen, feed more data, and the loss keeps falling on schedule. The design is almost aggressively free of cleverness, a general-purpose pattern-matching substrate that lets scale do the talking.</li>
+<li>The price: attention is <span class="arithmatex">\(O(n^2)\)</span> in sequence length. Context is rent, paid quadratically.</li>
+</ul>
+<p>And the GPT twist on top: drop the encoder half, keep the causal decoder, train on next-token prediction over everything. The humble objective from our bigram, unchanged since the counting table, just with a conditional distribution smart enough to be worth trillions of tokens.</p>
+<p>Resist the deflationary read. "It just predicts the next token" carries about as much information as "a computer just moves electrons." The objective is humble; what the objective forces into existence is not. To keep lowering that loss, the model must keep absorbing the structure of whatever produced the text, which is, at the limit, the world.</p>
+<h2 id="walls-before-llms">Walls before LLMs<a class="headerlink" href="#walls-before-llms" title="Permanent link">&para;</a></h2>
+<p>The road from perceptron to GPT is a sequence of walls, each of which looked fundamental in its decade. Notice the pattern in how they fell: nearly every breakthrough is one of two moves: help the gradients flow, or help the hardware parallelize.</p>
+<ul>
+<li>Single layer perceptrons can only solve linearly separable problems.<ul>
+<li>Cannot learn XOR function or overlapping patterns etc.</li>
+<li>Breakthrough: training multiple layers is possible with backpropagation.</li>
+<li>SOTA: universal approximation theorem.</li>
+</ul>
+</li>
+<li>Shallow networks worked well. But deep networks couldn’t train because gradients disappeared in early layers.<ul>
+<li>Traditional activation functions (sigmoid and tanh) have very small derivatives in the flat parts of their S-shape.</li>
+<li>Breakthrough: layer wise pre-training.</li>
+<li>SOTA: ReLU (better activation functions), normalization, skip connections (ResNet), better weight initialization (Xavier).</li>
+</ul>
+</li>
+<li>Standard MLPs can only handle fixed-size inputs, but language has variable-length sequences.<ul>
+<li>Cannot process sentences of different lengths.</li>
+<li>No memory of previous words in a sequence.</li>
+<li>Had to truncate or pad all inputs to same length.</li>
+<li>Breakthrough: Recurrent Neural Networks (RNNs) with recurrent connections that maintain hidden state.</li>
+</ul>
+</li>
+<li>RNNs couldn't learn long-term dependencies - gradients vanish over long sequences.<ul>
+<li>Same vanishing gradient problem as deep networks, but across time steps.</li>
+<li>Models forgot information from early in the sequence.</li>
+<li>Couldn't learn relationships between distant words.</li>
+<li>Breakthrough: LSTM (1997) and GRU (2014) with gating mechanisms that control information flow. Gradient clipping.</li>
+</ul>
+</li>
+<li>RNNs / LSTMs process sequences one step at a time, making training extremely slow.<ul>
+<li>Cannot parallelize across sequence length.</li>
+<li>Training time scales linearly with sequence length.</li>
+<li>GPU utilization was poor due to sequential dependencies.</li>
+<li>Breakthrough: Attention mechanisms (2015) allowing direct connections between all positions.</li>
+</ul>
+</li>
+<li>Seq2seq models created an information bottleneck at the encoder-decoder boundary.<ul>
+<li>Entire input sequence compressed into single fixed-size context vector.</li>
+<li>Decoder has no direct access to input tokens, only final encoder state.</li>
+<li>Performance degrades severely with longer input sequences.</li>
+<li>Context vector becomes a lossy compression of all input information.</li>
+<li>Breakthrough: Attention mechanisms (2015) allowing decoder to directly attend to encoder states.</li>
+</ul>
+</li>
+<li>Early attention mechanisms still relied on RNN / LSTM backbone architectures.<ul>
+<li>Attention was just an add-on to sequential RNN processing.</li>
+<li>Still couldn't parallelize the core sequence processing.</li>
+<li>Complex alignment and attention weight computation.</li>
+<li>Required separate encoder and decoder RNN stacks.</li>
+<li>Breakthrough: Pure attention architecture (Transformer 2017) eliminating recurrence entirely.</li>
+</ul>
+</li>
+<li>Encoder-decoder training inefficiencies for language modeling.<ul>
+<li>Required separate encoder and decoder stacks (doubled model size).</li>
+<li>Cross-attention between encoder and decoder added complexity.</li>
+<li>Bidirectional encoder couldn't be used for autoregressive generation.</li>
+<li>Training required paired input-output data.</li>
+<li>Breakthrough: Decoder-only architecture (GPT) using pure autoregressive self-attention.</li>
+</ul>
+</li>
+</ul>
+<h1 id="large-language-models">Large Language Models<a class="headerlink" href="#large-language-models" title="Permanent link">&para;</a></h1>
+<p>The lineage, recapped in one breath before the family portrait. An RNN compresses everything-so-far into one fixed-size hidden state, rewritten at every step: a bottleneck with amnesia. The LSTM gives the bottleneck gates so it can <em>choose</em> what to keep, additively, which is why its gradients survive longer. The Neural Turing Machine (2014), the most honest architecture nobody uses, went further and separated processor from storage: a controller with an external memory matrix and differentiable read/write heads, addressing by content and by location, trained end to end. It could learn tiny algorithms (copy, repeat, sort) from examples alone. It was also miserable to train. The field's verdict: don't build the tape into the network; let attention <em>be</em> the memory. The NTM's ghost won anyway: an LLM wired to tools and retrieval over an external store is the same decomposition, rebuilt at datacenter scale.</p>
+<p>Attention itself predates its own slogan: Bahdanau (2014) bolted it onto seq2seq RNNs so the decoder could consult every encoder state instead of one context vector, and translation quality jumped. The 2017 move was subtraction, not invention: delete the recurrence, keep the looking.</p>
+<p>Since then, the transformer family tree is mostly a series of answers to four embarrassments of the vanilla design:</p>
+<table>
+<thead>
+<tr>
+<th>Embarrassment</th>
+<th>The fix</th>
+<th>Representative species</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attention costs <span class="arithmatex">\(O(n^2)\)</span></td>
+<td>sparsify, window, linearize, or just engineer the memory traffic</td>
+<td>Sparse Transformer, Longformer, Performer, FlashAttention</td>
+</tr>
+<tr>
+<td>No memory beyond the window</td>
+<td>segment recurrence, compressed memories, retrieval from outside</td>
+<td>Transformer-XL, Compressive Transformer, RETRO</td>
+</tr>
+<tr>
+<td>Positions are a hack</td>
+<td>relative, rotary, or attenuating position schemes</td>
+<td>T5 bias, RoPE, ALiBi</td>
+</tr>
+<tr>
+<td>Every parameter pays for every token</td>
+<td>mixture of experts: route tokens to sparse specialists</td>
+<td>Switch Transformer, Mixtral-style MoE</td>
+</tr>
+</tbody>
+</table>
+<p>An LLM, then, is: a decoder-only transformer + a tokenizer + a scandalous fraction of the internet + one objective (predict the next token) + scale. What made it a <em>program</em> rather than a gamble is that the loss falls as a smooth power law in parameters, data and compute, predictable enough to budget years in advance. (Chinchilla's correction to the first scaling laws: grow data with parameters, roughly twenty tokens per parameter; half the field's flagship models had been data-starved.) Pause on how strange the law itself is: a clean power law spanning many orders of magnitude, in a system nobody designed at any single one of those scales. It was found, not engineered: less an invention, more the discovery of a material property of learned computation. Post-training (instruction tuning, RLHF and its descendants) then turns the resulting internet-simulator into something you can talk to. The RL part gets its own section later.</p>
+<h2 id="tokens-and-thoughts">Tokens and Thoughts<a class="headerlink" href="#tokens-and-thoughts" title="Permanent link">&para;</a></h2>
+<p>Two papers, one question: what is the relation between the tokens a model shuffles and anything deserving the name <em>thought</em>?</p>
+<p>From Tokens to Thoughts (Shani, Jurafsky, LeCun, Shwartz-Ziv, 2025) takes the compression-coherence tradeoff from our introduction and makes it measurable. The setup: dig up the classic human categorization data (Rosch's 1970s experiments behind prototype theory, where a robin is a better <em>bird</em> than a penguin, membership is graded and boundaries are fuzzy) and compare against LLM embedding spaces, scoring both through a rate-distortion / information-bottleneck style objective: pay for representational complexity, pay for semantic distortion, and ask where a system chooses to sit on that frontier.</p>
+<p>Findings, compressed (sorry):</p>
+<ul>
+<li>On broad strokes, models and humans agree: LLM concept clusters line up with human category boundaries far above chance. Bird, fish, furniture: the coarse carving matches.</li>
+<li>The fine structure diverges. Human categories carry typicality gradients, fuzzy edges, functional baggage, the robin-versus-penguin asymmetries that embedding geometry flattens out.</li>
+<li>The punchline: under the information-theoretic score, <em>LLMs are better compressors than we are</em>. Human concepts look statistically inefficient; we burn representational budget maintaining nuance that does nothing for reconstruction. The models optimize compression; we apparently optimize something else: usability of concepts for action, explanation, improvisation in an open world.</li>
+</ul>
+<p>One paper, one operationalization, small old human baselines. Plenty to argue with. But it is the right <em>kind</em> of argument: quantitative, falsifiable, about representations instead of vibes. And it lands exactly on this article's opening claim: succinctness and semantic fidelity are competing objectives, and where a mind sits on that frontier is a design choice. If human-shaped concepts live at the "wasteful" end, pure next-token compression will not drift there by accident, no matter the scale.</p>
+<p>Brainish (Liang, 2022) attacks from the constructive direction: forget analyzing. If you had to <em>design</em> the inner language of a mind, the thing tokens are a shadow of, what would the spec be? His answer: a multimodal inner monologue: words, images and sensations sharing one representation space, encoders and decoders around it, composable, compressed, yet decodable back into each modality. It is pitched as the inner language for the Blums' Conscious Turing Machine, which we will meet in the models-of-the-mind section. The inversion is the interesting part: language-of-thought as an engineering requirements document rather than a psychological hypothesis.</p>
+<p>Now recall the wishlist for conceptual representation from the very top of this article: compositional, recursive, narrative, self-referential, multimodal. Text tokens natively check maybe two of the five. That gap between what tokens are and what thoughts need is, depending on your temperament, the reason to expect the current paradigm to plateau, or the roadmap for its next decade.</p>
+<h2 id="philosophy">Philosophy<a class="headerlink" href="#philosophy" title="Permanent link">&para;</a></h2>
+<p>Millière and Buckner wrote the field guide to a debate in which everyone otherwise shouts past each other. The map, roughly, with the earlier chapters of this article finally cashing out.</p>
+<p>The deflationary corner. Bender and Koller: models train on <em>form</em>, and meaning is not form. Their octopus: a hyperintelligent octopus taps the undersea cable between two islanders and learns to impersonate either side perfectly, until a bear attacks and one islander asks how to build a weapon, and the octopus has nothing, because it never had a world, only chatter about one. Add "stochastic parrots" and you have the complete skeptical toolkit: fluent recombination without contact with reality.</p>
+<p>The ancestors of that intuition are better arguments than the slogan:</p>
+<ul>
+<li>Blockhead (Block, 1981): a giant lookup table storing a sensible response to every possible conversation is behaviorally perfect and intelligent the way a jukebox is a musician. Moral: intelligence is a property of <em>how</em> the answer is produced, not of the answer.</li>
+<li>The Chinese Room (Searle, 1980): a man in a room follows rules for shuffling Chinese symbols he does not understand, and the room passes every test. Syntax, says Searle, is not semantics. The strongest reply was always that understanding, if it is anywhere, lives in the <em>system</em>, not the clerk.</li>
+</ul>
+<p>Here is why LLMs make these thought experiments interesting again instead of settling them: an LLM is provably not Blockhead. The lookup table for all conversations does not fit in the universe; a model that fits on a few GPUs and still generalizes must have compressed, and compression that extreme forces <em>some</em> algorithmic structure, somewhere. So the question stopped being rhetorical and became empirical: which parts are memorization and which parts are mechanism? That question now has a lab: interpretability. Othello-GPT is the clean demonstration: train a small transformer on legal Othello move sequences (pure form; it is never shown a board), find that a probe can read the full board state out of the residual stream, and, the actual kicker, <em>edit</em> that internal board representation and watch the model's moves change to match the edited board. Next-token prediction on form induced a world model. For a world of sixty-four squares, yes. Whether the same happens for bears, islands and weapons is an open empirical question, but it is a question now, not a slogan.</p>
+<p>The externalist reply to "it's not grounded" is where our philosophy chapters do their work. If reference rides causal-historical chains of use (Kripke) and meanings ain't in the head anyway (Putnam), then "the model only ever saw text" is not automatically disqualifying: the text is causally downstream of the world, and the model is a node in our chains of reference: borrowed reference, like most of yours (Grindrod's linguistic intentionality; Mandelkern and Linzen ask, in exactly so many words, whether language models' words refer, and find the dismissive answer harder to sustain than it looks). On the use theory (Wittgenstein), competence in the games just <em>is</em> meaning, modulo the private-language worry from earlier: the models have read every transcript and played nothing. Spectators to the form of life they speak.</p>
+<p>There is also the developmental frame (Buckner's angle): LLMs are the largest experiment ever run on the empiricist bet: how much structure can experience alone buy? Chomsky's poverty of the stimulus, meeting a stimulus of fifteen trillion tokens. Whatever your priors, this is data that philosophy of mind never had before.</p>
+<p>Scoreboard, honestly kept:</p>
+<ul>
+<li>"It's just statistics" is dead as an argument. So is "it talks, therefore it understands." Both were always reports on the speaker's mood, not on the model.</li>
+<li>"Understanding" is decomposing into testable components (world models, reference, compositional generalization, self-knowledge) and they are arriving separately. Some are visibly present in the weights; others (stakes, embodiment, whatever consciousness turns out to be) are nowhere in the training signal and will not emerge from it by magic.</li>
+<li>The most useful phrase in the drawer is still Dennett's: competence without comprehension. The live question is which further competences quietly purchase which pieces of comprehension, and whether the remainder matters for anything except our self-esteem.</li>
+</ul>
+<h1 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h1>
+<ol>
+<li>Philosophy of Language by Martinich</li>
+<li>Understanding Deep Learning by Prince</li>
+<li><a href="https://lilianweng.github.io/posts/2018-06-24-attention/">Attention? Attention!</a> by Lilian Weng</li>
+<li><a href="https://lilianweng.github.io/posts/2023-01-27-the-transformer-family-v2/">The Transformer Family Version 2.0</a> by Lilian Weng</li>
+<li><a href="https://arxiv.org/abs/0812.4360">Driven by Compression Progress</a> by Schmidhuber</li>
+<li><a href="https://arxiv.org/abs/2505.17117">From Tokens to Thoughts</a> by LeCun and others</li>
+<li><a href="https://arxiv.org/abs/2401.03910">A Philosophical Introduction to Language Models</a> by Milliere and Buckner</li>
+<li><a href="https://arxiv.org/abs/1911.01547">On the Measure of Intelligence (ARC Paper)</a> by Francois Chollet</li>
+<li><a href="https://arxiv.org/abs/2404.09576">Large Language Models and Linguistic Intentionality</a> by Jumbly Grindrod</li>
+<li><a href="https://arxiv.org/pdf/2411.08706">Searching Latent Program Spaces</a> by Clement Bonnet and others</li>
+<li><a href="https://arxiv.org/pdf/2411.02272">Combining Induction and Transduction</a> by Kevin Ellis and others</li>
+<li><a href="https://jdh.hamkins.org/wp-content/uploads/Week-1-Reading-Disjunctive-Argument.pdf">Godel Disjunction</a> by Wrigley</li>
+<li>On <a href="https://plato.stanford.edu/entries/logic-paraconsistent/">Paraconsistent</a> Logic</li>
+<li><a href="http://www.cs.tau.ac.il/~nachum/papers/FourSonsOfPenrose.pdf">Four sons of Penrose</a> by Dershowitz</li>
+<li><a href="https://arxiv.org/pdf/2205.00001">Brainish</a> by Paul Liang</li>
+<li><a href="https://arxiv.org/abs/2107.13704">Conscious Turing Machines</a> by Manuel and Lenore Blum</li>
+<li><a href="https://journalpsyche.org/files/0xaa25.pdf">Minds, Machines, and Mathematics</a> by David Chalmers</li>
+<li>Philosophical Investigations by Wittgenstein</li>
+<li><a href="https://en.wikipedia.org/wiki/Naming_and_Necessity">Naming and Necessity</a> by Kripke</li>
+<li><a href="https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf">A Neural Probabilistic Language Model</a> by Bengio and others</li>
+<li><a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a> by Vaswani and others</li>
+<li><a href="https://arxiv.org/abs/2404.19756">KAN: Kolmogorov-Arnold Networks</a> by Liu and others</li>
+<li><a href="https://arxiv.org/abs/2210.13382">Emergent World Representations</a> by Kenneth Li and others</li>
+<li><a href="https://arxiv.org/abs/2308.05576">Do Language Models' Words Refer?</a> by Mandelkern and Linzen</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/banrovegrie" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../files/sidebar-toggle.js"></script>
+      
+    
+  </body>
+</html>

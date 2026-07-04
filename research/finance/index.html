@@ -1,0 +1,2283 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Essays and research notes on language, computation, mathematics and engineering, by Alapan Chaudhuri.">
+      
+      
+        <meta name="author" content="Alapan Chaudhuri">
+      
+      
+        <link rel="canonical" href="https://banrovegrie.github.io/research/finance/">
+      
+      
+        <link rel="prev" href="../../essays/poker/">
+      
+      
+        <link rel="next" href="../information-security/">
+      
+      
+      <link rel="icon" href="../../img/homotopy.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Finance - Why Not?</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../files/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#basics-of-indian-markets" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Why Not?" class="md-header__button md-logo" aria-label="Why Not?" data-md-component="logo">
+      
+  <img src="../../img/homotopy.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Why Not?
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Finance
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Why Not?" class="md-nav__button md-logo" aria-label="Why Not?" data-md-component="logo">
+      
+  <img src="../../img/homotopy.png" alt="logo">
+
+    </a>
+    Why Not?
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alapan Chaudhuri
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Essays
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Essays
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/weblog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Weblog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/composition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Composition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/yoda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    There is no Try
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/frame/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frame
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/show/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Show
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/stories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/problem-solving/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Problem Solving
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Doing Engineering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/economics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Economics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/about-that-question/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About that Question
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/poker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Poker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Research
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Research
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Finance
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Finance
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basics-of-indian-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basics of Indian Markets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basics-of-businesses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basics of Businesses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#investing-and-trading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Investing and Trading
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Investing and Trading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Index
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commonly-used-jargons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commonly used jargons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bid-and-ask" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bid and Ask
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-company-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Company Events
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-general-market-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key General Market Events
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basics-of-technical-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basics of Technical Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#candlestick-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Candlestick charts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insights-from-candlesticks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insights from Candlesticks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volumes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ten-commandments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ten Commandments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fundamental-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamental Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamental Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pl-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      P&amp;L Report
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balance-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balance Sheet
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cashflow-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cashflow Statement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cashflow Statement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connecting-the-dots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting the Dots
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ratios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ratios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pb-ratio-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      P/B ratio scale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pe-ratio-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      P/E ratio scale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ps-ratio-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      P/S ratio scale
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../information-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Information Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quantum-theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quantum-channels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Channels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prog-lang/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programming Language Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language-thought/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Language and Thought
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chess
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../competitive-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Competitive Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linear-algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear Algebra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../music-theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Music Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../millennium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What gets you a million dollars?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi-variate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multivariate Calculus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ads-cft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ads-CFT Correspondance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Probability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../psdp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PSDP Problem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haskell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Haskell in Harsh Words
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basics-of-indian-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basics of Indian Markets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basics-of-businesses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basics of Businesses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#investing-and-trading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Investing and Trading
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Investing and Trading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Index
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commonly-used-jargons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commonly used jargons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bid-and-ask" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bid and Ask
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-company-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Company Events
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-general-market-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key General Market Events
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basics-of-technical-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basics of Technical Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#candlestick-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Candlestick charts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insights-from-candlesticks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insights from Candlesticks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indicators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volumes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ten-commandments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ten Commandments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fundamental-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamental Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamental Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pl-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      P&amp;L Report
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balance-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Balance Sheet
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cashflow-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cashflow Statement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cashflow Statement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connecting-the-dots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting the Dots
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ratios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ratios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pb-ratio-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      P/B ratio scale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pe-ratio-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      P/E ratio scale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ps-ratio-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      P/S ratio scale
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Finance</h1>
+
+<p>Capital markets are, in their essence, humanity's wager on its own future, an affirmation that progress is both possible and worth investing in. They are meant to serve as channels through which resources and capital flow to those who can capitalise on it and trigger value while ideally optimizing risk for the world at large.</p>
+<p><img style="width:50%;" id="image" src="../../img/capital.png"></p>
+<p>This article is a collection of my thoughts on finance and the capital markets. Well that and a bunch of memes.</p>
+<p><img style="width:70%;" id="image" src="../../img/meme-capitalism.jpeg"></p>
+<h2 id="basics-of-indian-markets">Basics of Indian Markets<a class="headerlink" href="#basics-of-indian-markets" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Retail Investors</li>
+<li>Institutional Investors</li>
+<li>Regulator: SEBI (big brother and hopefully a good big brother)</li>
+<li>Depository participants (most banks and  few stockbrokers) allow you to interact with NSDL and CDSL (depositories) and maintain your DEMAT account (dematerialization account).</li>
+<li>Portfolio management starts at a minimum of 50 lakhs unlike mutual funds.</li>
+<li>Hedging: a strategy used to protect against potentialloses (essentially a form of optionality/insurance); might limit potential gains.</li>
+<li>Zerodha is a depository participant of the Central Depository Services Limited (CDSL).</li>
+<li>Clearing corporation: ensure no defaults in debit/credit transactions.</li>
+</ul>
+<h2 id="basics-of-businesses">Basics of Businesses<a class="headerlink" href="#basics-of-businesses" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Angel invstors, venture capitalists (serieses), private equity, IPO</li>
+<li>CAPEX: Capital Expenditure</li>
+<li>Equity based raising: reduces equity share</li>
+<li>Debt based raising: the interest problem, debt financing charges</li>
+<li>Debt restructuring: negotiating with creditors to change the terms of the debt, such as extending the payment period, lowering interest rates, or reducing the principal amount owed.</li>
+<li>Why go public?<ol>
+<li>Raise funds</li>
+<li>Spread risk across larger group of investors</li>
+<li>Exit for early investors</li>
+<li>Reward employees</li>
+<li>Improve visibility</li>
+</ol>
+</li>
+<li>Underwriting: process by which a financial institution, typically a bank or insurance company, evaluates and takes on the risk of a financial transaction.<ol>
+<li>In insurance, underwriting determines the policy terms and premiums.</li>
+<li>In investment banking, underwriters work with companies issuing stocks or bonds to evaluate the risk and help set the initial price for public offerings.</li>
+</ol>
+</li>
+<li>IPO: merchant banker <span class="arithmatex">\(\to\)</span> SEBI and registration <span class="arithmatex">\(\to\)</span> DRHP preparation <span class="arithmatex">\(\to\)</span> Market the IPO <span class="arithmatex">\(\to\)</span> Price Banding <span class="arithmatex">\(\to\)</span> Book building <span class="arithmatex">\(\to\)</span> Closure <span class="arithmatex">\(\to\)</span> Listing day</li>
+</ul>
+<h2 id="investing-and-trading">Investing and Trading<a class="headerlink" href="#investing-and-trading" title="Permanent link">&para;</a></h2>
+<p><img style="width:50%;" id="image" src="../../img/investing.jpeg"></p>
+<p>The way we generally get introduced to the capital markets and its derivatives is through a broker which acts as the router to the stock exchange which essentially behaves as a marketplace.</p>
+<p>Types of market participation:</p>
+<ol>
+<li>
+<p>Trading</p>
+<ul>
+<li>Day Trader: risk averse</li>
+<li>Scalper: highly risk averse</li>
+<li>Swing Trader: less risk averse</li>
+</ul>
+</li>
+<li>
+<p>Investing</p>
+<ul>
+<li>Growth investors: The objective here is to identify companies which are expected to grow significantly because of emerging industry and macro trends.</li>
+<li>Value investors: The objective here is to identify good companies while are undervalued (due to various reasons which maybe short term).</li>
+</ul>
+</li>
+</ol>
+<p>When you trade or invest, the best way to calibrate your performance is through <strong>CAGR</strong> and pinning it against the standard FD interests provided by banks and the general inflation of the country and its currency.</p>
+<h3 id="the-index">The Index<a class="headerlink" href="#the-index" title="Permanent link">&para;</a></h3>
+<p>The general health of a stock market is denoted by its associated indices which are generally an aggregation of the largest and most frequently traded stocks within the exchange that is presenting the index.</p>
+<p>The usefulness of indexes are as follows:
+- Information: trend
+- Benchmarking: yardstick
+- Trading and Hedging: dealing with index and its related securities (risk management)</p>
+<p>So how is the index calculated? Well, we provide some weights to the associated stocks and this is done using <strong>free float market capitalisation</strong> (larger the market capitalization, higher the weight).</p>
+<p><img style="width:70%;" id="image" src="../../img/heatmap-nifty.png">
+<img style="width:70%;" id="image" src="../../img/heatmap-nasdaq.png"></p>
+<h3 id="commonly-used-jargons">Commonly used jargons<a class="headerlink" href="#commonly-used-jargons" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Bull Market: market is on the rise</li>
+<li>Bear Market: market is on the decline</li>
+<li>Trend: direction of the market</li>
+<li>Volume: total transactions both buy and sell put together</li>
+<li>Market Segment<ul>
+<li>Capital Market: equities, preference shares, warrants and exchange traded funds</li>
+<li>Futures and Options: equity derivatives</li>
+<li>Debt Market: bonds, debentures, government securities</li>
+</ul>
+</li>
+</ol>
+<h3 id="bid-and-ask">Bid and Ask<a class="headerlink" href="#bid-and-ask" title="Permanent link">&para;</a></h3>
+<p>The price that sellers ask you is <strong>ask</strong> and the price that buyers bid is <strong>bid</strong>. The difference between the two is called the <strong>spread</strong> or the <strong>bid-ask spread</strong>.</p>
+<p>The priority in which the orders across the bid-ask spread are executed is called the <strong>price-time priority</strong>.
+- Exchanges give priority to sellers willing to sell at the least possible price and buyers willing to buy at the highest possible price.
+- If two orders have the same price, the order that was placed first is executed first.
+- Obviously, market orders (no fixed ask/bid just fastest matching) are usually given higher priority than limit orders (fixed ask/bid).</p>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<p>Consider the following order book:</p>
+<p><img style="width:60%;" id="image" src="../../img/order-book.png"></p>
+<ol>
+<li>
+<p>Current Bid-Ask Spread:</p>
+<ul>
+<li>Best (lowest) ask price: $100.40</li>
+<li>Best (highest) bid price: $100.35</li>
+<li>Spread = $0.05</li>
+</ul>
+</li>
+<li>
+<p>Price-Time Priority for Sell (Ask) Orders:</p>
+<ul>
+<li>Two orders at $100.40:<ol>
+<li>First priority: 500 units at 09:14:30 (placed first).</li>
+<li>Second priority: 300 units at 09:15:45 (placed second).</li>
+</ol>
+</li>
+<li>Then $100.45: 200 units.</li>
+<li>Then $100.50: 300 units.</li>
+</ul>
+</li>
+<li>
+<p>Price-Time Priority for Buy (Bid) Orders:</p>
+<ul>
+<li>Two orders at $100.35:<ol>
+<li>First priority: 400 units at 09:15:00 (placed first).</li>
+<li>Second priority: 200 units at 09:16:15 (placed second).</li>
+</ol>
+</li>
+<li>Then $100.30: 600 units.</li>
+<li>Then $100.25: 300 units.</li>
+</ul>
+</li>
+</ol>
+<p>If a new market order comes in, here's how it would be executed:
+- For a market buy order: It would first take the 500 units at $100.40 (earliest order), then the 300 units at $100.40 (later order), then move up to $100.45 if more quantity is needed.
+- For a market sell order: It would first take the 400 units at $100.35 (earliest order), then the 200 units at $100.35 (later order), then move down to $100.30 if more quantity is needed.</p>
+<p>This demonstrates both aspects of price-time priority:
+1. Better prices get priority (lower asks and higher bids).
+2. At the same price level, earlier orders get priority.</p>
+<p>Finally remember, all equity/stock settlements in India happen on a T+2 basis.</p>
+<h3 id="key-company-events">Key Company Events<a class="headerlink" href="#key-company-events" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Dividend</strong>: A payment made by a corporation to its shareholders (rewarding), usually as a distribution of profits. A company doesn't have to pay dividends, but it may choose to do so to attract investors.</p>
+</li>
+<li>
+<p><strong>Bonus Issue</strong>: An issue of additional shares to existing shareholders in proportion to their current holdings (fixed ratio generally). This is done to reward shareholders and are issued out of the company's reserves.</p>
+</li>
+</ul>
+<p>Similar to dividends, bonus issues are usually a way towards repaying the trust shareholders hold in the company. It also increases the liquidity of the shares.</p>
+<ul>
+<li><strong>Stock Split</strong>: A corporate action in which a company divides its existing shares into multiple shares to boost the liquidity of the shares. The total market capitalization of the company remains the same, but the number of shares increases.</li>
+</ul>
+<p>Similar to bonus issue, stock split is usually to encourage more retail participation by reducing
+the value per share.</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Bonus Issue</th>
+<th>Stock Split</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic concept</td>
+<td>New shares issued for free</td>
+<td>Existing shares divided</td>
+<td>Both increase number of shares</td>
+</tr>
+<tr>
+<td>Market price effect</td>
+<td>Price reduces proportionally</td>
+<td>Price reduces proportionally</td>
+<td>Identical effect</td>
+</tr>
+<tr>
+<td>Accounting treatment</td>
+<td>Reserves converted to share capital</td>
+<td>No change in share capital</td>
+<td>Key difference</td>
+</tr>
+<tr>
+<td>Shareholder wealth</td>
+<td>No change in total value</td>
+<td>No change in total value</td>
+<td>Identical effect</td>
+</tr>
+<tr>
+<td>Common ratios</td>
+<td>1:1, 1:2, 2:1 etc.</td>
+<td>2:1, 3:1, 5:1 etc.</td>
+<td>Similar approach</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>Reward shareholders &amp; improve liquidity</td>
+<td>Improve stock liquidity</td>
+<td>Similar goals</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>Rights Issue</strong>: An issue of additional shares to existing shareholders at a price below the current market price. This is done to raise additional capital.  For example 1:4 rights issue means for every 4 shares a shareholder owns, he can subscribe to 1 additional share.</p>
+</li>
+<li>
+<p><strong>Buyback</strong>: A buyback is when a company provides the option to buy back shares from other investors in the market (at a premium) to invest in itself (corporate restructuring).</p>
+</li>
+</ul>
+<h3 id="key-general-market-events">Key General Market Events<a class="headerlink" href="#key-general-market-events" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Monetary, Fiscal Policy and Budgets</strong>: 
+Central bank and government decisions on money supply, interest rates, taxation, and spending that directly influence economic growth and market sentiment.</p>
+</li>
+<li>
+<p><strong>Inflation and Deflation</strong>: 
+The rate at which prices of goods and services rise or fall in an economy, affecting purchasing power, interest rates, and investment returns.</p>
+</li>
+<li>
+<p><strong>Interest Rates</strong>: 
+The cost of borrowing money set by central banks that influences everything from mortgage rates to bond yields, making them a crucial driver of investment decisions and economic activity.</p>
+</li>
+<li>
+<p><strong>Index of Industrial Production (IIP)</strong>: 
+A monthly economic indicator that measures real production output of manufacturing, mining, and utilities sectors to gauge the growth of industrial activity in an economy.</p>
+</li>
+<li>
+<p><strong>Purchasing Managers Index (PMI)</strong>: 
+A monthly survey-based index that indicates the economic health of the manufacturing and services sectors by tracking changes in production, new orders, employment, and supplier deliveries.</p>
+</li>
+<li>
+<p><strong>Corporate Earnings Announcement</strong>: 
+Quarterly or annual reports from companies that reveal their financial performance, profitability, and future outlook, significantly impacting stock prices and market sentiment.</p>
+</li>
+</ol>
+<p>The Ministry of Statistics and Programme implementation (MOSPI) releases the IIP and PMI data in India, while the Reserve Bank of India (RBI) and the Ministry of Finance are responsible for monetary and fiscal policies.</p>
+<p>MOSPI also releases the Consumer Price Index (CPI) while the Office of Economic Adviser (Ministry of Commerce &amp; Industry) releases the Wholesale Price Index (WPI) data, which are key indicators of inflation in India. </p>
+<p>CPI measues retail inflation, while WPI measures wholesale inflation.</p>
+<h2 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h2>
+<p><img style="width:80%;" id="image" src="../../img/technical_analysis.png"></p>
+<p>As illustrated here by xkcd, technical analysis is 80% bullshit and 20% learning how to read OHLC (candlestick) charts and how to use indicators (RSI, MACD, Bollinger Bands). So from now on whenever I refer to technical analysis, I am refering to this 20% and not the majority astrology shit that people do in its name.</p>
+<h3 id="basics-of-technical-analysis">Basics of Technical Analysis<a class="headerlink" href="#basics-of-technical-analysis" title="Permanent link">&para;</a></h3>
+<p>We shall first study aspects of technical analysis so that we are first literate enough to read charts and then eventually move on to the philosophy and book-keeping of fundamental analysis.</p>
+<p>At the core, technical analysis visualizes the actions (and latent perceptions) of market participants in the form of charts and indicators and helps in identifying entry and exit points.</p>
+<p>Here are the core assumptions of technical analysis:
+1. Markets discount everything (or everything is priced in, however you want to look at it).
+2. Prices move in trends and the trends matter more than what is causing them.
+3. History tends to repeat itself and so do trends and people's reactions to those fluctuations in prices.</p>
+<h3 id="candlestick-charts">Candlestick charts<a class="headerlink" href="#candlestick-charts" title="Permanent link">&para;</a></h3>
+<p>The first thing that any market watcher learns is a new kind of weird-ass graph which is called the candlestick chart. The best thing about this chart is that it is a master at encapsulation and scales very very very well wrt any given time period. All you need are <span class="arithmatex">\(x\)</span>-sized intervals (e.g, 5 min, 1 month) across a period of <span class="arithmatex">\(y\)</span>-time (e.g., 1 day, 25 years). It also encodes more useful information than a line chart.</p>
+<p><img style="width:50%;" id="image" src="../../img/candlestick-meme.jpg"></p>
+<p>Essentially, a candlestick chart shows four key price points for each time period: the open, close, high, and low prices. The "body" (rectangle) shows the open and close prices, while the "wicks" (lines) show the high and low. The length of the body shows the price range between open and close, while the wicks show the full trading range. This compact representation makes it easy to see price movement patterns across any time period.</p>
+<p><img style="width:60%;" id="image" src="../../img/candlestick.png"></p>
+<p>Often just after learning about candlesticks, people try to come up with buy/sell signals based on local patterns across just a couple of candlesticks. Don't end up as "buy drink get high" while in pursuit of "buy low sell high".</p>
+<h3 id="insights-from-candlesticks">Insights from Candlesticks<a class="headerlink" href="#insights-from-candlesticks" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Short candle indicates subdued activity.</li>
+<li>Long candle indicates extreme activity; however, placing stoploss becomes an issue.</li>
+<li>Candle patterns don't make sense in high volatility or low time frames (&lt; 1 day).</li>
+<li>The underlying idea is that patterns work because they capture repeating human behavior.</li>
+<li>"Simple patterns tend to be more reliable than complex ones" - technical analysts who haven't lost more than 50% of their portfolio.</li>
+<li>Risk tolerance should dictate entry timing, not just pattern recognition.</li>
+<li>Volume should support the story the candles are telling.</li>
+<li>High volumes indicate the presence of smart money.</li>
+<li>Low volumes indicate retail participation.</li>
+<li>When you initiate a trade to either go long or short always make sure if volumes confirm.</li>
+<li>Support and resistance levels might help to understand where there is continual supply (resistance and selling) and demand (support and buying).</li>
+</ul>
+<p><img style="width:60%;" id="image" src="../../img/single-patterns.png"></p>
+<h3 id="indicators">Indicators<a class="headerlink" href="#indicators" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Moving Averages</li>
+<li>Relative Strength Index (RSI)</li>
+<li>Moving Average Convergence Divergence (MACD)</li>
+<li>Average Directional Index (ADX)</li>
+<li>+DI (Plus Directional Indicator)</li>
+<li>-DI (Minus Directional Indicator) </li>
+<li>Alligator Indicator</li>
+<li>Aroon</li>
+<li>Aroon Oscillator</li>
+<li>Average True Range (ATR)</li>
+<li>ATR Bands</li>
+<li>Supertrend</li>
+<li>Volume Weighted Average Price (VWAP)</li>
+</ul>
+<h3 id="volumes">Volumes<a class="headerlink" href="#volumes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>High Volume = Today's volume &gt; last 10 days average volume.</li>
+<li>Low Volume = Today's volume &lt; last 10 days average volume.</li>
+<li>Average Volume = Today's volume = last 10 days average volume.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Sl No</th>
+<th>Price</th>
+<th>Volume</th>
+<th>What is the expectation?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>Increases</td>
+<td>Increases</td>
+<td>Bullish</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Increases</td>
+<td>Decreases</td>
+<td>Caution - weak hands buying</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Decreases</td>
+<td>Increases</td>
+<td>Bearish</td>
+</tr>
+<tr>
+<td>04</td>
+<td>Decreases</td>
+<td>Decreases</td>
+<td>Caution - weak hands selling</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>High volumes indicate the presence of smart money.</li>
+<li>Low volumes indicate retail participation.</li>
+<li>When you initiate a trade to either go long or short always make sure if volumes confirm.</li>
+</ul>
+<h3 id="ten-commandments">Ten Commandments<a class="headerlink" href="#ten-commandments" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Most of technical analysis is mostly bullshit (80-20 as we discussed before).</li>
+<li>Make sure that you are atleast playing a 50/50 game.</li>
+<li>Buy on the rumour, sell on the news. Move with smart money - too much retail can be concering. Unless, they are in the terrible WRONG.</li>
+<li>Market conditions do not matter, companies and their fundamentals do.</li>
+<li>I don't like diversification. If you really want to just for diversification's sake just buy an index fund.</li>
+<li>Btw, in diversification, I meant diversification in the same asset class. Diversification across asset classes is a good idea.</li>
+<li>Volatility is not risk.</li>
+<li>I don't get day trading. I feel and understand its importance in making markets liquid and efficient but I strongly believe that investing and its philosophy is the bread and butter of the capital markets.</li>
+<li>Growth stocks v/s value stocks is bullshit. Just buy good companies and make sure that your money is helping out in the world.</li>
+<li>Capitalism is good. The goal of capitalism is not the accumulation but the flow of capital. Extreme accumulation and control over capital is not good. Exploitation is not good. We must have democracy and basic security for ALL.</li>
+</ol>
+<h2 id="fundamental-analysis">Fundamental Analysis<a class="headerlink" href="#fundamental-analysis" title="Permanent link">&para;</a></h2>
+<p>What matters?
+- Strategy and Vision.
+- Moat.
+- Management and Shareholding.</p>
+<ul>
+<li>Basic Numbers (Valuation, Share price).</li>
+<li>Financials (P&amp;L, Balance sheet, Cashflow).</li>
+<li>What can go wrong?</li>
+</ul>
+<h3 id="pl-report">P&amp;L Report<a class="headerlink" href="#pl-report" title="Permanent link">&para;</a></h3>
+<p>Talks about a specific time (year, quarter, etc.) period.</p>
+<ul>
+<li>PBT = Total Revenue - Total Expense - Exceptional items</li>
+<li>Net PAT = PBT - applicable taxes</li>
+<li>EPS = (PAT - Preferred Dividents) / Total outstanding ordinary shares</li>
+</ul>
+<p>Details are below.</p>
+<ul>
+<li>Revenue: top line of the company, figure out what amongst this is scalable<ul>
+<li>Operations revenue<ul>
+<li>Sale of products</li>
+<li>Sale of services</li>
+<li>Other operating revenues</li>
+</ul>
+</li>
+<li>Other income</li>
+</ul>
+</li>
+<li>Expenses: <ul>
+<li>Raw material and goods cost</li>
+<li>Salary</li>
+<li>Depreciation and Amortization</li>
+<li>Interest payment</li>
+<li>Others</li>
+</ul>
+</li>
+<li>PBT (Profit before tax)</li>
+<li>PAT (Profit after tax): bottomline of the company</li>
+<li>Earnings: PAT - Preferred Dividents</li>
+</ul>
+<h3 id="balance-sheet">Balance Sheet<a class="headerlink" href="#balance-sheet" title="Permanent link">&para;</a></h3>
+<p>Deals with ownership. Carry forwards from the previous year's balance sheet.</p>
+<ul>
+<li><strong>Assets</strong><ul>
+<li>Non current assets</li>
+<li>Current assets</li>
+</ul>
+</li>
+<li><strong>Liabilities</strong><ul>
+<li>Non current assets</li>
+<li>Current assets</li>
+</ul>
+</li>
+<li><strong>Equity</strong><ul>
+<li>Paid in capital (money from shareholders)</li>
+<li>Retained earnings (accumulated PAT)</li>
+</ul>
+</li>
+</ul>
+<h2 id="cashflow-statement">Cashflow Statement<a class="headerlink" href="#cashflow-statement" title="Permanent link">&para;</a></h2>
+<p>Happens through the following. If company takes in money then its positive (e.g., selling assets, raising funds), if it gives out money then its negative (e.g, paying dividends, paying debts, buying assets).</p>
+<ul>
+<li>Operating Activities</li>
+<li>Investing Activities</li>
+<li>Financing Activities</li>
+</ul>
+<h3 id="connecting-the-dots">Connecting the Dots<a class="headerlink" href="#connecting-the-dots" title="Permanent link">&para;</a></h3>
+<p>PAT flows from P&amp;L to Balance Sheet.
+Cash and cash equivalents flow from Cashflow Statement to Balance Sheet.</p>
+<div class="arithmatex">\[
+\text{Assets} = \text{Liabilities} + \text{Equity}
+\]</div>
+<p>Let's break down different scenarios:</p>
+<ol>
+<li>
+<p>Selling Products for Cash:</p>
+<ul>
+<li>Cash (Asset) INCREASES</li>
+<li>Revenue increases which increases Equity</li>
+<li>Assets and Equity both increase</li>
+</ul>
+</li>
+<li>
+<p>Taking a Loan:</p>
+<ul>
+<li>Cash (Asset) INCREASES</li>
+<li>Loan (Liability) INCREASES</li>
+<li>Assets and Liabilities both increase</li>
+</ul>
+</li>
+<li>
+<p>Paying Bills:</p>
+<ul>
+<li>Cash (Asset) DECREASES</li>
+<li>Either:</li>
+<li>Accounts Payable (Liability) DECREASES (if previously recorded)</li>
+<li>Expense increases which decreases Equity (if immediate payment)</li>
+</ul>
+</li>
+<li>
+<p>Buying Inventory:</p>
+<ul>
+<li>Cash (Asset) DECREASES</li>
+<li>Inventory (Asset) INCREASES</li>
+<li>Total Assets remain the same (just changed form)</li>
+</ul>
+</li>
+</ol>
+<p>Key Points:</p>
+<ol>
+<li>Cash is always an ASSET, never a liability</li>
+<li>Making sales increases both assets (cash) and equity (through revenue)</li>
+<li>Changes in one side of the equation must be balanced by changes in the other side</li>
+</ol>
+<p>Common misconception: People sometimes think debt/liabilities increase cash, which is temporarily true when taking a loan, but:</p>
+<ul>
+<li>The liability (debt) must be repaid.</li>
+<li>Interest payments actually decrease cash over time.</li>
+<li>The initial cash increase is offset by the obligation to repay.</li>
+</ul>
+<div class="arithmatex">\[\text{P\&amp;L} \xrightarrow{\text{PAT flows into}} \text{Balance Sheet (via earnings in Equity)} \xrightarrow{\text{changes affect}} \text{Cash Flow}\]</div>
+<h3 id="ratios">Ratios<a class="headerlink" href="#ratios" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Profitability Ratios</strong></p>
+<ul>
+<li>Operating margin <ul>
+<li>EBIDTA = Earnings before interest, taxes, depreciation, and amortization.</li>
+<li>Operating margin = EBITDA / Total Revenue = EBITDA margin</li>
+<li><strong>EBIDTA margin = (Total Revenue - Operating Expenses) / Total Revenue</strong></li>
+</ul>
+</li>
+<li>PAT margin = PAT / Revenue</li>
+<li>Return on equity or ROE<ul>
+<li>ROE measures the efficiency with which a company generates profits from each unit of equity.</li>
+<li><strong>ROE = PAT / Average Equity</strong><ul>
+<li>PAT is earned throughout the year.</li>
+<li>Equity changes throughout the year.</li>
+<li>Using just end-of-year equity would distort the ratio, so often averaging is done.</li>
+<li>The total equity includes both paid-in capital and retained earnings.</li>
+</ul>
+</li>
+<li>Higher the ROE the better but note that debt can artificially inflate ROE.</li>
+</ul>
+</li>
+</ul>
+<div class="arithmatex">\[\text{ROE} = \underbrace{\frac{\text{PAT}}{\text{Sales}}}_{\text{Net Margin}} \times \underbrace{\frac{\text{Sales}}{\text{Assets}}}_{\text{Asset Turnover}} \times \underbrace{\frac{\text{Assets}}{\text{Equity}}}_{\text{Leverage Multiplier}}\]</div>
+<div class="arithmatex">\[\text{ROE} = \text{Net Margin} \times \text{Asset Turnover} \times \text{Financial Leverage}\]</div>
+</li>
+<li>
+<p><strong>Leverage Ratios</strong></p>
+<ul>
+<li>Interest Coverage ratio = EBITDA / Interest Expense</li>
+<li>Debt to equity ratio = Total Debt / Total Equity</li>
+</ul>
+</li>
+<li>
+<p><strong>Valuation Ratios</strong></p>
+<ul>
+<li>Need to deal with intrinsic value, relative value, option based value and replacement value.</li>
+<li>Price to book ratio or P/B<ul>
+<li><strong>P/B = Market Cap / Total Equity = Market Value / Book Value</strong></li>
+<li>P/B = Price or market value per share / Book value per share</li>
+<li>Book Value per share = Total Equity / Total outstanding ordinary shares</li>
+<li><strong>Book Value</strong>: sort of the historical cost of setting up the company</li>
+<li><strong>Market Value</strong>: the future cost of setting up the company with its future progressions priced in</li>
+</ul>
+</li>
+<li>Price to earnings ratio or P/E<ul>
+<li><strong>P/E = Market Cap / Earnings</strong></li>
+<li>P/E = Price per share / EPS</li>
+<li>EPS = (PAT - Preferred Dividents) / Total outstanding ordinary shares</li>
+</ul>
+</li>
+<li>Price to sales ratio or P/S<ul>
+<li><strong>P/S = Market Cap / Total Sales</strong></li>
+<li>P/S = Price per share / Sales per share</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="arithmatex">\[\text{Required Growth Rate} \approx \text{Required Return} - \frac{1}{P/E}\]</div>
+<h3 id="pb-ratio-scale">P/B ratio scale<a class="headerlink" href="#pb-ratio-scale" title="Permanent link">&para;</a></h3>
+<ol>
+<li>High P/B (<span class="arithmatex">\(3-10+\)</span>)<ul>
+<li>Deep tech, biotech, software</li>
+<li>Few physical assets, high intangible value</li>
+</ul>
+</li>
+<li>Equalish P/B (<span class="arithmatex">\(1-3\)</span>)<ul>
+<li>Banking, insurance, manufacturing</li>
+<li>Assets mostly financial, easier to value or substantial physical assets</li>
+</ul>
+</li>
+</ol>
+<h3 id="pe-ratio-scale">P/E ratio scale<a class="headerlink" href="#pe-ratio-scale" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>High P/E (<span class="arithmatex">\(25-50+\)</span>)</p>
+<ul>
+<li>Deep tech, biotech, software</li>
+<li>High growth expectations, R&amp;D value</li>
+</ul>
+</li>
+<li>
+<p>Medium P/E (<span class="arithmatex">\(15-25\)</span>)</p>
+<ul>
+<li>Consumer Staples, industrial, healthcare</li>
+<li>Stable growth, established markets</li>
+</ul>
+</li>
+<li>
+<p>Low P/E (<span class="arithmatex">\(5-15\)</span>)</p>
+<ul>
+<li>Banking/Financial, energy, basic materials, automotive</li>
+<li>Cyclical nature, mature markets</li>
+</ul>
+</li>
+</ol>
+<h3 id="ps-ratio-scale">P/S ratio scale<a class="headerlink" href="#ps-ratio-scale" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>High P/S (<span class="arithmatex">\(5-15+\)</span>)</p>
+<ul>
+<li>Software, biotech</li>
+<li>High margins, recurring revenue</li>
+</ul>
+</li>
+<li>
+<p>Medium P/S (<span class="arithmatex">\(1-5\)</span>)</p>
+<ul>
+<li>Healthcare, consumer discretionary, business services</li>
+<li>Moderate margins, stable demand</li>
+</ul>
+</li>
+<li>
+<p>Low P/S (<span class="arithmatex">\(&lt;1\)</span>)</p>
+<ul>
+<li>Retail, airlines, groceries, auto manufacturers</li>
+<li>Very thin margins, high competition</li>
+</ul>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/banrovegrie" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../files/sidebar-toggle.js"></script>
+      
+    
+  </body>
+</html>

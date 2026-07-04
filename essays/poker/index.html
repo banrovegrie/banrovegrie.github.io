@@ -1,0 +1,1666 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Essays and research notes on language, computation, mathematics and engineering, by Alapan Chaudhuri.">
+      
+      
+        <meta name="author" content="Alapan Chaudhuri">
+      
+      
+        <link rel="canonical" href="https://banrovegrie.github.io/essays/poker/">
+      
+      
+        <link rel="prev" href="../about-that-question/">
+      
+      
+        <link rel="next" href="../../research/finance/">
+      
+      
+      <link rel="icon" href="../../img/homotopy.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Poker - Why Not?</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../files/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#basic-strategy" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Why Not?" class="md-header__button md-logo" aria-label="Why Not?" data-md-component="logo">
+      
+  <img src="../../img/homotopy.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Why Not?
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Poker
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Why Not?" class="md-nav__button md-logo" aria-label="Why Not?" data-md-component="logo">
+      
+  <img src="../../img/homotopy.png" alt="logo">
+
+    </a>
+    Why Not?
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alapan Chaudhuri
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Essays
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Essays
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../weblog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Weblog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../composition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Composition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yoda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    There is no Try
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frame/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frame
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../show/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Show
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problem-solving/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Problem Solving
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Doing Engineering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../economics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Economics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about-that-question/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About that Question
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Poker
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Poker
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handy-outs-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handy Outs Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#range-and-hand-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Range and Hand Decisions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poker-terminology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Poker Terminology
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategy-for-pokerbaazi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategy for Pokerbaazi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategy-for-crushing-crash-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategy for crushing Crash Games
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Research
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Research
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/finance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Finance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/information-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Information Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/quantum-theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/quantum-channels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Channels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/prog-lang/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programming Language Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/language-thought/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Language and Thought
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/chess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chess
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/competitive-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Competitive Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/linear-algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear Algebra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/music-theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Music Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/millennium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What gets you a million dollars?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/multi-variate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multivariate Calculus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/ads-cft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ads-CFT Correspondance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/data-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Probability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/psdp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PSDP Problem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/haskell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Haskell in Harsh Words
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handy-outs-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handy Outs Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#range-and-hand-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Range and Hand Decisions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poker-terminology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Poker Terminology
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategy-for-pokerbaazi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategy for Pokerbaazi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategy-for-crushing-crash-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategy for crushing Crash Games
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Poker</h1>
+
+<h2 id="basic-strategy">Basic Strategy<a class="headerlink" href="#basic-strategy" title="Permanent link">&para;</a></h2>
+<!-- <img style="width:60%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fee3ae0a1-a5be-41e5-a405-d24157dc4da8%2FPoker_Chart.png?table=block&id=11adec29-af0e-4144-866f-db848021934c&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2">
+
+<img style="width:60%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fb9bb0c17-aefa-4695-bba0-6b9f1ebd6377%2FUntitled.png?table=block&id=c07d5541-db80-4695-a120-4a9101f206c0&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2">
+
+<img style="width:60%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F36f57b6c-599d-414f-b11e-4b764423467b%2FUntitled.png?table=block&id=b7125c74-7a6c-4521-9ad9-9d3d105860bb&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"> -->
+
+<p>When you have <span class="arithmatex">\(\leq 12\text{BB}\)</span> in tournament or in general low stack, you should ideally try to shove it soon sometime and play more often.</p>
+<ul>
+<li>Odds <span class="arithmatex">\(= \text{reward}:\text{risk}\)</span></li>
+<li>Pot odds percentage <span class="arithmatex">\(=\)</span> <span class="arithmatex">\(\frac{\text{your bet}}{\text{final pot value}} \times 100\% = \frac{\text{risk}}{\text{risk + reward}} \times 100\%\)</span></li>
+<li>Final pot value <span class="arithmatex">\(=\)</span> pot value after you bet</li>
+<li>Call when your hand equity <span class="arithmatex">\(&gt;\)</span> pod odds percentage</li>
+<li>Equity = Outs <span class="arithmatex">\(\times\)</span> 4 (if both turn and river are left to be seen)</li>
+<li>Equity = (Outs <span class="arithmatex">\(\times\)</span> 4) <span class="arithmatex">\(-\)</span> (Outs <span class="arithmatex">\(-\)</span> 8) (if both turn and river are left to be seen)</li>
+<li>Equity = Outs <span class="arithmatex">\(\times\)</span> 2 (if only river is left to be seen)</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Don’t tilt
+Be TAG
+Be unpredictable
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Pairs aren’t worth much
+Shove only when strongest
+Look for straights or flushes of opponents
+</code></pre></div>
+<p><strong>Note:</strong> First in bluff is often something to use and watch out for.</p>
+<ul>
+<li>In Heads up, 70% of the time the flop misses both players. So, whoever bets first has a big advantage.</li>
+<li>Even mutiway, if no body takes interest, the first aggresor wins.</li>
+<li>People often C-Bet no matter the flop.</li>
+</ul>
+<h2 id="handy-outs-table">Handy Outs Table<a class="headerlink" href="#handy-outs-table" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Number of outs</th>
+<th>Drawing Hand</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>2 pair + needing a full house + inside straight draw</td>
+</tr>
+<tr>
+<td>6</td>
+<td>2 overcards needing to make a pair</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Open ended straight draw</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Flush draw</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Flush draw plus a pair needing to improve to trips</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Flush draw plus inside straight draw</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Flush draw plus open ended straight draw</td>
+</tr>
+</tbody>
+</table>
+<p><strong>14 outs</strong>: makes you even money against a better hand (DO NOT FOLD). Ans you will always be getting better than even pot odds from any bet (can go ALL IN).</p>
+<p><strong>Expressed odds</strong>: the odds of completing a hand based on the current pot size and the cost of calling a bet.</p>
+<p><strong>Implied odds</strong>: take into account the potential future bets that may occur if you hit your hand. In general, implied odds tend to be more important in no limit hold'em than expressed odds, since there is no limit to how much players can bet.</p>
+<h2 id="range-and-hand-decisions">Range and Hand Decisions<a class="headerlink" href="#range-and-hand-decisions" title="Permanent link">&para;</a></h2>
+<p><strong>Premium Hand</strong>: AA, KK, QQ, AK</p>
+<p><strong>Solid Hands</strong>: JJ, TT, 99, 88, 77, AQs, AJs</p>
+<p><strong>Speculative Hands</strong>: Smaller pairs (22+), suited aces (A2s+), suited connectors (78s, 9Ts)</p>
+<table>
+<thead>
+<tr>
+<th>Opening</th>
+<th>Big pairs or QQ+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raise</td>
+<td>3BB</td>
+</tr>
+<tr>
+<td>Re-raises</td>
+<td>3x the previous bet</td>
+</tr>
+<tr>
+<td>Note</td>
+<td>JJ is mostly not considered</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Opening</th>
+<th>Small pairs or 22+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weak game</td>
+<td>Play (max one raise)</td>
+</tr>
+<tr>
+<td>Strong game</td>
+<td>Don’t play</td>
+</tr>
+<tr>
+<td>Warning</td>
+<td>Negative implied odds in super deep stack games</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Opening</th>
+<th>Medium pairs or 66+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raise</td>
+<td>3BB</td>
+</tr>
+<tr>
+<td>Re-raises</td>
+<td>&gt; 4-bet FOLD</td>
+</tr>
+<tr>
+<td>Call</td>
+<td>50% - 80% (depending on position)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Opening</th>
+<th>AK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Short stack</td>
+<td>Plays great</td>
+</tr>
+<tr>
+<td>Deep stack</td>
+<td>Drawing hand</td>
+</tr>
+<tr>
+<td>Against a pair</td>
+<td>Just &lt; 50% (22 to QQ), but against AA 7% and against KK 30%</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Having suited cards only increases your chances of winning by 2% to 3%.</li>
+<li>Remember people have 1 in 17 chances of having pocket pairs, so if there are &gt; 8 people on the table you have 50% chance of playing against a pocket pair.</li>
+<li>While choosing hands to open with, don’t be results oriented since a good decision can look bad.</li>
+<li>AK is hard to play after flop. Best that you go all-in when playing short stack cash games.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Describe a Hand</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stack sizes</td>
+<td>Table image</td>
+<td>Recent activity</td>
+<td>Position</td>
+</tr>
+<tr>
+<td>Cards</td>
+<td>Thought process</td>
+<td>Action</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>AQ <span class="arithmatex">\(\ll\)</span> AK.</li>
+<li>A2-AJ are highly overrated.</li>
+</ul>
+<p><strong>Trouble Hands</strong>: KQ, KJ, KT, QJ, QT etc. are called pretty looking </p>
+<ul>
+<li>If someone represents a top 10% hand &gt; 20% of the time, you know they are bluffing &gt; 50% of the time.</li>
+<li>If you ever get 3-bet with the trouble hands, say bye bye.</li>
+</ul>
+<p><strong>Suited Connectors</strong>: not good for short stack games but they can be played well as disguised hands (better played in multi-way scenarios)</p>
+<ul>
+<li>Don’t play GTO poker 15%-20% of the time.</li>
+</ul>
+<h2 id="charts">Charts<a class="headerlink" href="#charts" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>SPR</th>
+<th>SPR Size</th>
+<th>Hands to Commit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low</td>
+<td>0 to 2</td>
+<td>Over Pair, Top Pair, Bottom 2 Pair</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>3 to 6</td>
+<td>Top 2 Pair, Non-nutted flushes and strights</td>
+</tr>
+<tr>
+<td>High</td>
+<td>7+</td>
+<td>Sets and Nutted Hands</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Drawing Hand</th>
+<th>Flop not all-in &amp; Turn equity</th>
+<th>Bet Sizing</th>
+<th>Pot Odds offered</th>
+<th>All-in case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flush + Open-ended SD</td>
+<td>33%</td>
+<td>Slightly over pot +</td>
+<td>&gt; 33%</td>
+<td>&gt; 60%</td>
+</tr>
+<tr>
+<td>Flush + Gut-shot SD</td>
+<td>25%</td>
+<td>2/3 pot +</td>
+<td>&gt; 28.5%</td>
+<td>&gt; 45%</td>
+</tr>
+<tr>
+<td>Flush</td>
+<td>19%</td>
+<td>1/2 pot +</td>
+<td>&gt; 25%</td>
+<td>&gt; 33%</td>
+</tr>
+<tr>
+<td>Open-ended SD</td>
+<td>17%</td>
+<td>1/3 pot +</td>
+<td>&gt; 25%</td>
+<td>34%</td>
+</tr>
+<tr>
+<td>Over Cards + 2-Pair Draw</td>
+<td>13%</td>
+<td>1/4 pot +</td>
+<td>&gt; 25%</td>
+<td>26%</td>
+</tr>
+<tr>
+<td>Gut-shot straight draw</td>
+<td>8%</td>
+<td>1/4 pot +</td>
+<td>&gt; 25%</td>
+<td>16%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="poker-terminology">Poker Terminology<a class="headerlink" href="#poker-terminology" title="Permanent link">&para;</a></h2>
+<p><strong>Ante</strong>: a stake put up by a player in poker before receiving cards.</p>
+<p><strong>Effective stack</strong>: maximum amount of chips you can loose in a round</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Aggressive (Bets Often)</th>
+<th>Passive (Bets Infrequently)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tight (Calls Seldom)</td>
+<td>TAG</td>
+<td>TP "Weak"</td>
+</tr>
+<tr>
+<td>Loose (Calls Often)</td>
+<td>LAG</td>
+<td>Calling Machine</td>
+</tr>
+</tbody>
+</table>
+<p>Now, if you are not aggressive it is very highly likely that you will loose. Be aggressive no matter if you are tight or loose.</p>
+<h2 id="strategy-for-pokerbaazi">Strategy for Pokerbaazi<a class="headerlink" href="#strategy-for-pokerbaazi" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Don’t bluff at higher stakes more than a very low freuquency.</li>
+<li>Playing style:<ul>
+<li>play loose or tight depending on table</li>
+<li>try to be aggresive</li>
+<li>lure but do not slowplay</li>
+</ul>
+</li>
+<li>Probability of getting beaten by a fullhouse or straight or flush is quite higher than normal.</li>
+<li>If you at all want to all in or overbet:<ul>
+<li>make sure that you have the nuts</li>
+<li>don’t try to catch bluff with something like 1 or 2 pair</li>
+</ul>
+</li>
+<li>Play RIT if you feel prompted to do all in.</li>
+<li>Don’t play cash games <span class="arithmatex">\(\ll 100\ \text{BB}\)</span>.</li>
+</ol>
+<h2 id="strategy-for-crushing-crash-games">Strategy for crushing Crash Games<a class="headerlink" href="#strategy-for-crushing-crash-games" title="Permanent link">&para;</a></h2>
+<ul>
+<li>You need to exploit your opponent’s weeknesses.</li>
+<li>Play few hands from early position, play more hands from late position.</li>
+<li>Do not slow play unless your opponent can easily catch up to good, but still second best hand.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/banrovegrie" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../files/sidebar-toggle.js"></script>
+      
+    
+  </body>
+</html>

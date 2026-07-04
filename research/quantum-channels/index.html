@@ -1,0 +1,1875 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Essays and research notes on language, computation, mathematics and engineering, by Alapan Chaudhuri.">
+      
+      
+        <meta name="author" content="Alapan Chaudhuri">
+      
+      
+        <link rel="canonical" href="https://banrovegrie.github.io/research/quantum-channels/">
+      
+      
+        <link rel="prev" href="../quantum-theory/">
+      
+      
+        <link rel="next" href="../prog-lang/">
+      
+      
+      <link rel="icon" href="../../img/homotopy.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Quantum Channels - Why Not?</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../files/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Why Not?" class="md-header__button md-logo" aria-label="Why Not?" data-md-component="logo">
+      
+  <img src="../../img/homotopy.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Why Not?
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quantum Channels
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Why Not?" class="md-nav__button md-logo" aria-label="Why Not?" data-md-component="logo">
+      
+  <img src="../../img/homotopy.png" alt="logo">
+
+    </a>
+    Why Not?
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alapan Chaudhuri
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Essays
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Essays
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/weblog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Weblog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/composition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Composition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/yoda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    There is no Try
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/frame/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frame
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/show/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Show
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/stories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/problem-solving/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Problem Solving
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Doing Engineering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/economics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Economics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/about-that-question/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About that Question
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essays/poker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Poker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Research
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Research
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Finance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../information-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Information Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quantum-theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Quantum Channels
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Channels
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-of-density-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review of Density Matrices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generalized-quantum-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generalized Quantum Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-steinspring-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to Steinspring Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Isometry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steinspring-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steinspring Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kraus-operator-picture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kraus Operator Picture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-of-kraus-operators-for-quantum-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples of Kraus Operators for Quantum Channels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#axiomatic-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Axiomatic Definitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equivalence-of-tpcp-maps-and-kraus-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equivalence of TPCP maps and Kraus operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measurements-as-quantum-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurements as Quantum Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantum-norms-and-distance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantum Norms and Distance Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Norms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schatten-p-norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schatten \(p\)-norms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measurements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#duality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Duality
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-trace-norm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to Trace Norm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chois-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choi's Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solving-a-lindblad-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solving a Lindblad Equation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prog-lang/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programming Language Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language-thought/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Language and Thought
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chess
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../competitive-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Competitive Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linear-algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear Algebra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../music-theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Music Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../millennium/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What gets you a million dollars?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi-variate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multivariate Calculus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ads-cft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ads-CFT Correspondance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Probability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../psdp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PSDP Problem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haskell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Haskell in Harsh Words
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-of-density-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review of Density Matrices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generalized-quantum-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generalized Quantum Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-steinspring-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to Steinspring Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Isometry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steinspring-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steinspring Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kraus-operator-picture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kraus Operator Picture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-of-kraus-operators-for-quantum-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples of Kraus Operators for Quantum Channels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#axiomatic-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Axiomatic Definitions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equivalence-of-tpcp-maps-and-kraus-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equivalence of TPCP maps and Kraus operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measurements-as-quantum-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurements as Quantum Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantum-norms-and-distance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantum Norms and Distance Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Norms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schatten-p-norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schatten \(p\)-norms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measurements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#duality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Duality
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-trace-norm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to Trace Norm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chois-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choi's Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solving-a-lindblad-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solving a Lindblad Equation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Quantum Channels</h1>
+
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Quantum Channels are generalizations of Quantum Operations. Since, in general our operations maybe noisy (inherently) and the system we are dealing with maybe open so Quantum Channels us the study of <strong>noisy open</strong> Quantum Operations.</p>
+<div class="arithmatex">\[
+\rho \xrightarrow{U}\rho'
+\]</div>
+<p>The above only holds for <strong>closed</strong> quantum systems. Thus, in case of <strong>noisy open</strong> quantum systems we have the following.</p>
+<div class="arithmatex">\[
+\rho \xrightarrow{\mathcal E} \rho'
+\]</div>
+<p>Here, <span class="arithmatex">\(\mathcal E\)</span> is a combination of:</p>
+<ul>
+<li>unitaries <span class="arithmatex">\((U)\)</span></li>
+<li>adding systems <span class="arithmatex">\((\rho \to \rho \otimes \sigma)\)</span></li>
+<li>subtracting systems or partial tracing <span class="arithmatex">\((\rho_{AB} \to \text{tr}_B \rho_{AB} = \rho_A)\)</span></li>
+</ul>
+<h2 id="review-of-density-matrices">Review of Density Matrices<a class="headerlink" href="#review-of-density-matrices" title="Permanent link">&para;</a></h2>
+<p>Moreover, to deal with <strong>noisy open</strong> systems we also need to review density matrices which are the general way of representing noisy quantum states.</p>
+<div class="arithmatex">\[
+\rho \equiv \text{noisy quantum state}
+\]</div>
+<div class="arithmatex">\[
+\mathcal E \equiv \text{noisy open quantum channel}
+\]</div>
+<!-- <img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fb2274519-c2aa-4dff-a58c-c03572cb66e1%2FUntitled.png?table=block&id=646dc1ff-bb2b-42eb-8c1c-0989a8db695e&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2">
+
+<img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F17804dbc-2fd9-4abd-9ed2-2b6546b3f65d%2FUntitled.png?table=block&id=7c369fe5-5c39-4e0d-aa41-c714dd84b1cc&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2">
+
+<img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F80068b3e-0b02-474d-b709-85227db91ce3%2FUntitled.png?table=block&id=e59e08a6-3d7b-4709-858f-83878f76cc4c&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"> -->
+
+<p>Now since, <span class="arithmatex">\(\rho\)</span> is positive semi-definite thus, <span class="arithmatex">\(\frac{1 + ||\vec{a}||}{2} \geq 0 \implies ||\vec{a}|| \leq 1\)</span>.</p>
+<p>This results in the Bloch Ball representation for general mixed state qubits, which serves as a generalization of the Bloch Sphere that serves as representation for pure state qubits. Pure state qubits have eigenvalues of <span class="arithmatex">\(0\)</span> or <span class="arithmatex">\(1\)</span>, <span class="arithmatex">\(\lambda(\rho) = 0\ \text{or}\ 1\)</span>.</p>
+<!-- <img style="width:40%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F65f28bcb-b310-4fc4-85b4-cfe1de7cbc23%2FUntitled.png?table=block&id=99774276-4089-4f50-87d0-32a2a2ff1d1a&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"> -->
+
+<p>The eigenvalue of the maximally mixed state is <span class="arithmatex">\({I}/{2}\)</span> where the state is actually given by the following.</p>
+<div class="arithmatex">\[
+\frac{1}{2}(|0 \rangle\langle 0| + |1 \rangle\langle 1|) \equiv \frac{1}{2}(|+ \rangle\langle +| + |- \rangle\langle -|)
+\]</div>
+<!-- ## Quantum Operations -->
+
+<!-- <img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F551a167d-6266-4fb1-8372-eb6639d4b849%2FUntitled.png?table=block&id=4b4519ca-daa3-416c-bbb2-a0f768edd96a&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"> -->
+
+<!-- However, in both these above cases, we are still dealing with **closed** (albeit **noisy**) for the random case. -->
+
+<h2 id="generalized-quantum-operations">Generalized Quantum Operations<a class="headerlink" href="#generalized-quantum-operations" title="Permanent link">&para;</a></h2>
+<p>We can refer to Generalized Quantum Operations as Quantum Channels (<strong>noisy</strong> and <strong>open</strong>) whose definitions we shall rediscover and formalize here.</p>
+<p>Now, it should be noted that there are three major equivalent formalisms for Quantum Channels:</p>
+<ul>
+<li>Operational (Steinspring)</li>
+<li>Mathemtically Simplified (Kraus)</li>
+<li>Axiomatic (TPCP maps)</li>
+</ul>
+<h2 id="introduction-to-steinspring-representation">Introduction to Steinspring Representation<a class="headerlink" href="#introduction-to-steinspring-representation" title="Permanent link">&para;</a></h2>
+<p>For closed systems we have a probabilistic combinations of the above (noisy closed channels).</p>
+<div class="arithmatex">\[
+|\psi\rangle \to U|\psi\rangle
+\]</div>
+<div class="arithmatex">\[
+|\psi\rangle\langle\psi| \to U |\psi\rangle\langle\psi|U^\dagger
+\]</div>
+<div class="arithmatex">\[
+\rho \to U\rho\ U^\dagger
+\]</div>
+<p>This can be generalized for noisy open channels as combinations of unitaries <span class="arithmatex">\((U)\)</span>, adding systems together <span class="arithmatex">\((\rho \to \rho \otimes \sigma)\)</span> and subtracting systems <span class="arithmatex">\((\rho_{AB} \to \text{tr}_B(\rho_{AB}) = \rho_A)\)</span>.</p>
+<p>But why is partial tracing allowed? Doesn't this "delete" information? </p>
+<!-- <img style="width:60%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2c84844d-bd95-4a56-8106-ec65e95aabe1%2FUntitled.png?table=block&id=eac38b17-1932-44a3-beda-eee8343de619&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=960&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"> -->
+
+<p>The information has basically flown out of your lab to the heavens (but still exists in nature) and in most cases, you simply can't access it anymore, kinda like your ex-girlfriend.</p>
+<div class="arithmatex">\[
+\text{tr}(\rho_{AB}) = \sum_b (I_A \otimes \langle b|)\ \rho\ (I_A \otimes |b\rangle) = (I_A \otimes \text{tr}_B)(\rho_{AB})
+\]</div>
+<h2 id="isometry">Isometry<a class="headerlink" href="#isometry" title="Permanent link">&para;</a></h2>
+<p>An operator <span class="arithmatex">\(V \in \mathcal{L}(X),\ V:{X \to Y}\)</span> is called an isometry if and only if <span class="arithmatex">\(||V\vec{v}|| = ||\vec{v}||\)</span> for all <span class="arithmatex">\(\vec{v} \in {X}\)</span>. In other words, an isometry is a genralization of norm preserving operators.</p>
+<p>Now, properties of linear isometries:</p>
+<ul>
+<li><span class="arithmatex">\(\langle v|v\rangle = \langle Vv|Vv\rangle = \langle v|V^\dagger V|v\rangle\)</span></li>
+<li>Thus, <span class="arithmatex">\(V^\dagger V = I_{{X}}\)</span>.</li>
+</ul>
+<p>Linear isometries are not always unitary operators, though, as those require additionally that <span class="arithmatex">\(X = Y\)</span> and <span class="arithmatex">\(V V^\dagger = I_X\)</span>.</p>
+<p>By the Mazur-Ulam theorem, any isometry of normed vector spaces over <span class="arithmatex">\(\mathbb{R}\)</span> is affine. Affine transformations are those that preserve lines and parallelism (but not necessarily distances and angles).</p>
+<h2 id="steinspring-representation">Steinspring Representation<a class="headerlink" href="#steinspring-representation" title="Permanent link">&para;</a></h2>
+<p>Isometries allow us to restate the requirements of a <strong>noisy open</strong> quantum channel. Now, it can be formed by combinations of isometries and partial trace. Moreover, the purpose of the partial trace is to trash the environment shit out of my lab.</p>
+<!-- <img style="width:40%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4094536f-32e8-4f23-ba20-89075124cdda%2FUntitled.png?table=block&id=1e3dfe03-822f-466c-9fd9-c1ed62d95a00&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"> -->
+
+<p>Thus, we have the following formalism.</p>
+<div class="arithmatex">\[
+V:A\to B\otimes E
+\]</div>
+<div class="arithmatex">\[
+\mathcal E : \mathcal L(A) \to \mathcal L(B)
+\]</div>
+<div class="arithmatex">\[
+\mathcal E(\rho) = \text{tr}_E(V\rho\ V^\dagger)
+\]</div>
+<p>Partial tracing can be delayed (deferred tracing), an idea similar to deferred measurements. Also, from a philosophical standpoint (Church of the Larger Hilbert Space) you can defer it forever.</p>
+<!-- <img style="width:40%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffb007ee6-ff8e-4572-b70e-e53149b65a35%2FUntitled.png?table=block&id=c92d8555-a0ff-4031-86f3-c639c4ff333c&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=1150&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"> -->
+
+<p>Now, the above circuit is equivalent to the below circuit. As a result, inductively, combinations of isometries and partial trace is equivalent to the <span class="arithmatex">\(\mathcal E\)</span> operator.</p>
+<!-- <img style="width:40%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5c6d8391-b8bc-447b-b46c-4f64c131a081%2FUntitled.png?table=block&id=e5c464ee-a64d-478d-8462-9875bde25249&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=770&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"> -->
+
+<h2 id="kraus-operator-picture">Kraus Operator Picture<a class="headerlink" href="#kraus-operator-picture" title="Permanent link">&para;</a></h2>
+<p>We can fix a orthonormal bases <span class="arithmatex">\(\{|e\rangle\}\)</span> for <span class="arithmatex">\(E\)</span>, and have <span class="arithmatex">\(\{V_e\}\)</span> such that</p>
+<div class="arithmatex">\[
+V = \sum_e V_e \otimes |e\rangle
+\]</div>
+<p>where <span class="arithmatex">\(V_e \in \mathcal L(A), V_e: A \to B\)</span> and furthermore</p>
+<div class="arithmatex">\[
+I = V^\dagger V = (\sum_{e_1} V^\dagger_{e_1} \otimes \langle e_1|)(\sum_{e_2} V_{e_2} \otimes |e_2\rangle)
+\]</div>
+<p>such that <span class="arithmatex">\(V_e \neq V_e^\dagger\)</span>in general and thus, we have the Kraus operator condition (stated below).</p>
+<div class="arithmatex">\[
+I = \sum_e V_e^\dagger V_e
+\]</div>
+<p>Thus, we can have a equivalent and simplified formalism of the Steinspring Operator <span class="arithmatex">\((\mathcal E)\)</span>, where <span class="arithmatex">\(\{V_e\}\)</span> are Kraus operators.</p>
+<div class="arithmatex">\[
+\mathcal E(\rho) = \text{tr}_E (V \rho\ V^\dagger) = \text{tr}_E (\sum_{e_1, e_2} V_{e_1} \rho\ V_{e_2}^\dagger \otimes |e_1\rangle\langle e_2|)
+\]</div>
+<div class="arithmatex">\[
+\implies \mathcal E(\rho) = \sum_e V_e\rho\ V_e^\dagger
+\]</div>
+<p>Conversely, given <span class="arithmatex">\(\{V_e\}\)</span> satisfying Kraus operator conditions, <span class="arithmatex">\(\mathcal E(\rho) = \sum_e {V_e \rho\ V_e^\dagger}\)</span> is a quantum operator with <span class="arithmatex">\(V = \sum_e V_e \otimes |e\rangle\)</span> as the isometry involved in the transformation.</p>
+<h2 id="examples-of-kraus-operators-for-quantum-channels">Examples of Kraus Operators for Quantum Channels<a class="headerlink" href="#examples-of-kraus-operators-for-quantum-channels" title="Permanent link">&para;</a></h2>
+<ol>
+<li><span class="arithmatex">\(\mathcal E(\rho) = U \rho\ U^\dagger \rightarrow\)</span> single Kraus operator <span class="arithmatex">\(\{U\}\)</span></li>
+<li><span class="arithmatex">\(\mathcal E(\rho) = \sum_e p_e U_e\ \rho\ U_e^\dagger \rightarrow\)</span> Kraus operators <span class="arithmatex">\(\{\sqrt{p_e} U_e\}\)</span></li>
+<li><span class="arithmatex">\(\text{tr}(\rho_{AB}) = \sum_b (I_A \otimes \langle b|)\ \rho\ (I_A \otimes |b\rangle)\)</span> where <span class="arithmatex">\(V_b = (I_A \otimes \langle b |_B)\)</span> thus we also have the following holding true, <span class="arithmatex">\(\sum_b V_b^\dagger V_b = \sum_b I_A \otimes |b\rangle\langle b| = I_A \otimes I_B = I\)</span>.</li>
+<li>
+<p>Ultimate Refrigerator: <span class="arithmatex">\(\mathcal E (\rho) = |0\rangle\langle 0|\)</span>, regardless of the initial state <span class="arithmatex">\(\rho\)</span>. </p>
+<div class="arithmatex">\[
+V_0 = |0\rangle\langle 0|, V_1 = |0\rangle\langle 1|
+\]</div>
+<div class="arithmatex">\[
+V_0 \rho\ V_0^\dagger + V_1 \rho\ V_1^\dagger = |0\rangle\langle 0|
+\]</div>
+</li>
+<li>
+<p>Depolarizing Channel: <span class="arithmatex">\(\mathcal E (\rho) = (1 - p)\rho + \rho ({I}/{2})\)</span> <span class="arithmatex">\(\rightarrow\)</span> simple kind of white noise effect </p>
+</li>
+<li>
+<p>Amplitude Damping Channel: <span class="arithmatex">\(\mathcal E_\gamma (\rho) = K_0 \rho\ K_0^\dagger + K_1 \rho\ K_1^\dagger\)</span> where we have the following </p>
+<div class="arithmatex">\[
+K_0 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; \sqrt{1 - \gamma} \\
+\end{bmatrix} \text{ and, }\ 
+K_1 = \begin{bmatrix}
+0 &amp; \sqrt{\gamma} \\
+0 &amp; 0 \\
+\end{bmatrix}
+\]</div>
+</li>
+</ol>
+<h2 id="axiomatic-definitions">Axiomatic Definitions<a class="headerlink" href="#axiomatic-definitions" title="Permanent link">&para;</a></h2>
+<p>By God, properties of <span class="arithmatex">\(\mathcal E\)</span> should be as follows:</p>
+<ul>
+<li>Linear (assume this or die, basically) and Hermitian preserving</li>
+<li>Trace preserving (TP) such that <span class="arithmatex">\(\text{tr}(\mathcal E(\rho)) = \text{tr}(\rho) = 1\)</span></li>
+<li>Completely positive (CP) since <span class="arithmatex">\(\rho \geq 0 \implies (\mathcal E \otimes I)(\rho) \geq 0\)</span></li>
+</ul>
+<p>But why completely positive? Well, because we are dealing with isometries of form <span class="arithmatex">\(A \to B \otimes E\)</span>.</p>
+<p>Here, completely positive means that if <span class="arithmatex">\(\mathcal E\)</span> is applied on a subsystem, then the complete system and the subsystems must remain positive.</p>
+<h2 id="equivalence-of-tpcp-maps-and-kraus-operators">Equivalence of TPCP maps and Kraus operators<a class="headerlink" href="#equivalence-of-tpcp-maps-and-kraus-operators" title="Permanent link">&para;</a></h2>
+<p>Equivalence Theorem: If <span class="arithmatex">\(\mathcal E(\rho) = \sum_e V_e\rho\ V_e^\dagger\)</span> then <span class="arithmatex">\(\mathcal E\)</span> is TPCP and converse holds true as well.</p>
+<!-- <img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F46663b5e-b401-49a2-8886-3db763aa8e84%2FUntitled.png?table=block&id=95fcd92a-d573-4a98-9e03-fc5945990d02&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2">
+
+<img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F8602461a-1673-4a0e-baa2-c06786adb676%2FUntitled.png?table=block&id=e76c7b76-d8f4-4079-94d0-ebf4f2a50f11&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2">
+
+<img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9103799a-4030-48dc-89f0-bc55ee1f1524%2FUntitled.png?table=block&id=9293fb22-91c3-49e2-b238-0dc354b8b72f&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2">
+
+<img style="width:80%;" id="image" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F80195c3c-ffd6-4627-bcf5-f1489db2d79a%2FUntitled.png?table=block&id=64d1c47f-fd4d-4a55-96ff-14d05f04731b&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=2000&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"> -->
+
+<p>This implies that the map <span class="arithmatex">\(N→J(N)\)</span> is injective. In fact it is known as the Choi-Jamiołkowski isomorphism, a correspondence between quantum channels and quantum states (described by density matrices).</p>
+<p>Equivalence of Operators: Given <span class="arithmatex">\(2\)</span> operators <span class="arithmatex">\(\mathcal E\)</span> and <span class="arithmatex">\(\mathcal F\)</span> with operator elements <span class="arithmatex">\(\{\mathcal E_i\}\)</span> and <span class="arithmatex">\(\{\mathcal F_i\}\)</span> respectively, if <span class="arithmatex">\(\mathcal E = \mathcal F\)</span> then  </p>
+<div class="arithmatex">\[
+\mathcal E_i = \sum_j u_{ij} \mathcal F_j
+\]</div>
+<h2 id="measurements-as-quantum-operations">Measurements as Quantum Operations<a class="headerlink" href="#measurements-as-quantum-operations" title="Permanent link">&para;</a></h2>
+<p>Measurement can be thought of as a quantum operation where the input is any quantum state and the output is classical, <span class="arithmatex">\(\mathcal E(\rho) = \sum_x p_x|x\rangle\langle x|\)</span> (diagonal density matrix). </p>
+<p>The probabilities, <span class="arithmatex">\(p_x\)</span>, should depend on the state. Further, <span class="arithmatex">\(p_x\)</span> should be a linear function of the density matrix <span class="arithmatex">\(p_x = \text{tr}(M_x \rho)\)</span>. From this we can work out the properties that <span class="arithmatex">\(M_x\)</span> should obey:</p>
+<ul>
+<li>Normalization: <span class="arithmatex">\(\text{tr}(\mathcal E(\rho)) = \text{tr}(p_x) = tr(M_x\rho) = 1 \implies \sum M_x = I\)</span></li>
+<li>Positive Semi-definite: <span class="arithmatex">\((\mathcal E \otimes I)(\rho) \geq 0 \implies p_x \geq 0\)</span> thus <span class="arithmatex">\(\text{tr}(M_x \rho) \geq 0, \forall\ M_x\)</span> over <span class="arithmatex">\(\rho\)</span> thus, we have <span class="arithmatex">\(M_x \geq 0 \implies M_x's\)</span> are positive semi-definite <span class="arithmatex">\(\implies M_x = E_x E_x^\dagger\)</span></li>
+</ul>
+<p>Thus, we have the following:</p>
+<div class="arithmatex">\[
+\sum_x M_x = I
+\]</div>
+<div class="arithmatex">\[
+M_x \geq 0
+\]</div>
+<p>These conditions still leave room for noisy measurements, etc.</p>
+<p>We can also talk about non-demolition measurements, which do not discard the quantum systems aftermeasurements. Consider the following quantum channel.</p>
+<div class="arithmatex">\[
+\mathcal E(\rho) =\sum_e V_e \rho V^\dagger_e \otimes |e\rangle\langle e| = \sum_e \frac{V_e \rho V^\dagger_e} {\text{tr}(V_e\rho V^†_e)} \otimes \text{tr}(V_e \rho V^\dagger_e)|e\rangle\langle e|
+\]</div>
+<p>This channel has the following interpretation: with probability as</p>
+<div class="arithmatex">\[
+p_e = \text{tr}(V_e \rho V_e^\dagger) = \text{tr}(V_e V_e^\dagger\rho) = \text{tr}(M_e\rho)
+\]</div>
+<p>the state of the system after the application of this channel is <span class="arithmatex">\(\rho_e = {(V_e \rho V^\dagger_e)}/{\text{tr}(V_e\rho V^†_e)}\)</span>. This is similar to having a measurement that outputs the post measured state <span class="arithmatex">\(\rho_e\)</span> with probability <span class="arithmatex">\(p_e\)</span>.</p>
+<h2 id="quantum-norms-and-distance-metrics">Quantum Norms and Distance Metrics<a class="headerlink" href="#quantum-norms-and-distance-metrics" title="Permanent link">&para;</a></h2>
+<p>Motivation: Now that we have defined channels and states of information, how do you differentiate between two items of information? What does it mean to say that information is preserved by some process? </p>
+<p>Well for these questions it is necessary to develop distance measures. There is a certain arbitrariness in the way distance measures are defined, both classically and quantum mechanically, and the community of people studying quantum computation and quantum information has found it convenient to use a variety of distance measures over the years. Two of those measures, the trace distance and the fidelity, have particularly wide currency today.</p>
+<h2 id="norms">Norms<a class="headerlink" href="#norms" title="Permanent link">&para;</a></h2>
+<p>Norm is a distance metric such that</p>
+<ol>
+<li><span class="arithmatex">\(|cv| = |c|.|v|\)</span></li>
+<li><span class="arithmatex">\(|v+w| \leq |v| + |w|\)</span></li>
+<li><span class="arithmatex">\(|v| = 0\)</span> iff <span class="arithmatex">\(v = 0\)</span></li>
+</ol>
+<p>Examples of norms are as follows</p>
+<ul>
+<li>Manhattan (<span class="arithmatex">\(L_1\)</span>)</li>
+<li>Euclidean (<span class="arithmatex">\(L_2\)</span>)</li>
+<li><span class="arithmatex">\(L_p\)</span> norm <span class="arithmatex">\(\to |v|_{L_p} = (\sum v_i^p)^{1/p}\)</span></li>
+</ul>
+<h2 id="schatten-p-norms">Schatten <span class="arithmatex">\(p\)</span>-norms<a class="headerlink" href="#schatten-p-norms" title="Permanent link">&para;</a></h2>
+<ol>
+<li><span class="arithmatex">\(L_1\)</span> norm corresponds to probability distributions</li>
+<li><span class="arithmatex">\(L_2\)</span> norm corresponds to pure states</li>
+<li><span class="arithmatex">\(L_\infty = \max_i {|v_i|}\)</span></li>
+</ol>
+<p>Similarly, schatten <span class="arithmatex">\(p\)</span>-norm <span class="arithmatex">\(:\)</span> <span class="arithmatex">\(|M|_{S_p} = |\sigma(M)|_{S_p}\)</span> where <span class="arithmatex">\(\sigma(M)\)</span> is a vector of singular values of a matrix, say <span class="arithmatex">\(M\)</span>.</p>
+<div class="arithmatex">\[
+S_1 = \sum \text{singular values}
+\]</div>
+<div class="arithmatex">\[
+S_2 = \sqrt {\sum \text{singular values}^2}
+\]</div>
+<div class="arithmatex">\[
+S_\infty = \max_i |\text{singular values}|
+\]</div>
+<p>In case of density matrices (in general to positive semi-definite Hermitian operators), we have <span class="arithmatex">\(\text{singular values = eigen values}\)</span> thus, <span class="arithmatex">\(\sigma(M) = \lambda(M)\)</span>.</p>
+<div class="arithmatex">\[
+|X|_{S_p} = |\sigma(X)|_{L_p} = (\sum_i \sigma_i^p)^{1/p}
+\]</div>
+<p>If <span class="arithmatex">\(X \geq 0\)</span>, then <span class="arithmatex">\(\sigma(X) = \lambda(X)\)</span> then, <span class="arithmatex">\(|X|_{S_1} = tr X \implies |\rho|_{S_1} {= \text{tr} (\rho)}\)</span>.</p>
+<p>Thus, <span class="arithmatex">\(\rho\)</span> is a density matrix <span class="arithmatex">\(\iff \rho \geq 0\)</span> and <span class="arithmatex">\(|\rho|_{S_1} = 1\)</span>.</p>
+<!-- <img style="width:40%;" id="image"  src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F09959a0d-5a45-4010-a089-b8fddfb942fb%2FUntitled.png?table=block&id=88a97f38-a7e5-4eaf-9680-3960872aca9b&spaceId=6ad4622e-38fc-4f69-b458-0d5cc1cce783&width=670&userId=64805756-4c37-4bc2-b218-4beca838ec29&cache=v2"> -->
+
+<h2 id="measurements">Measurements<a class="headerlink" href="#measurements" title="Permanent link">&para;</a></h2>
+<p>Let us consider a simple system with <span class="arithmatex">\(\{M, I-M\}\)</span> as measurement operators.</p>
+<p>Then, we have</p>
+<div class="arithmatex">\[
+M \geq 0, I - M \geq 0 \iff M \leq I
+\]</div>
+<div class="arithmatex">\[
+\iff 0 \leq M \leq I
+\]</div>
+<div class="arithmatex">\[
+\iff |M|_{S_\infty} \leq 1
+\]</div>
+<p>But why is it that two objects with different norms can co-exist in the same operator framework? The answer lies in the notion of duality.</p>
+<h2 id="duality">Duality<a class="headerlink" href="#duality" title="Permanent link">&para;</a></h2>
+<p>Given a norm <span class="arithmatex">\(|.|\)</span> there exists a dual norm such that, <span class="arithmatex">\(|x|_* = \max_{|y| \leq 1} |\langle x,y\rangle|\)</span>.</p>
+<ol>
+<li><span class="arithmatex">\(L_2\)</span> is dual to <span class="arithmatex">\(L_2\)</span></li>
+<li><span class="arithmatex">\(L_1\)</span> and <span class="arithmatex">\(L_\infty\)</span>  are dual to each other</li>
+<li><span class="arithmatex">\(S_2\)</span> is dual to <span class="arithmatex">\(S_2\)</span></li>
+<li><span class="arithmatex">\(S_1\)</span> and <span class="arithmatex">\(S_\infty\)</span>  are dual to each other</li>
+</ol>
+<h2 id="introduction-to-trace-norm">Introduction to Trace Norm<a class="headerlink" href="#introduction-to-trace-norm" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+T(\rho, \sigma) = \frac{1}{2}|\rho - \sigma|_{S_1} = \frac{1}{2}\  \text{tr}\ |\rho - \sigma|
+\]</div>
+<p>Then, <span class="arithmatex">\(\forall M\)</span> where <span class="arithmatex">\(M\)</span> denotes measurement,</p>
+<div class="arithmatex">\[
+|\text{tr}(M\rho) - \text{tr}(M\sigma)| = |\text{tr}(M (\rho - \sigma))| \leq |M|_{S_\infty} |\rho -\sigma|_{S_1} \leq |\rho -\sigma|_{S_1} = 2T(\rho, \sigma)
+\]</div>
+<p>In fact, we can tighten this inequality even further to obtain</p>
+<div class="arithmatex">\[
+|\text{tr}(M\rho) - \text{tr}(M\sigma)| \leq T(\rho, \sigma)
+\]</div>
+<div class="arithmatex">\[
+\Big\downarrow
+\]</div>
+<div class="arithmatex">\[
+T(\rho, \sigma) = \max_M |\text{tr}\ M(\rho-\sigma)|
+\]</div>
+<div class="arithmatex">\[
+\Big\downarrow
+\]</div>
+<div class="arithmatex">\[
+T(\mathcal E(\rho) - \mathcal E(\sigma)) \leq \max_M |\text{tr}\ M(\rho-\sigma| = T(\rho, \sigma)
+\]</div>
+<p>and finally we get the required inequality</p>
+<div class="arithmatex">\[
+T(\mathcal E(\rho), \mathcal E(\sigma)) \leq T(\rho, \sigma)
+\]</div>
+<p>Thus, I can never increase the distance of two states, no matter what. So, basically when you wanna protect against noise all we are doing is slowing down the rate of noise (indistinguishable nonsense).</p>
+<h2 id="chois-theorem">Choi's Theorem<a class="headerlink" href="#chois-theorem" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">\(\mathcal E :\mathbb {C} ^{n\times n}\to \mathbb {C} ^{m\times m}\)</span> be a linear map. Then, the following are equivalent:</p>
+<ul>
+<li><span class="arithmatex">\(\mathcal E\)</span> is <span class="arithmatex">\(n\)</span>-positive (i.e. <span class="arithmatex">\(\mathcal E(A)\in \mathbb {C} ^{m\times m}\)</span> is positive whenever <span class="arithmatex">\(A\in \mathbb {C} ^{n\times n}\)</span> is positive).</li>
+<li>
+<p>The matrix <span class="arithmatex">\(\Gamma_\mathcal E\)</span>, sometimes called the Choi matrix, is positive. Here the state <span class="arithmatex">\(\phi\)</span> is maximally entangled.</p>
+<div class="arithmatex">\[
+\Gamma_{\mathcal E}=\left(\operatorname {id} _{n}\otimes \mathcal E \right)\left(\vert \phi \rangle\langle \phi \vert\right)
+\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathcal E\)</span> is completely positive.</p>
+</li>
+</ul>
+<h2 id="solving-a-lindblad-equation">Solving a Lindblad Equation<a class="headerlink" href="#solving-a-lindblad-equation" title="Permanent link">&para;</a></h2>
+<p>Any ideal open quantum system will undergo Markovian dynamics provided that its evolution satisfies a Master equation.</p>
+<div class="arithmatex">\[
+\frac{d\rho}{dt} = \mathcal L(\rho) = -i[H, \rho] + \sum_k \gamma_k (V_k\rho V_k^\dagger - \frac{1}{2} \{V_k^\dagger V_k, \rho\})
+\]</div>
+<p>Let <span class="arithmatex">\(\rho = \frac{1}{2}(I + \vec r \cdot \vec \sigma)\)</span> and differentiate <span class="arithmatex">\(\rho(t)\)</span> to obtain <span class="arithmatex">\(\dot \rho(t)\)</span> in terms of <span class="arithmatex">\(\frac{d\vec{r}}{dt}\)</span>.</p>
+<div class="arithmatex">\[
+\frac{d\rho}{dt} = \frac 1 2 (\dot r_x\sigma_x + \dot r_y\sigma_y + \dot r_z\sigma_z)
+\]</div>
+<p>We equate <span class="arithmatex">\(\dot \rho = \mathcal L(\rho)\)</span> using the above representation for <span class="arithmatex">\(\dot \rho\)</span> and <span class="arithmatex">\(\rho\)</span> and solve the equation by solving the individual differential equations obtained. After we solve for <span class="arithmatex">\(\rho\)</span>, we obtain <span class="arithmatex">\(\Lambda_t\)</span>.</p>
+<div class="arithmatex">\[
+\Lambda_t: \rho_0 \to \rho_t, \quad \rho(t) = \Lambda_t(\rho(0))
+\]</div>
+<p>Now, with Choi's theorem we check if <span class="arithmatex">\(\Lambda_t\)</span> is <span class="arithmatex">\(CP\)</span> by checking whether <span class="arithmatex">\(\Gamma_\Lambda\)</span> is positive semi-definite.</p>
+<div class="arithmatex">\[
+\Gamma_\Lambda = C\vert\psi\rangle\langle\psi\vert
+\]</div>
+<div class="arithmatex">\[
+C = (I \otimes \Lambda_t)
+\]</div>
+<p>Now, we find the eigenvalues and eigenvectors of <span class="arithmatex">\(C\)</span> and represent it as <span class="arithmatex">\(C = \sum_i \lambda_i\vert v_i\rangle\)</span>. Then, we can obtain Kraus operators <span class="arithmatex">\(\{K_i\}_{\forall i}\)</span> such as follows (check below).</p>
+<div class="arithmatex">\[
+v_{i} = \begin{bmatrix}
+-1/2\\1/2\\-1/2\\1/2
+\end{bmatrix} \implies K_i = \sqrt{\lambda_i}
+\begin{bmatrix}
+-1/2 &amp; -1/2\\1/2 &amp; 1/2
+\end{bmatrix}
+\]</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/banrovegrie" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../files/sidebar-toggle.js"></script>
+      
+    
+  </body>
+</html>
